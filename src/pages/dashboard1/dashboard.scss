@@ -1,0 +1,8 @@
+.pages {
+  height: 100vh;
+  overflow-y: auto;
+  margin: 67px 0px 0px 250px;
+  box-sizing: border-box;
+  height: calc(100% - 67px);
+  width: calc(100% - 250px);
+}

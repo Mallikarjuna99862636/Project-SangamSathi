@@ -1,0 +1,354 @@
+
+//  Body Part SCSS 
+
+.body-main-container {
+   width: 100%;
+   height: 100vh;
+  background-image: url("../../../assets/images/home-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   padding-top: 90px;
+
+  .body-heading1 {
+    font-size: 52px;
+    line-height: 68px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .body-heading2 {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0px;
+  }
+
+  .body-heading3 {
+    font-size: 1.1rem;
+    line-height: 38px;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 5px;
+  }
+
+  .body-stack-1 {
+    margin-top: 20px;
+    margin-left: 150px;
+
+    .name-field,
+    .password-field {
+      width: 34%;
+      padding: 14px 16px;
+      font-size: 14px;
+      outline: 1px solid #cfced0;
+      line-height: 1.42857143;
+      color: #252328;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #cfced0;
+      border-radius: 2px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+
+    .Submit-Button {
+      font-size: 12px;
+      height: 50px;
+      font-weight: 400;
+      border-radius: 5px;
+      width: 120px;
+      color: #fff;
+      background-color: #ff4d4d;
+      border-color: #ff4d4d;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+      word-wrap: break-word;
+      white-space: normal !important;
+    }
+  }
+
+  .forgot-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    position: relative;
+    top: 15px;
+    left: 20px;
+  }
+
+//    Body Stack-2 SCSS 
+
+  .body-stack-2 {
+    margin-top: 205px;
+    border-top: 1px solid black;
+    width: 100%;
+
+    .body-part-div-1,
+    .body-part-div-3,
+    .body-part-div-5 {
+      display: flex;
+      min-height: initial;
+      border-right: 1px solid black;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .body-part-div-2,
+    .body-part-div-4,
+    .body-part-div-7 {
+      color: #fff;
+      padding-left: 20px;
+    }
+
+    .body-part-div-4,
+    .body-part-div-6,
+    .body-div-1 {
+      padding-left: 10px;
+    }
+
+
+    .logo-tag-1,
+    .logo-tag-2,
+    .logo-tag-3 {
+      margin-top: 10px;
+      color: #fff;
+      padding: 15px;
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+
+    .logo-tag-1 {
+      margin-left: 80px;
+    }
+
+
+
+    .body-heading-1 , .body-heading-2  {
+        font-size: 20px;
+        text-shadow: 3px 3px 0 #000;
+        margin: 5px 100px 5px 5px;
+      }
+      
+      .body-heading-5{
+        font-size: 20px;
+        text-shadow: 3px 3px 0 #000;
+        margin: 5px 40px 5px 5px;
+        text-align: left;
+      }
+      
+      .body-heading-4 , .body-heading-6{
+        text-shadow: 3px 3px 0 #000;
+        margin: 5px 40px 5px 5px;
+      }
+      
+      .body-heading-3{
+        text-align: left;
+        font-size: 20px;
+        text-shadow: 3px 3px 0 #000;
+        margin: 5px 100px 5px 5px;
+      }
+  }
+
+    //  stack 2 End Here 
+
+
+    // New Bottom div SCSS 
+
+    .body-part-div-8{
+        background-color: #00bda7;
+        margin-top: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+
+        .body-heading-7{
+            font-size: 35px;
+            font-weight: 500;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            color: #fff;
+          }
+
+
+          .register-button{
+            color: #252328;
+            height: 55px;
+            border: none;
+            padding: 14px 26px;
+            font-size: 14px;
+            line-height: 1.3333333;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-wrap: break-word;
+            transition: all 0.5s;
+            white-space: normal !important;
+          }
+          
+          .register-button:hover{
+            background-color: red;
+              color : #fff;
+          }
+          
+     }
+
+     @media (min-width: 1024px) {
+      .body-heading1 {
+        font-size: 52px;
+      }
+      .body-heading2 {
+        font-size: 28px;
+      }
+      .body-heading3 {
+        font-size: 1.1rem;
+      }
+      .body-stack-1 {
+        margin-top: 20px;
+        margin-left: 150px;
+  
+        .name-field,
+        .password-field {
+          width: 34%;
+        }
+      }
+      .body-stack-2 {
+        margin-top: 205px;
+  
+        .body-heading-1,
+        .body-heading-2 {
+          font-size: 20px;
+        }
+        .body-heading-5 {
+          font-size: 20px;
+        }
+        .body-heading-4,
+        .body-heading-6 {
+          font-size: 20px;
+        }
+        .body-heading-3 {
+          font-size: 20px;
+        }
+      }
+    }
+  
+    // Styles for medium screens
+    @media (max-width: 1023px) {
+      .body-main-container {
+        width: 950px;
+        height: 100vh;
+      }
+      .body-heading1 {
+        font-size: 40px;
+      }
+      .body-heading2 {
+        font-size: 24px;
+      }
+      .body-heading3 {
+        font-size: 1rem;
+      }
+      .body-stack-1 {
+        margin-top: 20px;
+        margin-left: 50px;
+  
+        .name-field,
+        .password-field {
+          width: 50%;
+        }
+      }
+      .body-stack-2 {
+        margin-top: 150px;
+  
+        .body-heading-1,
+        .body-heading-2 {
+          font-size: 18px;
+        }
+        .body-heading-5 {
+          font-size: 18px;
+        }
+        .body-heading-4,
+        .body-heading-6 {
+          font-size: 18px;
+        }
+        .body-heading-3 {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    // Styles for smaller screens
+    @media (max-width: 778px) {
+
+      .body-main-container {
+        width: 990px !important;
+        height: 100vh !important;
+      }
+  
+      .body-heading1 {
+        font-size: 32px;
+      }
+      .body-heading2 {
+        font-size: 20px;
+      }
+      .body-heading3 {
+        font-size: 0.9rem;
+      }
+      .body-stack-1 {
+        margin-top: 20px;
+        margin-left: 20px;
+  
+        .name-field,
+        .password-field {
+          width: 100%;
+        }
+      }
+      .body-stack-2 {
+        margin-top: 100px;
+  
+        .body-heading-1,
+        .body-heading-2 {
+          font-size: 16px;
+        }
+        .body-heading-5 {
+          font-size: 16px;
+        }
+        .body-heading-4,
+        .body-heading-6 {
+          font-size: 16px;
+        }
+        .body-heading-3 {
+          font-size: 16px;
+        }
+      }
+      .body-part-div-8 {
+        margin-top: 70px;
+  
+        .body-heading-7 {
+          font-size: 24px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+        .register-button {
+          font-size: 12px;
+          height: 40px;
+        }
+      }
+    }
+  
+
+
+
+}
+
+ 

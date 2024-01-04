@@ -1,0 +1,208 @@
+//   Main Box Css 
+
+.footer-main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 90px;
+  background-color: #39363d;
+
+  .footer-heading-1 {
+    font-size: 20px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .icon-button {
+    text-align: center;
+    background-color: #181718;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: #7f7c7c;
+    line-height: 1.3;
+    transition: all 0.5s;
+    font-size: 10px;
+    padding: 10px 10px;
+  }
+  .icon-button:hover {
+    background-color: red;
+  }
+}
+  
+//   This is Stack CSS and it have 4 div 
+
+
+  .Footer-Part {
+    background-color: #302d34;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    color: #98969b;
+    font-size: 14px;
+    justify-content: space-evenly;
+    height: 40%;
+
+    //  1st div CSS 
+
+    .contaner1 {
+      color: #98969b;
+      font-size: 16px;
+      margin-left: 20px;
+
+      img {
+        padding: 10px;
+      }
+
+      .footer-heading-section1-1 {
+        word-wrap: break-word;
+        margin-left: 20px;
+        font-weight: 600;
+      }
+    }
+
+    //  2st div CSS 
+
+    .contaner2 {
+      flex: 0 0 25%;
+      max-width: 25%;
+
+      .contact-heading-1,
+      .contact-heading-3 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 0px;
+        padding: 0px;
+        text-align: initial;
+        margin-left: 65px;
+      }
+      .contact-heading-3 {
+        margin: 40px 0px 30px 65px;
+      }
+
+      .contact-heading-4 {
+        color: #98969b;
+        font-size: 16px;
+        margin-left: -106px;
+        font-weight: 500;
+      }
+    }
+
+   //  3st div CSS 
+
+    .contaner3 {
+      flex: 0 0 16.666667%;
+      max-width: 16.666667%;
+
+      .about-heading-1 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 0px;
+        padding: 0px;
+        text-align: initial;
+        margin-left: 10px;
+      }
+      .about-heading-2,
+      .about-heading-3,
+      .about-heading-4,
+      .about-heading-5,
+      .about-heading-6,
+      .about-heading-7 {
+        color: #98969b;
+        text-align: initial;
+        margin-left: 10px;
+        padding: 2px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0px;
+      }
+
+      .about-heading-2:hover,
+      .about-heading-3:hover,
+      .about-heading-4:hover,
+      .about-heading-5:hover,
+      .about-heading-6:hover,
+      .about-heading-7:hover {
+        color: red;
+      }
+    }
+
+
+    //  4st div CSS 
+
+    .contaner4 {
+      flex: 0 0 25%;
+      max-width: 26%;
+
+      .subscrib-heading {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 0px;
+        padding: 0px;
+        text-align: initial;
+      }
+
+      .sub-input-field {
+        border: transparent;
+        color: #fff;
+        text-align: left;
+        margin-right: 96px;
+        width: 70%;
+        background-color: #454249;
+        height: 45px;
+        outline: none;
+      }
+
+      .subscrib-button {
+        color: #fff;
+        background-color: #ff4d4d;
+        border-color: #ff4d4d;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+        white-space: normal !important;
+        margin-right: 210px;
+        margin-top: 20px;
+      }
+
+      .subscrib-button:hover {
+        background-color: red;
+      }
+    }
+}
+//    This is bottom div CSS
+
+    .bottom-div {
+      background-color: #252428;
+      color: #98969b;
+      font-size: 12px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      box-sizing: border-box;
+
+      .bottom-heading {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: right;
+        font-size: 14px;
+        color: #98969b;
+        margin-right: 50px;
+      }
+    }
+  
+

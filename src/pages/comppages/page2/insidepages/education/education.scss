@@ -1,0 +1,37 @@
+.education-main-container {
+  margin: 30px;
+  // .education-stack-container {
+  //   display: grid;
+  //   grid-template-columns: repeat(1, 1fr);
+  // }
+  .education-first-table-data {
+    .education-table-one-heading {
+      text-align: initial;
+      color: #252328;
+      margin: 0px 0px 15px 0px;
+      font-weight: 600;
+      font-family: "Rubik", sans-serif;
+    }
+
+    .education-table th {
+      font-size: 16px;
+      text-align: initial;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 250px 14px 20px;
+      color: #252324;
+    }
+
+    .education-table td {
+      color: #6f6d72;
+      text-align: left;
+      background-color: #fdfdfd;
+      border-bottom: 1px solid #eee;
+      padding: 10px 490px  10px 16px;
+      vertical-align: baseline;
+      border-top: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
