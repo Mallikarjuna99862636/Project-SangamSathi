@@ -9,6 +9,7 @@ import Regstrationform1 from "../components/RegistrationForm1/Regstrationform1";
 import RegistrationConfirm from "../components/registrationConfirm/RegistrationConfirm";
 import Dashboard1 from "../pages/dashboard1/Dashboard1";
 import LogoutConfirm from "../components/logoutConfirm/LogoutConfirm";
+import TableData from "../components/Table/TableData";
 
 const AppRoutes = () => {
   const [render, setRander] = useState(false);
@@ -29,6 +30,7 @@ const AppRoutes = () => {
           <Route path="registrationconfirm" element={<RegistrationConfirm />} />
           <Route path="registrationsuccess" element={<RegistrationSuccess />} />
           <Route path="confirmlogout" element={<LogoutConfirm />} />
+          <Route path="table" element={<TableData/>} />
         </Route>
       </Routes>
     </>
