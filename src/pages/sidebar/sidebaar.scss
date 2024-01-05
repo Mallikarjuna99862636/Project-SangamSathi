@@ -36,10 +36,22 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
+
+    .sidebar-lists{
+      margin: 0;
+      font-size: 15px;
+      font-weight: 500;
+    }
   }
 
   .list-items-buttons {
+    margin: 3px 0px;
     color: #626262;
     border-bottom: 1px solid #ebebeb;
+    &:hover{
+      background-color: aqua;
+    }
   }
+ 
+
 }

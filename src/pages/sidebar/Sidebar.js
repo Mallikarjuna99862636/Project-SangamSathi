@@ -4,7 +4,7 @@ import {
   Drawer,
   Divider,
   List,
-  ListItemText,
+  // ListItemText,
   ListItemIcon,
   ListItemButton,
   Stack,
@@ -22,6 +22,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 
 const Sidebar = () => {
+
+  
   return (
     <Box className="sidebar-main-container">
      
@@ -58,20 +60,22 @@ const Sidebar = () => {
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
-            <ListItemButton className="list-items-buttons  active">
+            <ListItemButton className="list-items-buttons" >
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <ExploreIcon />
               </ListItemIcon>
-              <Link className="links" to="/dashboard">
-                <ListItemText className="text-list" primary="Dashboard" />
+              <Link className="links " to="/dashboard">
+                {/* <ListItemText  primary="Dashboard" /> */}
+                <h4 className="sidebar-lists">Dashboard  </h4>
               </Link>
             </ListItemButton>
-            <ListItemButton className="list-items-buttons  ">
+            <ListItemButton className="list-items-buttons   ">
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <PersonIcon />
               </ListItemIcon>
-              <Link className="links" to='/profile'>
-              <ListItemText primary="Profile" />
+              <Link className="links active" to='/profile'>
+              {/* <ListItemText  primary="Profile" /> */}
+              <h4 className="sidebar-lists">Profile  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -79,7 +83,8 @@ const Sidebar = () => {
                 <FormatListBulletedIcon />
               </ListItemIcon>
               <Link className="links" to="/my-matches" >
-              <ListItemText primary="My Matches"  /> 
+              {/* <ListItemText primary="My Matches"  />  */}
+              <h4 className="sidebar-lists">My Matches  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -87,7 +92,8 @@ const Sidebar = () => {
                 <GroupIcon />
               </ListItemIcon>
               <Link className="links" to="/my-interests">
-              <ListItemText primary="My Interests" />
+              {/* <ListItemText primary="My Interests" /> */}
+              <h4 className="sidebar-lists">My Interests  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -95,7 +101,8 @@ const Sidebar = () => {
                 <CalculateIcon />
               </ListItemIcon>
               <Link className="links" to="/assistance-services">
-              <ListItemText primary="Assistance Services" />
+              {/* <ListItemText primary="Assistance Services" /> */}
+              <h4 className="sidebar-lists">Assistance Services  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -103,7 +110,8 @@ const Sidebar = () => {
                 <CalculateIcon />
               </ListItemIcon>
               <Link className="links" to="/view-all">
-              <ListItemText primary="View All" />
+              {/* <ListItemText primary="View All" /> */}
+              <h4 className="sidebar-lists">View All  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -111,7 +119,8 @@ const Sidebar = () => {
                 <GroupIcon />
               </ListItemIcon>
               <Link className="links" to="/search">
-              <ListItemText primary="Search" />
+              {/* <ListItemText primary="Search" /> */}
+              <h4 className="sidebar-lists">Search  </h4>
               </Link>
             </ListItemButton>
             <ListItemButton className="list-items-buttons  ">
@@ -119,7 +128,8 @@ const Sidebar = () => {
                 <LogoutIcon />
               </ListItemIcon>
               <Link className="links" to="/logout">
-              <ListItemText primary="Logout" />
+              {/* <ListItemText primary="Logout" /> */}
+              <h4 className="sidebar-lists">Logout  </h4>
               </Link>
             </ListItemButton>
           </List>

@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { TextField, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import {
+  TextField,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  TablePagination
+} from '@mui/material';
 
 const TableData = () => {
   const [tableData, setTableData] = useState([]);
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
 
   useEffect(() => {
-    // Adjust the API endpoint according to your actual API
-    const apiUrl = 'https://jsonplaceholder.typicode.com/users';
-
-    axios.get(apiUrl)
+    axios.get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
         setTableData(response.data);
       })
@@ -28,32 +37,37 @@ const TableData = () => {
     );
   });
 
-  const handleSearchChange = (event) => {
-    setSearch(event.target.value);
+  const handleChangePage = (newPage) => {
+    setPage(newPage);
   };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
+  const visibleRows = filteredData.slice(page * rowsPerPage, (page + 1) * rowsPerPage);
 
   return (
     <div>
       <TextField
-        label="Search by Name or Country"
+        label="Search "
         variant="outlined"
         value={search}
-        onChange={handleSearchChange}
+        onChange={(e) => setSearch(e.target.value)}
       />
-
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
               <TableCell>Id</TableCell>
               <TableCell>Name</TableCell>
-              <TableCell>SurName</TableCell>
+              <TableCell>Username</TableCell>
               <TableCell>Email</TableCell>
-              {/* Add more table headers based on your data structure */}
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredData.map((row, index) => (
+            {visibleRows.map((row, index) => (
               <TableRow key={index}>
                 <TableCell>{row.id}</TableCell>
                 <TableCell>{row.name}</TableCell>
@@ -63,9 +77,19 @@ const TableData = () => {
             ))}
           </TableBody>
         </Table>
+
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={filteredData.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
       </TableContainer>
     </div>
   );
-}
+};
 
 export default TableData;

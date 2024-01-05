@@ -24,7 +24,7 @@ const Page1 = () => {
 
 const closePopup = () => {
   setPopupOpen(false); 
-  // setPopupOpen(prevState => !prevState);
+//  setPopupOpen(prevState => !prevState);
   setSelectedCardIndex(null);
   console.log("Close button clicked");
 };
