@@ -11,8 +11,15 @@ import AssistanceServices from "../comppages/assistanceServices/AssistanceServic
 import ViewAll from "../comppages/viewAll/ViewAll";
 import Search from "../comppages/search/Search";
 import Logout from "../comppages/logout/Logout";
+// import { useDispatch, useSelector } from "react-redux";
+// import { selectUser, userLogout } from "../../Redux/reduxData/DataRedux";
 
 const Dashboard1 = () => {
+  // const user = useSelector(selectUser)
+  //  const dispatch = useDispatch()
+  //  const handleLogout =(e)=>{
+  //      dispatch(userLogout())
+  //  }
   return (
     <div>
       <Dashheader />

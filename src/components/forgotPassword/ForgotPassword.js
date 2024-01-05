@@ -8,7 +8,7 @@ const ForgotPassword = () => {
     <Box className="forgotpwd-container">
       <Box className="forgotpwd-container1" >
         <Box>
-          <img src={logo2} alt="sangam-sathi-logo" />
+          <img className="sangam-logo" src={logo2} alt="sangam-sathi-logo" />
         </Box>
         <Box className="ForgotPwd-div">
           <h1 className="forgot-heading"> Forgot Password ?</h1>

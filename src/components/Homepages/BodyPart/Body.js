@@ -1,24 +1,40 @@
 import { Box, Stack } from "@mui/material";
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import './BodyPart.scss'
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import ResentRegisterpage from "./ResentRegisterpage/ResentRegisterpage";
 import Footer from "../Footer-Part/Footer";
 import { useNavigate , Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { userLogin } from "../../../Redux/reduxData/DataRedux";
 const Body = ({render}) => {
 
-  const [mail,setMail] = useState("")
+  const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+   const handleSubmit =(e)=>{
+    e.preventDefault()
+    dispatch(userLogin({
+      email : email,
+      password:password,
+      loggedIn : true
+    }))
+   }
+   console.log(handleSubmit)
+
+  
 
   const handleRegistar = () => {
     navigate("/registration");
   };
  
+  
    const handleDashboard=()=>{
-      if(mail==="malli@gmail.com" && password==="1234"){
-          //  navigate("/dashboard");
-           render(true)
+      if(email==="malli@gmail.com" && password==="1234"){
+           navigate("/dashboard");
+            render(true)
       }
    }
 
@@ -38,8 +54,8 @@ const Body = ({render}) => {
             className="name-field"
             autoComplete="on"
             placeholder="User Name"
-            value={mail}
-            onChange={(e)=>setMail(e.target.value)}
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <input
             type="password"

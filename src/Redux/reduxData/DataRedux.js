@@ -4,12 +4,32 @@ const initialState = {
   isLoading: false,
   error: "",
   data: "",
+  user: null,
+  loggedIn : false
 };
 
 export const dataRedux = createSlice({
   name: "dataRedux",
   initialState,
   reducers: {
+    userLogin: (state, action) => {
+      const userdata = action.payload;
+      const newState = {
+        ...state,
+        isLoading: true,
+        user : userdata
+      };
+      return newState;
+    },
+    userLogout: (state) => {
+    const  userresp = null;
+      const newState = {
+        ...state,
+        isLoading: true,
+        user : userresp
+      };
+      return newState;
+    },
     dataDetailsRequest: (state) => {
       const newState = {
         ...state,
@@ -50,6 +70,9 @@ export const {
   dataDetailsFailure,
   dataDetailsSuccess,
   dataDetailsRequest,
+  userLogin,
+  userLogout
 } = dataRedux.actions;
 
+export const selectUser = (state) => state.user.user;
 export default dataRedux.reducer;

@@ -10,19 +10,19 @@ import RegistrationConfirm from "../components/registrationConfirm/RegistrationC
 import Dashboard1 from "../pages/dashboard1/Dashboard1";
 import LogoutConfirm from "../components/logoutConfirm/LogoutConfirm";
 import TableData from "../components/Table/TableData";
+// import { useSelector } from "react-redux";
+// import { selectUser } from "../Redux/reduxData/DataRedux";
 
 const AppRoutes = () => {
   const [render, setRander] = useState(false);
+  // const user = useSelector(selectUser)
   return (
     <>
-      {render && <Dashboard1 />}
+     {render && <Dashboard1 />} 
       <Routes>
         <Route path="/">
-          {render ? (
-            <Route index element={<Dashboard1 />} />
-          ) : (
-            <Route index element={<Header open={setRander} />} />
-          )}
+           <Route index element={<Header open={setRander} />} />
+           <Route path="dashboard" element={<Dashboard1 />} />
           <Route path="forgotpassword" element={<ForgotPassword />} />
           <Route path="registration" element={<RegistrationPage />} />
           <Route path="registrationform" element={<RegistrationForm />} />
