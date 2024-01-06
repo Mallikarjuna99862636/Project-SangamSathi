@@ -14,7 +14,7 @@ import Logout from "../comppages/logout/Logout";
 // import { useDispatch, useSelector } from "react-redux";
 // import { selectUser, userLogout } from "../../Redux/reduxData/DataRedux";
 
-const Dashboard1 = () => {
+const Dashboard1 = ({open}) => {
   // const user = useSelector(selectUser)
   //  const dispatch = useDispatch()
   //  const handleLogout =(e)=>{
@@ -22,7 +22,7 @@ const Dashboard1 = () => {
   //  }
   return (
     <div>
-      <Dashheader />
+      <Dashheader render={open} />
       <Sidebar />
       <div className="pages">
         <Routes>

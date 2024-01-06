@@ -53,7 +53,7 @@ const Body = ({render}) => {
             id="text-field-1"
             className="name-field"
             autoComplete="on"
-            placeholder="User Name"
+            placeholder=" Enter User Name"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
           />

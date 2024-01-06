@@ -29,14 +29,14 @@ const closePopup = () => {
   console.log("Close button clicked");
 };
 
-useEffect(() => {
-  console.log("isPopupOpen before update:", isPopupOpen);  
-  if (!isPopupOpen) {
-    console.log("Closing popup...");
-    closePopup();
-  }
-  console.log("isPopupOpen after update:", isPopupOpen);
-}, [isPopupOpen]);
+// useEffect(() => {
+//   console.log("isPopupOpen before update:", isPopupOpen);  
+//   if (!isPopupOpen) {
+//     console.log("Closing popup...");
+//     closePopup();
+//   }
+//   console.log("isPopupOpen after update:", isPopupOpen);
+// }, [isPopupOpen]);
   
 
   useEffect(() => {

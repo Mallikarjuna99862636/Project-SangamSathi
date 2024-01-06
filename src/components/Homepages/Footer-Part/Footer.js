@@ -29,7 +29,7 @@ const Footer = () => {
           <YouTubeIcon className="icon-button" />
         </Stack>
       </Box>
-      <Stack className="footer-part" >
+      <Stack className="footer-part" direction="row">
         <Box className="contaner1">
           <img src={logo4} alt="sangam-sathi-logo" />
           <br />

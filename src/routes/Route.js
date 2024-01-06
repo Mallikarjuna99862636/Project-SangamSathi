@@ -10,6 +10,7 @@ import RegistrationConfirm from "../components/registrationConfirm/RegistrationC
 import Dashboard1 from "../pages/dashboard1/Dashboard1";
 import LogoutConfirm from "../components/logoutConfirm/LogoutConfirm";
 import TableData from "../components/Table/TableData";
+import ExtraCodeDiv from "../components/CodeExtra/ExtraCodeDiv";
 // import { useSelector } from "react-redux";
 // import { selectUser } from "../Redux/reduxData/DataRedux";
 
@@ -22,7 +23,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/">
            <Route index element={<Header open={setRander} />} />
-           <Route path="dashboard" element={<Dashboard1 />} />
+           <Route path="dashboard" element={<Dashboard1 open={setRander} />} />
           <Route path="forgotpassword" element={<ForgotPassword />} />
           <Route path="registration" element={<RegistrationPage />} />
           <Route path="registrationform" element={<RegistrationForm />} />
@@ -31,6 +32,7 @@ const AppRoutes = () => {
           <Route path="registrationsuccess" element={<RegistrationSuccess />} />
           <Route path="confirmlogout" element={<LogoutConfirm />} />
           <Route path="table" element={<TableData/>} />
+          <Route path="extra" element={<ExtraCodeDiv/>} />
         </Route>
       </Routes>
     </>

@@ -244,7 +244,7 @@
     }
   
     // Styles for medium screens
-    @media (max-width: 1023px) {
+    @media  screen and (max-width: 1023px) {
       .body-main-container {
         width: 950px;
         height: 100vh;
@@ -288,7 +288,7 @@
     }
   
     // Styles for smaller screens
-    @media (max-width: 778px) {
+    @media screen and (max-width: 778px) {
 
       .body-main-container {
         width: 990px !important;
