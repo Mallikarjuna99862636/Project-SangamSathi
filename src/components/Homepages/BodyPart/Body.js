@@ -34,7 +34,7 @@ const Body = ({render}) => {
    const handleDashboard=()=>{
       if(email==="malli@gmail.com" && password==="1234"){
            navigate("/dashboard");
-            render(true)
+             render(true)
       }
    }
 

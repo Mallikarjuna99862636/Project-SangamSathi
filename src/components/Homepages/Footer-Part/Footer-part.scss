@@ -33,13 +33,15 @@
 //   This is Stack CSS and it have 4 div 
 
 
-  .Footer-Part {
+  .footer-part {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     background-color: #302d34;
     padding-top: 50px;
     padding-bottom: 40px;
     color: #98969b;
     font-size: 14px;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     height: 40%;
 
     //  1st div CSS 

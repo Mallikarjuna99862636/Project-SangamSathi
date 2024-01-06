@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const create = (baseUrl = "https://restcountries.com/v3.1/all") => {
+const create = (baseUrl = "https://jsonplaceholder.typicode.com/users") => {
   const api = axios.create({
     baseURL: baseUrl,
     headers: {

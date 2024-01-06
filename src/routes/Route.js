@@ -18,7 +18,7 @@ const AppRoutes = () => {
   // const user = useSelector(selectUser)
   return (
     <>
-     {render && <Dashboard1 />} 
+     {render && <Dashboard1 /> }  
       <Routes>
         <Route path="/">
            <Route index element={<Header open={setRander} />} />

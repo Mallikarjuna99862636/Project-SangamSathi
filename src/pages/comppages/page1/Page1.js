@@ -24,7 +24,7 @@ const Page1 = () => {
 
 const closePopup = () => {
   setPopupOpen(false); 
-//  setPopupOpen(prevState => !prevState);
+  // setPopupOpen(prevState => !prevState);
   setSelectedCardIndex(null);
   console.log("Close button clicked");
 };
@@ -69,7 +69,11 @@ useEffect(() => {
               onClick={() => handleCardClick(i + index)}
             >
               <Box className="img-div">
-                <img className="card-user-dp" src={userdp} alt="user-dp" />
+              <Box className="sub-img-div">
+               <figure>
+               <img className="card-user-dp" src={userdp} alt="user-dp" />
+               </figure>
+              </Box>
               </Box>
               <Box className="sub-div1-card1">
                 <Link className="sub-div1-link">
@@ -190,7 +194,9 @@ useEffect(() => {
         <Stack className="sub-card-stack-div">
           <Box className="sub-div-card1">
             <Box className="img-div">
-              <img className="card-user-dp" src={userdp} alt="user-dp" />
+              <Box className="sub-img-div">
+             <figure><img className="card-user-dp" src={userdp} alt="user-dp" /></figure>
+              </Box>
             </Box>
             <Box className="sub-div1-card1">
               <Link className="sub-div1-link">
@@ -217,7 +223,9 @@ useEffect(() => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-              <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+            <Box className="sub-img-div-1">
+             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
+              </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
@@ -243,7 +251,9 @@ useEffect(() => {
           {/* Third Div Start here  */}
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-              <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+            <Box className="sub-img-div-1">
+             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
+            </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
@@ -278,7 +288,10 @@ useEffect(() => {
         <Stack className="sub-card-stack-div">
           <Box className="sub-div-card1">
             <Box className="img-div">
-              <img className="card-user-dp" src={userdp} alt="user-dp" />
+            <Box className="sub-img-div">
+            <figure> <img className="card-user-dp" src={userdp} alt="user-dp" /></figure> 
+              
+            </Box>
             </Box>
             <Box className="sub-div1-card1">
               <Link className="sub-div1-link">
@@ -305,7 +318,9 @@ useEffect(() => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-              <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+            <Box className="sub-img-div-1">
+              <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
+            </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
@@ -333,7 +348,9 @@ useEffect(() => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-              <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+            <Box className="sub-img-div-1">
+             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure> 
+              </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
