@@ -1,0 +1,68 @@
+.parentsprefer-main-container{
+    margin: 30px;
+.social-formcontrol-1,
+.social-formcontrol-5 {
+    margin: 0;
+  background-color: white;
+  width: 450px;
+}
+
+.social-formcontrol-2,
+.social-formcontrol-3,
+.social-formcontrol-4,
+.social-formcontrol-6,
+.social-formcontrol-7 {
+  background-color: white;
+  width: 450px;
+}
+
+.social-textfield-1 {
+  background-color: white;
+  width: 450px;
+  height: 40px;
+}
+
+.buttons-class-div{
+    display: flex;
+    justify-content: end;
+    margin-right: 90px;
+
+    .submit-button{
+        color: #fff;
+        background-color:#28a745;
+        border-color: #28a745;
+        border: none;
+        padding: 15px 18px;
+        margin: 0px 8px;
+        height: 48px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+        transition: all 0.5s;
+        white-space: normal !important;
+    }
+    .reset-button{
+        color: #fff;
+        background-color: #ff4d4d;
+        border-color: #ff4d4d;
+        border: none;
+        padding: 15px 18px;
+        margin: 0px 8px;
+        margin-bottom: 12px;
+        height: 48px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+        transition: all 0.5s;
+        white-space: normal !important;
+    }
+}
+
+}

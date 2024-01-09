@@ -1,11 +1,11 @@
-.familyreligious-main-container {
+.lifestyle-main-container {
     margin: 30px;
-  .familyreligious-stack-container {
+  .lifestyle-stack-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .first-table-data {
-    .table-one-heading {
+  .lifestyle-first-table-data {
+    .lifestyle-table-one-heading {
       font-size: 20px;
       text-align: initial;
       color: #252328;
@@ -14,17 +14,17 @@
       font-family: "Rubik", sans-serif;
     }
 
-    .table-1 th {
+    .lifestyle-table-1 th {
         font-size: 16px;
       text-align: initial;
       background-color: #fff;
        border-bottom: 1px solid #eee;
       padding: 14px 120px 14px 10px;
       color: #252324;
-      // font-weight: 600;
+    //   font-weight: 500;
     }
 
-    .table-1 td {
+    .lifestyle-table-1 td {
         color: #6f6d72;
       text-align: left;
       background-color: #fdfdfd;
@@ -38,9 +38,9 @@
   }
 
 
-  .second-table-data {
-    .table-two-heading{
-      font-size: 20px;
+  .lifestyle-second-table-data {
+    .lifestyle-table-two-heading{
+        font-size: 20px;
       text-align: initial;
       color: #252328;
       margin: 0px 0px 15px 0px;
@@ -48,17 +48,17 @@
       font-family: "Rubik", sans-serif;
     }
 
-    .table-2 th {
+    .lifestyle-table-2 th {
         font-size: 16px;
         text-align: initial;
       background-color: #fff;
       border-bottom: 1px solid #eee;
       padding: 14px 85px 14px 16px;
       color: #252324;
-      // font-weight: 500;
+    //   font-weight: 500;
       }
 
-    .table-2 td {
+    .lifestyle-table-2 td {
      color: #6f6d72;
       text-align: left;
       background-color: #fdfdfd;
