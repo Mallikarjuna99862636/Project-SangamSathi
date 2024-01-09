@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import userdps from "../../../assets/images/profile-pic.jpg";
-import "./mymatches.scss";
+import userdp from "../../../../../assets/images/profile-pic.jpg";
+import "./mymatch.scss";
 
-const MyMatches = () => {
+const MyMatch = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   const [userCard, setUserCard] = useState([]);
   const [selectedCardDetails, setSelectedCardDetails] = useState({});
@@ -27,11 +27,11 @@ const MyMatches = () => {
 
   const getData = (page) => {
     fetch(
-      `https://jsonplaceholder.typicode.com/albums?_page=${page}&_limit=${itemsPerPage}`
+      `https://jsonplaceholder.typicode.com/users?_page=${page}&_limit=${itemsPerPage}`
     )
       .then((response) => response.json())
       .then((data) => {
-        setUserCard(data.slice(0, 20));
+        setUserCard(data.slice(0,2));
       })
       .catch((error) => console.log(error));
   };
@@ -46,51 +46,47 @@ const MyMatches = () => {
   }, [currentPage]);
 
   return (
-    <Box>
-    <Box className="mymatches-header-part">
-        <h3 className="mymatches-user-name">My Partner Preferences</h3>
-        <Divider />
-      </Box>
-      <Box className="mymatches-card-stack-div">
+    <>
+      <Box className="mymatch-card-stack-div">
         {userCard.map((card, index) => (
           <Box
             key={index}
-            className="mymatches-div-card1"
+            className="mymatch-div-card1"
             onClick={() => handleCardClick(index)}
           >
-            <Box className="mymatches-img-div">
-              <Box className="mymatches-sub-img-div">
+            <Box className="mymatch-img-div">
+              <Box className="mymatch-sub-img-div">
                 <figure>
                   <img
-                    className="mymatches-card-user-dp"
-                    src={userdps}
+                    className="mymatch-card-user-dp"
+                    src={userdp}
                     alt="user-dp"
                   />
                 </figure>
               </Box>
             </Box>
-            <Box className="mymatches-sub-div1-card1">
-              <Link className="mymatches-sub-div1-link">
-                <h2 className="mymatches-sub-div1-heading"> Naveen </h2>
+            <Box className="mymatch-sub-div1-card1">
+              <Link className="mymatch-sub-div1-link">
+                <h2 className="mymatch-sub-div1-heading"> Naveen </h2>
               </Link>
-              <p className="mymatches-sub-div1-para"> Bengalore</p>
+              <p className="mymatch-sub-div1-para"> Bengalore</p>
             </Box>
-            <Box className="mymatches-sub-div2-card1">
-              <Box className="mymatches-sub-div3-card1">
-                <span className="mymatches-sub-div3-age">{card.id}</span>
-                <span className="mymatches-sub-div3-text">Age</span>
+            <Box className="mymatch-sub-div2-card1">
+              <Box className="mymatch-sub-div3-card1">
+                <span className="mymatch-sub-div3-age">{card.id}</span>
+                <span className="mymatch-sub-div3-text">Age</span>
               </Box>
-              <Box className="mymatches-sub-div4-card1">
-                <span className="mymatches-sub-div4-age">5.4</span>
-                <span className="mymatches-sub-div4-text">Height</span>
+              <Box className="mymatch-sub-div4-card1">
+                <span className="mymatch-sub-div4-age">5.4</span>
+                <span className="mymatch-sub-div4-text">Height</span>
               </Box>
-              <Box className="mymatches-sub-div5-card1">
-                <span className="mymatches-sub-div5-age">SGM333</span>
-                <span className="mymatches-sub-div5-text">Reg No</span>
+              <Box className="mymatch-sub-div5-card1">
+                <span className="mymatch-sub-div5-age">SGM333</span>
+                <span className="mymatch-sub-div5-text">Reg No</span>
               </Box>
             </Box>
             {popupOpen && selectedCardIndex === index && (
-              <div className="mymatches-popup-content">
+              <div className="mymatch-popup-content">
                 <h2>{selectedCardDetails.name}</h2>
                 <h2>{selectedCardDetails.id}</h2>
                 <button onClick={closePopup}>Close</button>
@@ -109,7 +105,7 @@ const MyMatches = () => {
           Previous
         </button>
         {Array.from(
-          { length: Math.ceil(50 / itemsPerPage) },
+          { length: Math.ceil(10 / itemsPerPage) },
           (_, i) => i + 1
         ).map((page) => (
           <span
@@ -130,8 +126,8 @@ const MyMatches = () => {
           Next
         </button>
       </div>
-    </Box>
+    </>
   );
 };
 
-export default MyMatches;
+export default MyMatch;

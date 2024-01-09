@@ -1,3 +1,14 @@
+.mymatches-header-part {
+  padding: 5px 10px;
+  .mymatches-user-name {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+}
+
+
 .mymatches-card-stack-div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

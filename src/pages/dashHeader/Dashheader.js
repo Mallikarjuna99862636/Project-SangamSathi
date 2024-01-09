@@ -23,7 +23,7 @@ const App = styled(AppBar)`
   height: 65px;
   opticity: 0.3;
   background-color: white;
-  box-shadow: 2px 2px 1px black;
+  border-bottom : 1px solid rgb(235, 235, 235);
 `;
 
 const Dashheader = ({render}) => {
