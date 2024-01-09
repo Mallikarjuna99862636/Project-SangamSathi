@@ -1,0 +1,42 @@
+.myinterests-page-container {
+  .myinterests-header-part {
+    padding: 5px 10px;
+    .myinterests-user-name {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .myinterests-tabs-list {
+    margin: 10px 30px 0px 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    width: 94%;
+    box-sizing: border-box;
+
+     .tabs-content{
+      padding: 50px 40px;
+      background-color: #ffffff;
+      border: 1px solid #ebebeb;
+      border-color: #ebebeb;
+      margin-top: -2px;
+     }
+
+    .tab-names-list-01,
+    .tab-names-list-02,
+    .tab-names-list-03,
+    .tab-names-list-04 {
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 16px 38px;
+      border: 1px solid #ebebeb;
+      border-radius: 0px;
+      background-color: #eee;
+      margin-bottom: 0px;
+      color: #6f6d72;
+      text-align: center;
+      margin-right: 2px;
+    }
+  }
+}
