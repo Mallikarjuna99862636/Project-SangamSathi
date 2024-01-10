@@ -7,6 +7,7 @@ import userdp from "../../../assets/images/profile-pic.jpg";
 import "./page1.scss";
 import { Link } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const Page1 = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -18,26 +19,24 @@ const Page1 = () => {
     const selectedCard = userCard[index];
     setSelectedCardDetails(selectedCard);
     setSelectedCardIndex(index);
-    setPopupOpen(true); 
+    setPopupOpen(true);
   };
 
+  const closePopup = () => {
+    setPopupOpen(false);
+    // setPopupOpen(prevState => !prevState);
+    setSelectedCardIndex(null);
+    console.log("Close button clicked");
+  };
 
-const closePopup = () => {
-  setPopupOpen(false); 
-  // setPopupOpen(prevState => !prevState);
-  setSelectedCardIndex(null);
-  console.log("Close button clicked");
-};
-
-// useEffect(() => {
-//   console.log("isPopupOpen before update:", isPopupOpen);  
-//   if (!isPopupOpen) {
-//     console.log("Closing popup...");
-//     closePopup();
-//   }
-//   console.log("isPopupOpen after update:", isPopupOpen);
-// }, [isPopupOpen]);
-  
+  // useEffect(() => {
+  //   console.log("isPopupOpen before update:", isPopupOpen);
+  //   if (!isPopupOpen) {
+  //     console.log("Closing popup...");
+  //     closePopup();
+  //   }
+  //   console.log("isPopupOpen after update:", isPopupOpen);
+  // }, [isPopupOpen]);
 
   useEffect(() => {
     const getData = () => {
@@ -52,7 +51,6 @@ const closePopup = () => {
     getData();
   }, [setUserCard]);
 
- 
   const renderCards = () => {
     const cardSets = [];
     const numberOfCardsPerSlide = 3;
@@ -69,11 +67,11 @@ const closePopup = () => {
               onClick={() => handleCardClick(i + index)}
             >
               <Box className="img-div">
-              <Box className="sub-img-div">
-               <figure>
-               <img className="card-user-dp" src={userdp} alt="user-dp" />
-               </figure>
-              </Box>
+                <Box className="sub-img-div">
+                  <figure>
+                    <img className="card-user-dp" src={userdp} alt="user-dp" />
+                  </figure>
+                </Box>
               </Box>
               <Box className="sub-div1-card1">
                 <Link className="sub-div1-link">
@@ -99,7 +97,7 @@ const closePopup = () => {
                 <div className="popup-content">
                   <h2>{selectedCardDetails.name}</h2>
                   <h2>{selectedCardDetails.id}</h2>
-                   <button onClick={closePopup}>Close</button> 
+                  <button onClick={closePopup}>Close</button>
                 </div>
               )}
             </Box>
@@ -195,7 +193,10 @@ const closePopup = () => {
           <Box className="sub-div-card1">
             <Box className="img-div">
               <Box className="sub-img-div">
-             <figure><img className="card-user-dp" src={userdp} alt="user-dp" /></figure>
+                <figure>
+                  <img className="card-user-dp" src={userdp} alt="user-dp" />
+                </figure>
+                <FavoriteIcon className="heart-icon" fontSize="small" />
               </Box>
             </Box>
             <Box className="sub-div1-card1">
@@ -223,8 +224,10 @@ const closePopup = () => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-            <Box className="sub-img-div-1">
-             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
+              <Box className="sub-img-div-1">
+                <figure>
+                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+                </figure>
               </Box>
             </Box>
             <Box className="sub-div1-card2">
@@ -251,9 +254,11 @@ const closePopup = () => {
           {/* Third Div Start here  */}
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-            <Box className="sub-img-div-1">
-             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
-            </Box>
+              <Box className="sub-img-div-1">
+                <figure>
+                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+                </figure>
+              </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
@@ -288,10 +293,12 @@ const closePopup = () => {
         <Stack className="sub-card-stack-div">
           <Box className="sub-div-card1">
             <Box className="img-div">
-            <Box className="sub-img-div">
-            <figure> <img className="card-user-dp" src={userdp} alt="user-dp" /></figure> 
-              
-            </Box>
+              <Box className="sub-img-div">
+                <figure>
+                  {" "}
+                  <img className="card-user-dp" src={userdp} alt="user-dp" />
+                </figure>
+              </Box>
             </Box>
             <Box className="sub-div1-card1">
               <Link className="sub-div1-link">
@@ -318,9 +325,11 @@ const closePopup = () => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-            <Box className="sub-img-div-1">
-              <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure>
-            </Box>
+              <Box className="sub-img-div-1">
+                <figure>
+                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+                </figure>
+              </Box>
             </Box>
             <Box className="sub-div1-card2">
               <Link className="sub-div1-link-1">
@@ -348,8 +357,10 @@ const closePopup = () => {
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
-            <Box className="sub-img-div-1">
-             <figure><img className="card-user-dp-1" src={userdp} alt="user-dp" /></figure> 
+              <Box className="sub-img-div-1">
+                <figure>
+                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
+                </figure>
               </Box>
             </Box>
             <Box className="sub-div1-card2">

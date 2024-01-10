@@ -51,9 +51,7 @@ const Search = () => {
       <Box className="radio-div">
         <label className="radio-heading"> First Marriage * </label>
         <input type="radio" id="marrige-yes" name="marrige" value={checkbox} onClick={handleCheckBoxYes}/>Yes
-        {/* <label for="marrige-yes">Yes</label> */}
          <input type="radio" id="marrige-no" name="marrige" value={checkbox} onClick={handleCheckBoxNo}/>No
-        {/* <label for="marrige-no">No</label> */}
         <br/>
       {
         showMarrital && 

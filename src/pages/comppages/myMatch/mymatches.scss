@@ -6,11 +6,12 @@
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: 500;
+    margin: 10px 0px;
   }
 
   .modify-button{
-  height: 30px;
-    margin: 29px 0px 0px 8px;
+    height: 30px;
+    margin: 15px 0px 0px 8px;
     padding: 2px 9px;
     font-size: 11px;
     line-height: 1.5;
@@ -26,7 +27,11 @@
     white-space: normal !important;
     color: #fff;
     background-color: #ff4d4d;
-    border-color: #ff4d4d;
+    cursor: pointer;
+    
+    &:hover{
+       background-color: red;
+    }
   }
 
 }

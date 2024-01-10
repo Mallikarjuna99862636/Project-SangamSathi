@@ -251,6 +251,25 @@
 
         .img-div {
           .sub-img-div {
+            position: relative;
+            .heart-icon {
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin: 10px 20px 5px 0px;
+              z-index: 1;
+              background-color: #fff;
+              border-radius: 4px;
+              padding: 4px 6px;
+              border: 1px solid #ebebeb;
+              color: #ff4d4d;
+              font-size: 15px;
+               &:hover{
+                   color: white;
+                   background-color: #ff4d4d;
+                   border: 1px solid #ff4d4d;
+               }
+            }
             figure {
               margin: 0;
               padding: 0;
@@ -372,7 +391,7 @@
         }
       }
 
-      /* sub-div-card2   CSS Start  aaaa  */ 
+      /* sub-div-card2   CSS Start  aaaa  */
 
       .sub-div-card2 {
         border: 1px solid #e6e5e7;
@@ -406,7 +425,6 @@
               }
             }
           }
-         
         }
 
         .sub-div1-card2 {

@@ -50,8 +50,9 @@ const MyMatches = () => {
     <Box className="mymatches-header-part">
         <h3 className="mymatches-user-name">My Partner Preferences</h3>
         <button className="modify-button"> Modify </button>
-        <Divider />
+        
       </Box>
+      <Divider />
       <Box className="mymatches-card-stack-div">
         {userCard.map((card, index) => (
           <Box
