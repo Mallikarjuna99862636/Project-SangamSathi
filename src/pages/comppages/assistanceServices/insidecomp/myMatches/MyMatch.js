@@ -96,9 +96,9 @@ const MyMatch = () => {
         ))}
       </Box>
 
-      <div className="pagination-div">
+      <div className="mymatch-pagination-div">
         <button
-          className="pagination-previous-button"
+          className="mymatch-pagination-previous-button"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -110,7 +110,7 @@ const MyMatch = () => {
         ).map((page) => (
           <span
             key={page}
-            className={`pagination-number-item ${
+            className={`mymatch-pagination-number-item ${
               page === currentPage ? "active" : ""
             }`}
             onClick={() => handlePageChange(page)}
@@ -119,7 +119,7 @@ const MyMatch = () => {
           </span>
         ))}
         <button
-          className="pagination-next-button"
+          className="mymatch-pagination-next-button"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === Math.ceil(50 / itemsPerPage)}
         >

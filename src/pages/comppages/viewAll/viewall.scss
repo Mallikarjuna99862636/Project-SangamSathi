@@ -1,10 +1,22 @@
-.completed-card-stack-div {
+.viewall-header-part {
+    padding: 5px 10px;
+    .viewall-user-name {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+  
+  }
+  
+  
+  .viewall-card-stack-div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 10px;
   
-    .completed-div-card1 {
+    .viewall-div-card1 {
       position: relative;
       border: 1px solid #e6e5e7;
       padding: 4px;
@@ -14,8 +26,8 @@
       position: relative;
       box-sizing: border-box;
   
-      .completed-img-div {
-        .completed-sub-img-div {
+      .viewall-img-div {
+        .viewall-sub-img-div {
           figure {
             margin: 0;
             padding: 0;
@@ -26,7 +38,7 @@
               bottom: -36px;
               opacity: 1;
             }
-            .completed-card-user-dp {
+            .viewall-card-user-dp {
               width: 100%;
               height: 300px;
               transform: scale(1);
@@ -39,13 +51,13 @@
         }
       }
   
-      .completed-sub-div1-card1 {
+      .viewall-sub-div1-card1 {
         padding: 16px 16px 12px 16px;
         margin-bottom: 6px;
   
-        .completed-sub-div1-link {
+        .viewall-sub-div1-link {
           text-decoration: none;
-          .completed-sub-div1-heading {
+          .viewall-sub-div1-heading {
             margin: 0px 0px 15px 0px;
             max-height: 38px;
             font-size: 17px;
@@ -58,7 +70,7 @@
             }
           }
         }
-        .completed-sub-div1-para {
+        .viewall-sub-div1-para {
           font-size: 14px;
           font-weight: 400;
           color: #6f6d72;
@@ -68,14 +80,14 @@
         }
       }
   
-      .completed-sub-div2-card1 {
+      .viewall-sub-div2-card1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: stretch;
         margin: -4px;
         border-top: 1px solid #e6e5e7;
   
-        .completed-sub-div3-card1 {
+        .viewall-sub-div3-card1 {
           padding: 10px 0px 10px 0px;
           -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -83,19 +95,19 @@
           text-align: center;
           line-height: 1.6;
   
-          .completed-sub-div3-age {
+          .viewall-sub-div3-age {
             font-size: 14px;
             color: #252328;
             font-weight: 500;
           }
   
-          .completed-sub-div3-text {
+          .viewall-sub-div3-text {
             font-size: 12px;
             display: block;
           }
         }
   
-        .completed-sub-div4-card1 {
+        .viewall-sub-div4-card1 {
           padding: 10px 0px 10px 0px;
           -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -103,19 +115,19 @@
           text-align: center;
           line-height: 1.6;
   
-          .completed-sub-div4-age {
+          .viewall-sub-div4-age {
             font-size: 14px;
             color: #252328;
             font-weight: 500;
           }
   
-          .completed-sub-div4-text {
+          .viewall-sub-div4-text {
             font-size: 12px;
             display: block;
           }
         }
   
-        .completed-sub-div5-card1 {
+        .viewall-sub-div5-card1 {
           padding: 10px 0px 10px 0px;
           -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -123,13 +135,13 @@
           text-align: center;
           line-height: 1.6;
   
-          .completed-sub-div5-age {
+          .viewall-sub-div5-age {
             font-size: 14px;
             color: #252328;
             font-weight: 500;
           }
   
-          .completed-sub-div5-text {
+          .viewall-sub-div5-text {
             font-size: 12px;
             display: block;
           }
@@ -137,7 +149,7 @@
       }
     }
   
-    .completed-popup-content {
+    .viewall-popup-content {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -152,13 +164,13 @@
   
   //    Extra Pagenavigation SCSS
   
-  .completed-pagination-div {
+  .viewall-pagination-div {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
   
-    .completed-pagination-previous-button, .completed-pagination-next-button {
+    .viewall-pagination-previous-button, .viewall-pagination-next-button {
       margin: 0 5px;
       padding: 15px 25px;
       cursor: pointer;
@@ -169,17 +181,17 @@
       border: 1px solid #e6e5e7;
       transition: background-color 0.3s;
     }
-    .completed-pagination-previous-button:hover , .completed-pagination-next-button:hover {
+    .viewall-pagination-previous-button:hover , .viewall-pagination-next-button:hover {
       background-color: red;
     }
   
-    .completed-pagination-previous-button:disabled , .completed-pagination-next-button:disabled {
+    .viewall-pagination-previous-button:disabled , .viewall-pagination-next-button:disabled {
       cursor: not-allowed;
       background-color: #ddd;
       color: #666;
     }
   
-    .completed-pagination-number-item{
+    .viewall-pagination-number-item{
       margin: 0 5px;
       padding:  12px 15px;
       color: #252328;
@@ -191,7 +203,7 @@
       transition: background-color 0.3s, color 0.3s;  
     }
   
-    .completed-pagination-number-item:hover {
+    .viewall-pagination-number-item:hover {
       background-color: red;
       color: #fff;
     }

@@ -96,9 +96,9 @@ const Suggestions = () => {
         ))}
       </Box>
 
-      <div className="pagination-div">
+      <div className="suggestions-pagination-div">
         <button
-          className="pagination-previous-button"
+          className="suggestions-pagination-previous-button"
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -110,7 +110,7 @@ const Suggestions = () => {
         ).map((page) => (
           <span
             key={page}
-            className={`pagination-number-item ${
+            className={`suggestions-pagination-number-item ${
               page === currentPage ? "active" : ""
             }`}
             onClick={() => handlePageChange(page)}
@@ -119,7 +119,7 @@ const Suggestions = () => {
           </span>
         ))}
         <button
-          className="pagination-next-button"
+          className="suggestions-pagination-next-button"
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === Math.ceil(50 / itemsPerPage)}
         >

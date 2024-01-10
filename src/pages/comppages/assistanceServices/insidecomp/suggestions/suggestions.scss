@@ -152,13 +152,13 @@
   
   //    Extra Pagenavigation SCSS
   
-  .pagination-div {
+  .suggestions-pagination-div {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
   
-    .pagination-previous-button, .pagination-next-button {
+    .suggestions-pagination-previous-button, .suggestions-pagination-next-button {
       margin: 0 5px;
       padding: 15px 25px;
       cursor: pointer;
@@ -169,17 +169,17 @@
       border: 1px solid #e6e5e7;
       transition: background-color 0.3s;
     }
-    .pagination-previous-button:hover , .pagination-next-button:hover {
+    .suggestions-pagination-previous-button:hover , .suggestions-pagination-next-button:hover {
       background-color: red;
     }
   
-    .pagination-previous-button:disabled , .pagination-next-button:disabled {
+    .suggestions-pagination-previous-button:disabled , .suggestions-pagination-next-button:disabled {
       cursor: not-allowed;
       background-color: #ddd;
       color: #666;
     }
   
-    .pagination-number-item{
+    .suggestions-pagination-number-item{
       margin: 0 5px;
       padding:  12px 15px;
       color: #252328;
@@ -191,7 +191,7 @@
       transition: background-color 0.3s, color 0.3s;  
     }
   
-    .pagination-number-item:hover {
+    .suggestions-pagination-number-item:hover {
       background-color: red;
       color: #fff;
     }

@@ -49,6 +49,7 @@ const MyMatches = () => {
     <Box>
     <Box className="mymatches-header-part">
         <h3 className="mymatches-user-name">My Partner Preferences</h3>
+        <button className="modify-button"> Modify </button>
         <Divider />
       </Box>
       <Box className="mymatches-card-stack-div">

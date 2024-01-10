@@ -22,8 +22,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 
 const Sidebar = () => {
+   
 
-  
   return (
     <Box className="sidebar-main-container">
      
@@ -123,14 +123,13 @@ const Sidebar = () => {
               <h4 className="sidebar-lists">Search  </h4>
               </Link>
             </ListItemButton>
-            <ListItemButton className="list-items-buttons  ">
+            <ListItemButton className="list-items-buttons">
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <LogoutIcon />
               </ListItemIcon>
-              <Link className="links" to="/logout">
-              {/* <ListItemText primary="Logout" /> */}
+              <Link className="links" to='/confirmlogout' >
               <h4 className="sidebar-lists">Logout  </h4>
-              </Link>
+                </Link>
             </ListItemButton>
           </List>
         </Box>

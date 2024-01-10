@@ -10,7 +10,7 @@ import MyInterests from "../comppages/myInterests/MyInterests";
 import AssistanceServices from "../comppages/assistanceServices/AssistanceServices";
 import ViewAll from "../comppages/viewAll/ViewAll";
 import Search from "../comppages/search/Search";
-import Logout from "../comppages/logout/Logout";
+// import Logout from "../comppages/logout/Logout";
 // import { useDispatch, useSelector } from "react-redux";
 // import { selectUser, userLogout } from "../../Redux/reduxData/DataRedux";
 
@@ -37,7 +37,7 @@ const Dashboard1 = ({open}) => {
             />
             <Route path="view-all" element={<ViewAll />} />
             <Route path="search" element={<Search />} />
-            <Route path="logout" element={<Logout />} />
+            {/* <Route path="logout" element={<Logout />} /> */}
           </Route>
         </Routes>
       </div>
