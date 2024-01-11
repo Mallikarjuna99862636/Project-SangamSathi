@@ -252,6 +252,14 @@
         .img-div {
           .sub-img-div {
             position: relative;
+
+            .silver-img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              margin: 10px 0px 0px 10px;
+              z-index: 1;
+            }
             .heart-icon {
               position: absolute;
               top: 0;

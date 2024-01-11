@@ -1,27 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { Box, Divider } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Dialog,
+  DialogContent,
+  DialogActions,
+  Tab,
+  Tabs,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import userdps from "../../../assets/images/profile-pic.jpg";
 import "./viewall.scss";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import premiumimg from "../../../assets/images/premiumImg.jpg";
+import CancelIcon from '@mui/icons-material/Cancel';
+import AboutPop from "./popupContent/aboutPop/AboutPop";
+import FamilyPop from "./popupContent/familyPop/FamilyPop";
+import EducationPop from "./popupContent/educationPop/EducationPop";
+import LifestylePop from "./popupContent/lifeStylePop/LifestylePop";
+import PreferencePop from "./popupContent/preferencePop/PreferencePop";
+
+
 
 const ViewAll = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
   const [userCard, setUserCard] = useState([]);
   const [selectedCardDetails, setSelectedCardDetails] = useState({});
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+
+  const [details, setDetails] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setDetails(newValue);
+  };
 
   const handleCardClick = (index) => {
     const selectedCard = userCard[index];
     setSelectedCardDetails(selectedCard);
-    setSelectedCardIndex(index);
-    setPopupOpen(true);
+    setOpenDialog(true);
   };
 
-  const closePopup = () => {
-    setPopupOpen(false);
-    setSelectedCardIndex(null);
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
     console.log("Close button clicked");
   };
 
@@ -45,9 +66,25 @@ const ViewAll = () => {
     getData(currentPage);
   }, [currentPage]);
 
+  const renderContent = () => {
+    switch (details) {
+      case 0:
+        return <AboutPop />;
+      case 1:
+        return <FamilyPop />;
+      case 2:
+        return <EducationPop />;
+      case 3:
+        return <LifestylePop />;
+      case 4:
+        return <PreferencePop />;
+      default:
+        return null;
+    }
+  };
   return (
     <Box>
-    <Box className="viewall-header-part">
+      <Box className="viewall-header-part">
         <h3 className="viewall-user-name">View All</h3>
         <Divider />
       </Box>
@@ -67,6 +104,12 @@ const ViewAll = () => {
                     alt="user-dp"
                   />
                 </figure>
+                <img
+                  src={premiumimg}
+                  className="viewall-premium-img"
+                  alt="premium-img"
+                />
+                <FavoriteIcon className="viewall-heart-icon" fontSize="small" />
               </Box>
             </Box>
             <Box className="viewall-sub-div1-card1">
@@ -89,16 +132,70 @@ const ViewAll = () => {
                 <span className="viewall-sub-div5-text">Reg No</span>
               </Box>
             </Box>
-            {popupOpen && selectedCardIndex === index && (
-              <div className="viewall-popup-content">
-                <h2>{selectedCardDetails.name}</h2>
-                <h2>{selectedCardDetails.id}</h2>
-                <button onClick={closePopup}>Close</button>
-              </div>
-            )}
           </Box>
         ))}
       </Box>
+
+      <Dialog
+        maxWidth="md"
+        open={openDialog}
+        onClose={handleCloseDialog}
+        PaperProps={{
+          style: {
+            top: "15%",
+            left: "33%",
+            transform: "translate(-50%, -50%)",
+            padding : "0px"
+          },
+        }}
+      >
+        <Box className="popup-list">
+          <DialogContent maxWidth="md" style={{ padding: '0px' }}>
+            <Box className="user-name-age" >
+              <h3 className="user-name-details-heading">
+                {" "}
+                Akshatha N L , 27 Years (Last Seen: 3/27/23 12:31 PM){" "}
+                {selectedCardDetails.id}
+              </h3>
+              <DialogActions>
+                {/* <Button onClick={handleCloseDialog}>Close</Button> */}
+               <CancelIcon className="cancel-icon" onClick={handleCloseDialog}/>
+              </DialogActions>
+            </Box>
+            <Box className="user-other-details" >
+              <Box>
+                <img className="user-profile-pic" src={userdps} alt="user-dp" />
+              </Box>
+              <Box className="viewall-tabs-list">
+                <Box>
+                  <Tabs
+                    className="viewall-tabs"
+                    value={details}
+                    onChange={handleChange}
+                    centered
+                  >
+                    <Tab className="viewall-tab-names-list-01" label="About" />
+                    <Tab className="viewall-tab-names-list-02" label="Family" />
+                    <Tab
+                      className="viewall-tab-names-list-03"
+                      label="Education"
+                    />
+                    <Tab
+                      className="viewall-tab-names-list-04"
+                      label="LifeStyle"
+                    />
+                    <Tab
+                      className="viewall-tab-names-list-05"
+                      label="Preference"
+                    />
+                  </Tabs>
+                  <Box className="viewall-tabs-content">{renderContent()}</Box>
+                </Box>
+              </Box>
+            </Box>
+          </DialogContent>
+        </Box>
+      </Dialog>
 
       <div className="viewall-pagination-div">
         <button

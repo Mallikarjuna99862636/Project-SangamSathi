@@ -4,6 +4,7 @@ import icon1 from "../../../assets/images/wedding-arch.png";
 import icon2 from "../../../assets/images/love-letter.png";
 import icon3 from "../../../assets/images/chat.png";
 import userdp from "../../../assets/images/profile-pic.jpg";
+import silverimg from '../../../assets/images/silverImg.jpg';
 import "./page1.scss";
 import { Link } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
@@ -118,11 +119,11 @@ const Page1 = () => {
       <Box className="dash-sub-div-01">
         <Box className="dash-sub-div-02">
           <h1 className="dash-heading-01">
-            {" "}
+      
             Assistance service available @ 1599/-{" "}
           </h1>
           <h3 className="dash-heading-02">
-            {" "}
+          
             For Selected 10 Profiles (Validity - 60 days){" "}
           </h3>
           <button className="info-button">
@@ -143,7 +144,7 @@ const Page1 = () => {
           </Box>
           <Box className="view-all-link-01">
             <Link className="link-one">
-              {" "}
+  
               <p>View All</p>
             </Link>
           </Box>
@@ -196,6 +197,7 @@ const Page1 = () => {
                 <figure>
                   <img className="card-user-dp" src={userdp} alt="user-dp" />
                 </figure>
+                <img src={silverimg} className="silver-img" alt="silver-img" />
                 <FavoriteIcon className="heart-icon" fontSize="small" />
               </Box>
             </Box>
