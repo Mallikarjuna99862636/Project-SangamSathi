@@ -13,14 +13,13 @@ import userdps from "../../../assets/images/profile-pic.jpg";
 import "./viewall.scss";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import premiumimg from "../../../assets/images/premiumImg.jpg";
-import CancelIcon from '@mui/icons-material/Cancel';
+import CancelIcon from "@mui/icons-material/Cancel";
 import AboutPop from "./popupContent/aboutPop/AboutPop";
 import FamilyPop from "./popupContent/familyPop/FamilyPop";
 import EducationPop from "./popupContent/educationPop/EducationPop";
 import LifestylePop from "./popupContent/lifeStylePop/LifestylePop";
 import PreferencePop from "./popupContent/preferencePop/PreferencePop";
-
-
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
 
 const ViewAll = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -142,27 +141,30 @@ const ViewAll = () => {
         onClose={handleCloseDialog}
         PaperProps={{
           style: {
-            top: "15%",
+            top: "45%",
             left: "33%",
             transform: "translate(-50%, -50%)",
-            padding : "0px"
+            padding: "0px",
+            overflow : 'none'
           },
         }}
       >
         <Box className="popup-list">
-          <DialogContent maxWidth="md" style={{ padding: '0px' }}>
-            <Box className="user-name-age" >
+          <DialogContent maxWidth="md" style={{ padding: "0px" }}>
+            <Box className="user-name-age">
               <h3 className="user-name-details-heading">
                 {" "}
                 Akshatha N L , 27 Years (Last Seen: 3/27/23 12:31 PM){" "}
                 {selectedCardDetails.id}
               </h3>
               <DialogActions>
-                {/* <Button onClick={handleCloseDialog}>Close</Button> */}
-               <CancelIcon className="cancel-icon" onClick={handleCloseDialog}/>
+                <CancelIcon
+                  className="cancel-icon"
+                  onClick={handleCloseDialog}
+                />
               </DialogActions>
             </Box>
-            <Box className="user-other-details" >
+            <Box className="user-other-details">
               <Box>
                 <img className="user-profile-pic" src={userdps} alt="user-dp" />
               </Box>
@@ -190,6 +192,27 @@ const ViewAll = () => {
                     />
                   </Tabs>
                   <Box className="viewall-tabs-content">{renderContent()}</Box>
+                </Box>
+              </Box>
+            </Box>
+            <Divider />
+            <Box>
+              <Box className="viewall-main-container-card1">
+                <Box className="viewall-container-card1">
+                  <FmdGoodIcon className="security-icon" />
+                  <Box className="viewall-sub-container-card1">
+                    <h4 className="viewall-trusted-heading-2"> Verified </h4>
+                    <ul className="list-items">
+                      <li>Email</li>
+                      <li>Mobile</li>
+                      <li>Image</li>
+                    </ul>
+                  </Box>
+                </Box>
+                <Box>
+                  <button className="express-interest-button">
+                    Express Interest
+                  </button>
                 </Box>
               </Box>
             </Box>
