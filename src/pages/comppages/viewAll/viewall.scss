@@ -5,6 +5,7 @@
   box-sizing: border-box;
   height: calc(100% - 67px);
   width: calc(100% - 250px);
+}
   .viewall-header-part {
     padding: 5px 10px;
     .viewall-user-name {
@@ -180,18 +181,130 @@
       }
     }
 
-    .viewall-popup-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 1;
+    
+  }
+
+  
+
+  // PopUp CSS here
+
+  .dialog-main-content {
+    .popup-list {
+      .user-name-age {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        background-color: #ff4d4d;
+        .user-name-details-heading {
+          margin: 0;
+        }
+        .cancel-icon {
+          margin-top: -6px;
+        }
+      }
+      .user-other-details {
+        display: flex;
+        margin: 0px 15px;
+
+        .user-profile-pic {
+          margin-top: 20px;
+          width: 230px;
+          height: 270px;
+        }
+        .viewall-tabs-list {
+          margin-left: 10px;
+          .viewall-tabs {
+            // width: 200px;
+            .viewall-tab-names-list-01,
+            .viewall-tab-names-list-02,
+            .viewall-tab-names-list-03,
+            .viewall-tab-names-list-04,
+            .viewall-tab-names-list-05 {
+              text-transform: capitalize;
+              font-weight: 600;
+            }
+          }
+
+          .viewall-tabs-content {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .viewall-main-container-card1 {
+        display: flex;
+        justify-content: space-between;
+        .viewall-container-card1 {
+          background-color: #fff;
+          border: 1px solid #e6e5e7;
+          padding: 10px;
+          margin: 10px 0px 10px 25px;
+          box-sizing: border-box;
+          display: flex;
+          width: 48%;
+          height: 120px;
+          border-radius: 2px;
+          .security-icon-img {
+            width: 60px;
+            height: 65px;
+            margin-top: 5px;
+            margin-right: 10px;
+          }
+
+          .viewall-sub-container-card1 {
+            margin-top: 5px;
+            margin-left: 12px;
+
+            .viewall-trusted-heading-2 {
+              margin: 0;
+              font-size: 18px;
+              line-height: 26px;
+              color: #252328;
+              font-weight: 500;
+              text-align: left;
+            }
+
+            .list-items {
+              display: inline-flex;
+              list-style: none;
+              padding: 0;
+            }
+
+            .list-items li {
+              padding: 0px 5px;
+              font-size: 16px;
+              line-height: 26px;
+              color: #6f6d72;
+              font-weight: 500;
+            }
+          }
+        }
+        .express-interest-button {
+          background-color: #0099fe;
+          color: #fff;
+          border: none;
+          margin: 55px 10px 0px 0px;
+          padding: 20px 20px;
+          font-size: 12px;
+          font-weight: 700;
+          border-radius: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.5s;
+          word-wrap: break-word;
+          white-space: normal !important;
+        }
+      }
     }
   }
+
 
   //    Extra Pagenavigation SCSS
 
@@ -248,120 +361,5 @@
     }
   }
 
-  // PopUp CSS here
 
-  .popup-list {
-    .user-name-age {
-      display: flex;
-      justify-content: space-between;
-      color: white;
-      font-size: 16px;
-      font-weight: 400;
-      align-items: flex-start;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      padding: 1rem;
-      border-bottom: 1px solid #e9ecef;
-      background-color: #ff4d4d;
-      .user-name-details-heading {
-        margin: 0;
-      }
-      .cancel-icon {
-        margin-top: -6px;
-      }
-    }
-    .user-other-details {
-      display: flex;
-      margin: 0px 15px;
 
-      .user-profile-pic {
-        margin-top: 20px;
-        width: 230px;
-        height: 270px;
-      }
-      .viewall-tabs-list {
-        margin-left: 10px;
-        .viewall-tabs {
-          // width: 200px;
-          .viewall-tab-names-list-01,
-          .viewall-tab-names-list-02,
-          .viewall-tab-names-list-03,
-          .viewall-tab-names-list-04,
-          .viewall-tab-names-list-05 {
-            text-transform: capitalize;
-            font-weight: 600;
-          }
-        }
-
-        .viewall-tabs-content {
-          margin-left: 20px;
-        }
-      }
-    }
-
-    .viewall-main-container-card1 {
-      display: flex;
-      justify-content: space-between;
-      .viewall-container-card1 {
-        background-color: #fff;
-        border: 1px solid #e6e5e7;
-        padding: 10px;
-        margin: 10px 0px 10px 25px;
-        box-sizing: border-box;
-        display: flex;
-        width: 48%;
-        height: 120px;
-        border-radius: 2px;
-        .security-icon-img {
-          width: 60px;
-          height: 65px;
-          margin-top: 5px;
-          margin-right: 10px;
-        }
-
-        .viewall-sub-container-card1 {
-          margin-top: 5px;
-          margin-left: 12px;
-
-          .viewall-trusted-heading-2 {
-            margin: 0;
-            font-size: 18px;
-            line-height: 26px;
-            color: #252328;
-            font-weight: 500;
-            text-align: left;
-          }
-
-          .list-items {
-            display: inline-flex;
-            list-style: none;
-            padding: 0;
-          }
-
-          .list-items li {
-            padding: 0px 5px;
-            font-size: 16px;
-            line-height: 26px;
-            color: #6f6d72;
-            font-weight: 500;
-          }
-        }
-      }
-      .express-interest-button {
-        background-color: #0099fe;
-        color: #fff;
-        border: none;
-        margin: 55px 10px 0px 0px;
-        padding: 20px 20px;
-        font-size: 12px;
-        font-weight: 700;
-        border-radius: 2px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.5s;
-        word-wrap: break-word;
-        white-space: normal !important;
-      }
-    }
-  }
-}

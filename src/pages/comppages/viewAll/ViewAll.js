@@ -141,6 +141,7 @@ const ViewAll = () => {
       </Box>
 
       <Dialog
+        className ="dialog-main-content"
         maxWidth="md"
         open={openDialog}
         onClose={handleCloseDialog}
