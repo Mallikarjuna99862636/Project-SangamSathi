@@ -19,7 +19,9 @@ import FamilyPop from "./popupContent/familyPop/FamilyPop";
 import EducationPop from "./popupContent/educationPop/EducationPop";
 import LifestylePop from "./popupContent/lifeStylePop/LifestylePop";
 import PreferencePop from "./popupContent/preferencePop/PreferencePop";
-import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import securePayment from '../../../assets/images/secure-payment.png' 
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const ViewAll = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -82,7 +84,10 @@ const ViewAll = () => {
     }
   };
   return (
-    <Box>
+    <>
+    <Dashheader/>
+    <Sidebar/>
+    <Box className="viewall-main-container">
       <Box className="viewall-header-part">
         <h3 className="viewall-user-name">View All</h3>
         <Divider />
@@ -141,8 +146,9 @@ const ViewAll = () => {
         onClose={handleCloseDialog}
         PaperProps={{
           style: {
+            position : 'fixed',
             top: "45%",
-            left: "33%",
+            left: "50%",
             transform: "translate(-50%, -50%)",
             padding: "0px",
             overflow : 'none'
@@ -199,7 +205,7 @@ const ViewAll = () => {
             <Box>
               <Box className="viewall-main-container-card1">
                 <Box className="viewall-container-card1">
-                  <FmdGoodIcon className="security-icon" />
+                  <img className="security-icon-img" src={securePayment} alt="securePayment" />
                   <Box className="viewall-sub-container-card1">
                     <h4 className="viewall-trusted-heading-2"> Verified </h4>
                     <ul className="list-items">
@@ -251,6 +257,7 @@ const ViewAll = () => {
         </button>
       </div>
     </Box>
+    </>
   );
 };
 

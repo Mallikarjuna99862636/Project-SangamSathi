@@ -26,13 +26,12 @@ const App = styled(AppBar)`
   border-bottom : 1px solid rgb(235, 235, 235);
 `;
 
-const Dashheader = ({render}) => {
+const Dashheader = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(null);
 
   const handleLogout = () => {
     navigate("/confirmlogout");
-    render(false)
   };
 
   const handleClick = (event) => {

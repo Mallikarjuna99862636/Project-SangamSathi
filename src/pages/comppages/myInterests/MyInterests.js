@@ -5,6 +5,8 @@ import Accepted from "./insidepage/accepted/Accepted";
 import Requests from "./insidepage/requests/Requests";
 import Sent from "./insidepage/sent/Sent";
 import Pending from "./insidepage/pending/Pending";
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const MyInterests = () => {
   const count = 1
@@ -30,6 +32,9 @@ const MyInterests = () => {
   };
 
   return (
+    <>
+    <Dashheader/>
+    <Sidebar/>
     <Box className="myinterests-page-container">
       <Box className="myinterests-header-part">
         <h3 className="myinterests-user-name">Interested Profile</h3>
@@ -47,6 +52,7 @@ const MyInterests = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };
 

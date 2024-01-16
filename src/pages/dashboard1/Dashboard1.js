@@ -1,31 +1,28 @@
 import React from "react";
 import Dashheader from "../dashHeader/Dashheader";
 import Sidebar from "../sidebar/Sidebar";
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
 import Page1 from "../comppages/page1/Page1";
 import "./dashboard.scss";
-import Profile from "../comppages/page2/Profile";
-import MyMatches from "../comppages/myMatch/MyMatches";
-import MyInterests from "../comppages/myInterests/MyInterests";
-import AssistanceServices from "../comppages/assistanceServices/AssistanceServices";
-import ViewAll from "../comppages/viewAll/ViewAll";
-import Search from "../comppages/search/Search";
+// import Profile from "../comppages/page2/Profile";
+// import MyMatches from "../comppages/myMatch/MyMatches";
+// import MyInterests from "../comppages/myInterests/MyInterests";
+// import AssistanceServices from "../comppages/assistanceServices/AssistanceServices";
+// import ViewAll from "../comppages/viewAll/ViewAll";
+// import Search from "../comppages/search/Search";
 // import Logout from "../comppages/logout/Logout";
 // import { useDispatch, useSelector } from "react-redux";
 // import { selectUser, userLogout } from "../../Redux/reduxData/DataRedux";
 
-const Dashboard1 = ({open}) => {
-  // const user = useSelector(selectUser)
-  //  const dispatch = useDispatch()
-  //  const handleLogout =(e)=>{
-  //      dispatch(userLogout())
-  //  }
+const Dashboard1 = () => {
+  
   return (
     <div>
-      <Dashheader render={open} />
+      <Dashheader  />
       <Sidebar />
       <div className="pages">
-        <Routes>
+      <Page1 />
+        {/* <Routes>
           <Route path="/">
             <Route path="dashboard" element={<Page1 />} />
             <Route path="profile" element={<Profile />} />
@@ -37,9 +34,8 @@ const Dashboard1 = ({open}) => {
             />
             <Route path="view-all" element={<ViewAll />} />
             <Route path="search" element={<Search />} />
-            {/* <Route path="logout" element={<Logout />} /> */}
           </Route>
-        </Routes>
+        </Routes> */}
       </div>
     </div>
   );

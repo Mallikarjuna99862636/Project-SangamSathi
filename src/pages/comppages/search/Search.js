@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 import "./search.scss";
 import jsonData from "../../../Jsondata/data.json";
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const Search = () => {
   const datas = jsonData;
@@ -36,6 +38,9 @@ const Search = () => {
     }
 
   return (
+    <>
+    <Dashheader/>
+    <Sidebar/>
     <Box className="search-main-container">
       <Box className="search-header-part">
         <h3 className="search-user-name">Profile Based On Preference</h3>
@@ -260,6 +265,7 @@ const Search = () => {
         <button className="search-reset-button"> Reset</button>
       </Box>
     </Box>
+    </>
   );
 };
 

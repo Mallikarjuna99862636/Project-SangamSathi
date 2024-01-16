@@ -7,6 +7,8 @@ import Selected from "./insidecomp/selected/Selected";
 import OnProcess from "./insidecomp/onProcess/OnProcess";
 import Completed from "./insidecomp/completed/Completed";
 import Rejected from "./insidecomp/rejected/Rejected";
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const AssistanceServices = () => {
   const indexNum = 2;
@@ -36,6 +38,9 @@ const AssistanceServices = () => {
   };
 
   return (
+    <>
+     <Dashheader/>
+     <Sidebar/>
     <Box className="assistanceservices-page-container">
       <Box className="assistanceservices-header-part">
         <h3 className="assistanceservices-user-name">RamaS (SGM001) 9876543210</h3>
@@ -55,6 +60,7 @@ const AssistanceServices = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };
 

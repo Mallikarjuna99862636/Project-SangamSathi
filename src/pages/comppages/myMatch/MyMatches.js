@@ -3,6 +3,8 @@ import { Box, Divider } from "@mui/material";
 import { Link } from "react-router-dom";
 import userdps from "../../../assets/images/profile-pic.jpg";
 import "./mymatches.scss";
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const MyMatches = () => {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -46,7 +48,10 @@ const MyMatches = () => {
   }, [currentPage]);
 
   return (
-    <Box>
+    <>
+    <Dashheader/>
+    <Sidebar/>
+    <Box className='mymatches-main-container'>
     <Box className="mymatches-header-part">
         <h3 className="mymatches-user-name">My Partner Preferences</h3>
         <button className="modify-button"> Modify </button>
@@ -133,6 +138,7 @@ const MyMatches = () => {
         </button>
       </div>
     </Box>
+    </>
   );
 };
 

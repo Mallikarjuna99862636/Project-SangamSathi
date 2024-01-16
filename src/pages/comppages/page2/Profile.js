@@ -9,6 +9,8 @@ import LifeStyle from "./insidepages/lifeStyle/LifeStyle";
 import ParentsPrefer from "./insidepages/parentsPreference/ParentsPrefer";
 import Others from "./insidepages/others/Others";
 import PrivacySetting from "./insidepages/privacySetting/PrivacySetting";
+import Dashheader from "../../dashHeader/Dashheader";
+import Sidebar from "../../sidebar/Sidebar";
 
 const Profile = () => {
   const [value, setValue] = useState(0);
@@ -41,6 +43,9 @@ const Profile = () => {
   };
 
   return (
+    <>
+     <Dashheader/>
+     <Sidebar/>
     <Box className="profile-page-container">
       <Box className="profile-header-part">
         <h3 className="profile-user-name"> My Profile</h3>
@@ -64,6 +69,7 @@ const Profile = () => {
         </Box>
       </Box>
     </Box>
+    </>
   );
 };
 

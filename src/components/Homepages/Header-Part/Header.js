@@ -11,7 +11,7 @@ const App = styled(AppBar)`
   background-color: #eee6e65e;
 `;
 
-const Header = ({ open }) => {
+const Header = () => {
   const navigate = useNavigate();
 
   const handleRegistrarButton = () => {
@@ -30,7 +30,7 @@ const Header = ({ open }) => {
           </button>
         </Toolbar>
       </App>
-      <Body render={open} />
+      <Body  />
     </Box>
   );
 };

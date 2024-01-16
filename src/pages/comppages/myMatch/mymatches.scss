@@ -1,6 +1,14 @@
+.mymatches-main-container{
+  height: 100vh;
+  overflow-y: auto;
+  margin: 67px 0px 0px 250px;
+  box-sizing: border-box;
+  height: calc(100% - 67px);
+  width: calc(100% - 250px);
 .mymatches-header-part {
   padding: 5px 10px;
   display: flex;
+  
   .mymatches-user-name {
     text-align: left;
     font-size: 24px;
@@ -239,4 +247,5 @@
     background-color: red;
     color: #fff;
   }
+}
 }

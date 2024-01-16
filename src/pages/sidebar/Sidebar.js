@@ -64,7 +64,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <ExploreIcon />
               </ListItemIcon>
-              <Link className="links " to="/dashboard">
+              <Link className="links " to="/user/dashboard">
                 {/* <ListItemText  primary="Dashboard" /> */}
                 <h4 className="sidebar-lists">Dashboard  </h4>
               </Link>
@@ -73,7 +73,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <PersonIcon />
               </ListItemIcon>
-              <Link className="links active" to='/profile'>
+              <Link className="links active" to='/user/profile'>
               {/* <ListItemText  primary="Profile" /> */}
               <h4 className="sidebar-lists">Profile  </h4>
               </Link>
@@ -82,7 +82,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <FormatListBulletedIcon />
               </ListItemIcon>
-              <Link className="links" to="/my-matches" >
+              <Link className="links" to="/user/my-matches" >
               {/* <ListItemText primary="My Matches"  />  */}
               <h4 className="sidebar-lists">My Matches  </h4>
               </Link>
@@ -91,7 +91,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <GroupIcon />
               </ListItemIcon>
-              <Link className="links" to="/my-interests">
+              <Link className="links" to="/user/my-interests">
               {/* <ListItemText primary="My Interests" /> */}
               <h4 className="sidebar-lists">My Interests  </h4>
               </Link>
@@ -100,7 +100,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <CalculateIcon />
               </ListItemIcon>
-              <Link className="links" to="/assistance-services">
+              <Link className="links" to="/user/assistance-services">
               {/* <ListItemText primary="Assistance Services" /> */}
               <h4 className="sidebar-lists">Assistance Services  </h4>
               </Link>
@@ -109,7 +109,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <CalculateIcon />
               </ListItemIcon>
-              <Link className="links" to="/view-all">
+              <Link className="links" to="/user/view-all">
               {/* <ListItemText primary="View All" /> */}
               <h4 className="sidebar-lists">View All  </h4>
               </Link>
@@ -118,7 +118,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <GroupIcon />
               </ListItemIcon>
-              <Link className="links" to="/search">
+              <Link className="links" to="/user/search">
               {/* <ListItemText primary="Search" /> */}
               <h4 className="sidebar-lists">Search  </h4>
               </Link>

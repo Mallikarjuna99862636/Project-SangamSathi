@@ -5,10 +5,10 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Link, useNavigate } from "react-router-dom";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import DisabledByDefaultIcon from "@mui/icons-material/DisabledByDefault";
-import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import FeaturedVideoIcon from "@mui/icons-material/FeaturedVideo";
 import Footer from "../Homepages/Footer-Part/Footer";
 import logo4 from "../../assets/images/sangam-sathi-logo.png";
+import securePayment from '../../assets/images/secure-payment.png'
 
 const CheckedIcon = styled(CheckBoxIcon)`
   color: green;
@@ -258,7 +258,7 @@ const RegistrationPage = () => {
         </Box>
         <Stack direction="row" spacing={3} className="trusted-stack">
           <Box className="container-card1">
-            <FmdGoodIcon style={{ fontSize: "64px" }} />
+          <img className="security-icon-img" src={securePayment} alt="securePayment" />
             <Box>
               <h4 className="trusted-heading-2"> Secure Payment </h4>
               <h4 className="trusted-heading-3">

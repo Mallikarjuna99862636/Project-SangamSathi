@@ -7,7 +7,7 @@ import Footer from "../Footer-Part/Footer";
 import { useNavigate , Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../../../Redux/reduxData/DataRedux";
-const Body = ({render}) => {
+const Body = () => {
 
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
@@ -33,8 +33,7 @@ const Body = ({render}) => {
   
    const handleDashboard=()=>{
       if(email==="malli@gmail.com" && password==="1234"){
-           navigate("/dashboard");
-             render(true)
+           navigate("/user/dashboard");
       }
    }
 
