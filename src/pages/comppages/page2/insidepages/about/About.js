@@ -11,7 +11,7 @@ import "./about.scss";
 import CancelIcon from "@mui/icons-material/Cancel";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 
-const About = () => {
+const About = ({render}) => {
   const [pincode, setPincode] = useState("583115");
   const [address, setAddress] = useState("Bengalore");
   const [occupationCountry, setOccupationCountry] = useState("India");
@@ -51,6 +51,7 @@ const About = () => {
     setAddress(newAddress);
     setPincode(newPincode);
     handleCloseDialog();
+    render(true)
   };
 
 
@@ -59,6 +60,7 @@ const About = () => {
     const newoccupationCountry = e.target.elements.occupationCountry.value;
     setOccupationCountry(newoccupationCountry);
     handleCloseCountryDialog();
+    render(true)
   };
 
   const handleLanguageSubmit = (e) => {
@@ -66,6 +68,7 @@ const About = () => {
     const newLanguage = e.target.elements.language.value;
     setLanguage(newLanguage);
     handleCloseLanguageDialog();
+    render(true)
   };
 
   

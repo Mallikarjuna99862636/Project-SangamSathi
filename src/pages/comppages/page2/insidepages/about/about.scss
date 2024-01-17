@@ -1,5 +1,4 @@
 .about-main-container {
-  // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   margin: 30px;
   .about-stack-container {
     display: grid;
@@ -48,8 +47,8 @@
       color: #252328;
       margin: 0px 0px 15px 0px;
       font-weight: 600;
-      font-family: "Rubik", sans-serif;
     }
+
     .edit-icon {
       padding-left: 5px;
       position: relative;
@@ -79,8 +78,7 @@
   }
 }
 
-  // Address And Pin Change PopUp Dialog 
- 
+// Address And Pin Change PopUp Dialog
 
 .addess-edit-popup-list {
   .addess-edit-popup-div1 {
@@ -106,7 +104,7 @@
   //  Main Content Css like Textarea button input text
 
   .addess-edit-div {
-      padding: 10px;
+    padding: 10px;
     .addess-edit-popup-div2 {
       .addess-edit-popup-div2-label {
         display: inline-block;
@@ -144,7 +142,7 @@
         line-height: 2.3;
       }
       .addess-pincode {
-      margin-bottom: 10px;
+        margin-bottom: 10px;
         width: 90%;
         height: auto;
         color: #343031;
@@ -162,12 +160,12 @@
 
     //  Buttons Css
     .edit-changes-button {
-    padding: 10px;
-    display: flex;
-    justify-content: end;
+      padding: 10px;
+      display: flex;
+      justify-content: end;
       .close-button {
-      margin: 5px;
-      border: none;
+        margin: 5px;
+        border: none;
         font-size: 13px;
         height: 50px;
         font-weight: 400;
@@ -188,8 +186,8 @@
       }
 
       .save-changes-button {
-       margin: 5px;
-      border: none;
+        margin: 5px;
+        border: none;
         font-size: 13px;
         height: 50px;
         font-weight: 400;
@@ -211,4 +209,3 @@
     }
   }
 }
-

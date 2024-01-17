@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Divider, Tab, Tabs } from "@mui/material";
+import { Box, Divider, Tab, Tabs , Alert , Snackbar } from "@mui/material";
 import "./profile.scss";
 import About from "./insidepages/about/About";
 import FamilyReligious from "./insidepages/familyReligious/FamilyReligious";
@@ -14,6 +14,15 @@ import Sidebar from "../../sidebar/Sidebar";
 
 const Profile = () => {
   const [value, setValue] = useState(0);
+  const [open, setOpen] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -22,9 +31,9 @@ const Profile = () => {
   const renderContent = () => {
     switch (value) {
       case 0:
-        return <About />;
+        return <About render={setOpen}/>;
       case 1:
-        return <FamilyReligious/>;
+        return <FamilyReligious render={setOpen}/>;
       case 2:
         return <Education/>;
       case 3:
@@ -51,6 +60,16 @@ const Profile = () => {
         <h3 className="profile-user-name"> My Profile</h3>
         <Divider />
       </Box>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity="info"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          Updated Successfully
+        </Alert>
+      </Snackbar>
       <Box className="tabs-list">
         <Box>
           <Tabs className="tabs" value={value} onChange={handleChange} centered>
