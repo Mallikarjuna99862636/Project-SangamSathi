@@ -13,6 +13,7 @@
       font-weight: 500;
       font-family: "Rubik", sans-serif;
     }
+    
 
     .lifestyle-table-1 th {
         font-size: 16px;
@@ -39,6 +40,22 @@
 
 
   .lifestyle-second-table-data {
+
+.icon-div-edit{
+  display: flex;
+  justify-content: end;
+  margin-right: 75px;
+  .edit-icon {
+    padding: 6px 15px;;
+    line-height: 1.5;
+    position: relative;
+    top: 7px;
+    color: #fff;
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+  }
+}
+
     .lifestyle-table-two-heading{
         font-size: 20px;
       text-align: initial;
@@ -70,4 +87,162 @@
     font-weight: 500;
     }
   }
+}
+
+
+ // Extra Css For dialogs For values changes
+
+
+ .popmodify-edit-popup-list {
+  .popmodify-edit-popup-div1 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #ff4d4d;
+    .popmodify-edit-popup-heading {
+      margin: 0;
+    }
+    .popmodify-edit-cancel-icon {
+      margin-top: -6px;
+    }
+  }
+
+  //  Main Content Css like Select box button input text
+
+  .popmodify-edit-div {
+    padding: 10px;
+    .popmodify-edit-popup-div2 {
+      .popmodify-edit-popup-div2-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #5f5e61;
+        line-height: 2.3;
+      }
+    }
+    .popmodify-edit-popup-div3 {
+
+      .radio-list-div{
+        margin: 4px 23px 5px 0px;
+      
+        > label{
+          padding: 5px 10px 5px 0px;
+        }
+
+      }
+
+      .popmodify-edit-popup-div3-label {
+        // padding: 5px;
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #5f5e61;
+        line-height: 2.3;
+      } 
+      .select-smoke-div{
+        margin-left: 83px;
+        width: 69%;
+        margin-bottom: 10px;
+      }
+
+      .select-diet-div{
+        margin-left: 102px;
+        width: 69%;
+        margin-bottom: 10px;
+      }
+      .select-sunsign-div{
+        margin-left: 77px;
+        width: 69%;
+        margin-bottom: 10px;
+      }
+      .select-bloodgroup-div{
+        margin-left: 45px;
+        width: 69%;
+        margin-bottom: 10px;
+      }
+      .select-drink-div {
+        margin-left: 91px;
+        width: 69%;
+        margin-bottom: 10px;
+      }
+      
+      .rathi-name-div {
+        margin-bottom: 10px;
+        width: 90%;
+        height: auto;
+        color: #343031;
+        background-color: #fff;
+        background-image: none;
+        border: 2px solid #e6e5e7;
+        border-radius: 2px;
+        padding: 12px 16px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out 0.15s,
+          -webkit-box-shadow ease-in-out 0.15s;
+      }
+    }
+
+    //  Buttons Css
+    .edit-changes-button {
+      padding: 10px;
+      display: flex;
+      justify-content: end;
+      .close-button {
+        margin: 5px;
+        border: none;
+        font-size: 13px;
+        height: 50px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #dc3645;
+        border-color: #dc3645;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        word-wrap: break-word;
+        white-space: normal !important;
+      }
+
+      .save-changes-button {
+        margin: 5px;
+        border: none;
+        font-size: 13px;
+        height: 50px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        word-wrap: break-word;
+        white-space: normal !important;
+      }
+    }
+  }
+   
 }

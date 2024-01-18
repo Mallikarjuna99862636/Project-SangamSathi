@@ -416,6 +416,36 @@
         ]
       },
       {
+        "sunsignStatus": [
+           "Dont Know",
+           "Aries",
+           "Taurus",
+           "Gemini",
+           "Cancer",
+          "Leo",
+          "Virgo",
+          "Libra",
+          "Scorpio",
+          "Sagittarius",
+          "Capricorn",
+          "Aquarius",
+          "Pisces"
+        ]
+      },
+      {
+        "bloodGroupStatus": [
+           "Dont Know",
+           "A+",
+           "A-",
+           "B+",
+           "B-",
+          "AB+",
+          "AB-",
+          "O-",
+          "O+"
+        ]
+      },
+      {
         "minAge": [
            "18",
            "19",

@@ -70,7 +70,7 @@ const ParentsPrefer = () => {
                   onChange={(e)=>setFromAge(e.target.value)}
                 >
                   {
-                    datas[7].minAge.map((item,index)=>(
+                    datas[9].minAge.map((item,index)=>(
                       <MenuItem value={index} >{item} </MenuItem>
                     ))
                   }
@@ -164,7 +164,7 @@ const ParentsPrefer = () => {
                  
                 >
                   {
-                    datas[7].minAge.map((item,index)=>(
+                    datas[9].minAge.map((item,index)=>(
                       <MenuItem value={index} >{item} </MenuItem>
                     ))
                   }

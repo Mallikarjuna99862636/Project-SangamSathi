@@ -35,7 +35,7 @@ const Profile = () => {
       case 1:
         return <FamilyReligious render={setOpen}/>;
       case 2:
-        return <Education/>;
+        return <Education render={setOpen}/>;
       case 3:
         return <Photos/> ;
       case 4:
