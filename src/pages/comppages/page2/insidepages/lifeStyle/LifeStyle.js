@@ -12,9 +12,9 @@ import {
 import "./lifestyle.scss";
 import CancelIcon from "@mui/icons-material/Cancel";
 import EditNoteIcon from "@mui/icons-material/EditNote";
-import jsondata from '../../../../../Jsondata/data.json'
+import jsondata from "../../../../../Jsondata/data.json";
 
-const LifeStyle = () => {
+const LifeStyle = ({render}) => {
   const values = jsondata;
   const [openDialog, setOpenDialog] = useState(false);
   const [drink, setDrink] = useState("No");
@@ -29,8 +29,36 @@ const LifeStyle = () => {
     setOpenDialog(true);
   };
 
+  const handleBodyTypeChange = (e) => {
+    setBodyType(e.target.value);
+  };
+
+  const handleSkinTypeChange = (e) => {
+    setSkinType(e.target.value);
+  };
+
   const handleCloseDialog = () => {
     setOpenDialog(false);
+  };
+
+  const handleAllDataSubmit = (e) => {
+    e.preventDefault();
+    const newDrink = drink;
+    const newSmoke = smoke;
+    const newDiet = diet;
+    const newSunsign = sunsign;
+    const newBloodgroup = bloodgroup;
+    const newSkinType = skinType;
+    const newBodyType = bodyType;
+    setDrink(newDrink);
+    setSmoke(newSmoke);
+    setDiet(newDiet);
+    setSunsign(newSunsign);
+    setBloodgroup(newBloodgroup);
+    setSkinType(newSkinType);
+    setBodyType(newBodyType);
+    handleCloseDialog();
+    render(true)
   };
 
   return (
@@ -116,7 +144,7 @@ const LifeStyle = () => {
           </DialogContent>
           <form
             className="popmodify-edit-div"
-            //  onSubmit={handleDegreeSubmit}
+              onSubmit={handleAllDataSubmit}
           >
             {/* This Dialog is for Drink Changes  */}
 
@@ -136,11 +164,9 @@ const LifeStyle = () => {
                 value={drink}
                 onChange={(e) => setDrink(e.target.value)}
               >
-               
-              <MenuItem value="Yes"> Yes </MenuItem>
-              <MenuItem value="No"> No </MenuItem>
-              <MenuItem value="Occasionally" > Occasionally </MenuItem>
-                
+                <MenuItem value="Yes"> Yes </MenuItem>
+                <MenuItem value="No"> No </MenuItem>
+                <MenuItem value="Occasionally"> Occasionally </MenuItem>
               </Select>
             </Box>
             {/* This Dialog is for Smoke Changes  */}
@@ -160,9 +186,9 @@ const LifeStyle = () => {
                 value={smoke}
                 onChange={(e) => setSmoke(e.target.value)}
               >
-               <MenuItem value="Yes"> Yes </MenuItem>
-              <MenuItem value="No"> No </MenuItem>
-              <MenuItem value="Occasionally" > Occasionally </MenuItem>
+                <MenuItem value="Yes"> Yes </MenuItem>
+                <MenuItem value="No"> No </MenuItem>
+                <MenuItem value="Occasionally"> Occasionally </MenuItem>
               </Select>
             </Box>
             {/* This Dialog is for Diet Changes  */}
@@ -183,11 +209,16 @@ const LifeStyle = () => {
                 onChange={(e) => setDiet(e.target.value)}
               >
                 <MenuItem value="Veg"> Veg </MenuItem>
-              <MenuItem value="Non-Veg"> Non-Veg </MenuItem>
-              <MenuItem value="Occasionally Non-Veg" > Occasionally Non-Veg </MenuItem>
+                <MenuItem value="Non-Veg"> Non-Veg </MenuItem>
+                <MenuItem value="Occasionally Non-Veg">
+                  {" "}
+                  Occasionally Non-Veg{" "}
+                </MenuItem>
               </Select>
             </Box>
+
             {/* This Dialog is for Sunsign Changes  */}
+
             <Box className="popmodify-edit-popup-div3">
               <label
                 htmlFor="language"
@@ -205,11 +236,14 @@ const LifeStyle = () => {
                 onChange={(e) => setSunsign(e.target.value)}
               >
                 {values[7].sunsignStatus.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
-                ))} 
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
+                ))}
               </Select>
             </Box>
             {/* This Dialog is for  Blood Group Changes  */}
+
             <Box className="popmodify-edit-popup-div3">
               <label
                 htmlFor="language"
@@ -226,17 +260,19 @@ const LifeStyle = () => {
                 value={bloodgroup}
                 onChange={(e) => setBloodgroup(e.target.value)}
               >
-                 {values[8].bloodGroupStatus.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
-                ))} 
+                {values[8].bloodGroupStatus.map((item, index) => (
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
+                ))}
               </Select>
             </Box>
 
             {/* This Dialog is for  Skintone Changes  */}
-         
+
             <Box
               className="popmodify-edit-popup-div3"
-              sx={{ display: "flex", justifyContent: "space-evenly" }}
+              sx={{ display: "flex", justifyContent: "space-between" }}
             >
               <label
                 htmlFor="language"
@@ -253,6 +289,8 @@ const LifeStyle = () => {
                     name="skinTone"
                     value="Fair"
                     className="radio-input"
+                    onChange={handleSkinTypeChange}
+                    checked={skinType === "Fair"}
                   />
                   <label htmlFor="fair">Fair</label>
 
@@ -261,6 +299,8 @@ const LifeStyle = () => {
                     id="very-fair"
                     name="skinTone"
                     value="Very Fair"
+                    onChange={handleSkinTypeChange}
+                    checked={skinType === "Very Fair"}
                   />
                   <label htmlFor="very-fair">Very Fair</label>
 
@@ -269,25 +309,34 @@ const LifeStyle = () => {
                     id="wheatish"
                     name="skinTone"
                     value="Wheatish"
+                    onChange={handleSkinTypeChange}
+                    checked={skinType === "Wheatish"}
                   />
                   <label htmlFor="wheatish">Wheatish</label>
 
-                  <input type="radio" id="dark" name="skinTone" value="Dark" />
+                  <input
+                    type="radio"
+                    id="dark"
+                    name="skinTone"
+                    value="Dark"
+                    onChange={handleSkinTypeChange}
+                    checked={skinType === "Dark"}
+                  />
                   <label htmlFor="dark">Dark</label>
                 </Box>
               </Stack>
             </Box>
-            
+
             {/* This Dialog is for  Body Type Changes  */}
-            
+
             <Box
               className="popmodify-edit-popup-div3"
-              sx={{ display: "flex", justifyContent: "space-between"  }}
+              sx={{ display: "flex", justifyContent: "space-between" }}
             >
               <label
                 htmlFor="language"
                 className="popmodify-edit-popup-div3-label"
-                 >
+              >
                 {" "}
                 Body Type
               </label>
@@ -299,6 +348,8 @@ const LifeStyle = () => {
                     name="bodyType"
                     value="Average"
                     className="radio-input"
+                    onChange={handleBodyTypeChange}
+                    checked={bodyType === "Average"}
                   />
                   <label htmlFor="average">Average</label>
 
@@ -307,6 +358,8 @@ const LifeStyle = () => {
                     id="slim"
                     name="bodyType"
                     value="Slim"
+                    onChange={handleBodyTypeChange}
+                    checked={bodyType === "Slim"}
                   />
                   <label htmlFor="slim">Slim</label>
 
@@ -315,16 +368,24 @@ const LifeStyle = () => {
                     id="athletic"
                     name="bodyType"
                     value="Athletic"
+                    onChange={handleBodyTypeChange}
+                    checked={bodyType === "Athletic"}
                   />
                   <label htmlFor="athletic">Athletic</label>
 
-                  <input type="radio" id="heavy" name="bodyType" value="Dark" />
+                  <input
+                    type="radio"
+                    id="heavy"
+                    name="bodyType"
+                    value="Dark"
+                    onChange={handleBodyTypeChange}
+                    checked={bodyType === "Heavy"}
+                  />
                   <label htmlFor="heavy">Heavy</label>
                 </Box>
               </Stack>
             </Box>
 
-           
             <Divider />
             <Box className="edit-changes-button">
               <button className="close-button" onClick={handleCloseDialog}>

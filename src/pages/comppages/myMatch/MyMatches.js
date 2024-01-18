@@ -5,14 +5,20 @@ import userdps from "../../../assets/images/profile-pic.jpg";
 import "./mymatches.scss";
 import Dashheader from "../../dashHeader/Dashheader";
 import Sidebar from "../../sidebar/Sidebar";
+import {useNavigate} from 'react-router-dom'
 
 const MyMatches = () => {
+  const navigate = useNavigate()
   const [popupOpen, setPopupOpen] = useState(false);
   const [userCard, setUserCard] = useState([]);
   const [selectedCardDetails, setSelectedCardDetails] = useState({});
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
+
+  const handleModifyButton =()=>{
+       navigate('/user/profile')
+  }
 
   const handleCardClick = (index) => {
     const selectedCard = userCard[index];
@@ -54,7 +60,7 @@ const MyMatches = () => {
     <Box className='mymatches-main-container'>
     <Box className="mymatches-header-part">
         <h3 className="mymatches-user-name">My Partner Preferences</h3>
-        <button className="modify-button"> Modify </button>
+        <button className="modify-button" onClick={handleModifyButton}> Modify </button>
         
       </Box>
       <Divider />

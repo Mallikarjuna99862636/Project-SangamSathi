@@ -39,7 +39,7 @@ const Profile = () => {
       case 3:
         return <Photos/> ;
       case 4:
-        return <LifeStyle/> ;
+        return <LifeStyle render={setOpen}/> ;
       case 5:
         return <ParentsPrefer/> ;
       case 6:
