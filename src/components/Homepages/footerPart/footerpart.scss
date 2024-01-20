@@ -97,6 +97,9 @@
       flex: 0 0 16.666667%;
       max-width: 16.666667%;
 
+     .footer-nav-links{
+      text-decoration: none;
+    }
       .about-heading-1 {
         color: #fff;
         font-size: 14px;
@@ -165,6 +168,7 @@
       }
 
       .subscrib-button {
+        border: none;
         color: #fff;
         background-color: #ff4d4d;
         border-color: #ff4d4d;

@@ -9,21 +9,20 @@ import {
   Select,
   MenuItem,
 } from "@mui/material";
-import CancelIcon from "@mui/icons-material/Cancel";
-import EditNoteIcon from "@mui/icons-material/EditNote";
+import {Cancel , EditNote} from "@mui/icons-material";
 import json from "../../../../../Jsondata/data.json";
 import "./education.scss";
 
-const Education = ({render}) => {
+const Education = ({ render }) => {
   const data = json;
   const [degree, setDegree] = useState("B.E/B.Tech");
   const [openDegree, setOpenDegree] = useState(false);
   const [occupation, setOccupation] = useState("Software Engg");
   const [openOccupation, setOpenOccupation] = useState(false);
-  const [Income , setIncome ] = useState("16Lakh-18Lakh");
-  const [openIncome , setOpenIncome ] = useState(false);
-  const [occupationCountry , setOccupationCountry ] = useState("India");
-  const [openOccupationCountry , setOpenOccupationCountry ] = useState(false);
+  const [Income, setIncome] = useState("16Lakh-18Lakh");
+  const [openIncome, setOpenIncome] = useState(false);
+  const [occupationCountry, setOccupationCountry] = useState("India");
+  const [openOccupationCountry, setOpenOccupationCountry] = useState(false);
 
   const handleCloseDegreeDialog = () => {
     setOpenDegree(false);
@@ -58,7 +57,7 @@ const Education = ({render}) => {
     const newDegree = degree;
     setDegree(newDegree);
     handleCloseDegreeDialog();
-    render(true)
+    render(true);
   };
 
   const handleOccupationSubmit = (e) => {
@@ -66,23 +65,22 @@ const Education = ({render}) => {
     const newOccupation = occupation;
     setOccupation(newOccupation);
     handleCloseOccupationDialog();
-    render(true)
+    render(true);
   };
   const handleIncomeSubmit = (e) => {
     e.preventDefault();
     const newIncome = Income;
     setIncome(newIncome);
     handleCloseIncomeDialog();
-    render(true)
+    render(true);
   };
   const handleOccupationCountrySubmit = (e) => {
     e.preventDefault();
     const newOccupationCountry = occupationCountry;
     setOccupationCountry(newOccupationCountry);
     handleCloseOccupationCountryDialog();
-    render(true)
+    render(true);
   };
-
 
   return (
     <Box className="education-main-container">
@@ -96,7 +94,7 @@ const Education = ({render}) => {
                 <td>
                   {" "}
                   {degree}
-                  <EditNoteIcon
+                  <EditNote
                     className="edit-icon"
                     onClick={handleOpenDegreeDialog}
                   />
@@ -107,7 +105,7 @@ const Education = ({render}) => {
                 <td>
                   {" "}
                   {occupation}{" "}
-                  <EditNoteIcon
+                  <EditNote
                     className="edit-icon"
                     onClick={handleOpenOccupationDialog}
                   />
@@ -115,17 +113,24 @@ const Education = ({render}) => {
               </tr>
               <tr>
                 <th> Income Per Annum </th>
-                <td> {Income} <EditNoteIcon
+                <td>
+                  {" "}
+                  {Income}{" "}
+                  <EditNote
                     className="edit-icon"
                     onClick={handleOpenIncomeDialog}
-                  /></td>
+                  />
+                </td>
               </tr>
               <tr>
                 <th> Occupation Country </th>
-                <td>{occupationCountry}  <EditNoteIcon
+                <td>
+                  {occupationCountry}{" "}
+                  <EditNote
                     className="edit-icon"
                     onClick={handleOpenOccupationCountryDialog}
-                  /></td>
+                  />
+                </td>
               </tr>
             </tbody>
           </table>
@@ -155,17 +160,14 @@ const Education = ({render}) => {
                 Edit Qualification
               </h3>
               <DialogActions>
-                <CancelIcon
+                <Cancel
                   className="popmodify-edit-cancel-icon"
                   onClick={handleCloseDegreeDialog}
                 />
               </DialogActions>
             </Box>
           </DialogContent>
-          <form
-            className="popmodify-edit-div"
-             onSubmit={handleDegreeSubmit}
-          >
+          <form className="popmodify-edit-div" onSubmit={handleDegreeSubmit}>
             <Box className="popmodify-edit-popup-div3">
               <label
                 htmlFor="language"
@@ -184,7 +186,9 @@ const Education = ({render}) => {
                 onChange={(e) => setDegree(e.target.value)}
               >
                 {data[4].qualificationValues.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
                 ))}
               </Select>
             </Box>
@@ -229,7 +233,7 @@ const Education = ({render}) => {
                 Edit Qualification
               </h3>
               <DialogActions>
-                <CancelIcon
+                <Cancel
                   className="popmodify-edit-cancel-icon"
                   onClick={handleCloseOccupationDialog}
                 />
@@ -238,7 +242,7 @@ const Education = ({render}) => {
           </DialogContent>
           <form
             className="popmodify-edit-div"
-             onSubmit={handleOccupationSubmit}
+            onSubmit={handleOccupationSubmit}
           >
             <Box className="popmodify-edit-popup-div3">
               <label
@@ -258,7 +262,9 @@ const Education = ({render}) => {
                 onChange={(e) => setOccupation(e.target.value)}
               >
                 {data[3].occupationValues.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
                 ))}
               </Select>
             </Box>
@@ -303,17 +309,14 @@ const Education = ({render}) => {
                 Edit Income Per Annum
               </h3>
               <DialogActions>
-                <CancelIcon
+                <Cancel
                   className="popmodify-edit-cancel-icon"
                   onClick={handleCloseIncomeDialog}
                 />
               </DialogActions>
             </Box>
           </DialogContent>
-          <form
-            className="popmodify-edit-div"
-             onSubmit={handleIncomeSubmit}
-          >
+          <form className="popmodify-edit-div" onSubmit={handleIncomeSubmit}>
             <Box className="popmodify-edit-popup-div3">
               <label
                 htmlFor="language"
@@ -332,7 +335,9 @@ const Education = ({render}) => {
                 onChange={(e) => setIncome(e.target.value)}
               >
                 {data[2].incomeValues.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
                 ))}
               </Select>
             </Box>
@@ -374,10 +379,10 @@ const Education = ({render}) => {
           <DialogContent maxWidth="md" style={{ padding: "0px" }}>
             <Box className="popmodify-edit-popup-div1">
               <h3 className="popmodify-edit-popup-heading">
-               Edit Occupation Country
+                Edit Occupation Country
               </h3>
               <DialogActions>
-                <CancelIcon
+                <Cancel
                   className="popmodify-edit-cancel-icon"
                   onClick={handleCloseOccupationCountryDialog}
                 />
@@ -386,7 +391,7 @@ const Education = ({render}) => {
           </DialogContent>
           <form
             className="popmodify-edit-div"
-             onSubmit={handleOccupationCountrySubmit}
+            onSubmit={handleOccupationCountrySubmit}
           >
             <Box className="popmodify-edit-popup-div3">
               <label
@@ -406,7 +411,9 @@ const Education = ({render}) => {
                 onChange={(e) => setOccupationCountry(e.target.value)}
               >
                 {data[4].qualificationValues.map((item, index) => (
-                  <MenuItem value={item} key={index}>{item} </MenuItem>
+                  <MenuItem value={item} key={index}>
+                    {item}{" "}
+                  </MenuItem>
                 ))}
               </Select>
             </Box>

@@ -1,9 +1,9 @@
 import { Box, Stack } from "@mui/material";
 import React, {  useState } from "react";
-import './BodyPart.scss'
+import './bodypart.scss'
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import ResentRegisterpage from "./ResentRegisterpage/ResentRegisterpage";
-import Footer from "../Footer-Part/Footer";
+import ResentRegisterpage from "./resentRegisterpage/ResentRegisterpage";
+import Footer from "../footerPart/Footer";
 import { useNavigate , Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../../../Redux/reduxData/DataRedux";

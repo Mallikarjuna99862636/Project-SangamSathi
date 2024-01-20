@@ -5,45 +5,44 @@
   box-sizing: border-box;
   height: calc(100% - 67px);
   width: calc(100% - 250px);
-    .assistanceservices-header-part {
-      padding: 5px 10px;
-      .assistanceservices-user-name {
-        text-align: left;
-        font-size: 24px;
-        margin-bottom: 20px;
-        font-weight: 500;
-      }
-    }
-  
-    .assistanceservices-tabs-list {
-      margin: 10px 20px 0px 25px;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-      width: 96%;
-      box-sizing: border-box;
-  
-       .assistanceservices-tabs-content{
-        background-color: #ffffff;
-        border: 1px solid #ebebeb;
-        border-color: #ebebeb;
-       }
-  
-      .assistanceservices-tab-names-list-01,
-      .assistanceservices-tab-names-list-02,
-      .assistanceservices-tab-names-list-03,
-      .assistanceservices-tab-names-list-04,
-      .assistanceservices-tab-names-list-05,
-      .assistanceservices-tab-names-list-06 {
-        text-transform: capitalize;
-        font-weight: 600;
-        padding: 16px 38px;
-        border: 1px solid #ebebeb;
-        border-radius: 0px;
-        background-color: #eee;
-        margin-bottom: 0px;
-        color: #6f6d72;
-        text-align: center;
-        margin-right: 2px;
-      }
+  .assistanceservices-header-part {
+    padding: 5px 10px;
+    .assistanceservices-user-name {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
   }
-  
+
+  .assistanceservices-tabs-list {
+    margin: 10px 20px 0px 25px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    width: 96%;
+    box-sizing: border-box;
+
+    .assistanceservices-tabs-content {
+      background-color: #ffffff;
+      border: 1px solid #ebebeb;
+      border-color: #ebebeb;
+    }
+
+    .assistanceservices-tab-names-list-01,
+    .assistanceservices-tab-names-list-02,
+    .assistanceservices-tab-names-list-03,
+    .assistanceservices-tab-names-list-04,
+    .assistanceservices-tab-names-list-05,
+    .assistanceservices-tab-names-list-06 {
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 16px 38px;
+      border: 1px solid #ebebeb;
+      border-radius: 0px;
+      background-color: #eee;
+      margin-bottom: 0px;
+      color: #6f6d72;
+      text-align: center;
+      margin-right: 2px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Stack, TextField, Grid } from "@mui/material";
-import "./thirdpage.scss";
+import "./logindetails.scss";
 
-const ThirdPage = ({ onThirdPageComplete }) => {
+const LoginDetails = ({ onThirdPageComplete }) => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [mailid, setMailId] = useState("");
@@ -120,4 +120,4 @@ const ThirdPage = ({ onThirdPageComplete }) => {
   );
 };
 
-export default ThirdPage;
+export default LoginDetails;

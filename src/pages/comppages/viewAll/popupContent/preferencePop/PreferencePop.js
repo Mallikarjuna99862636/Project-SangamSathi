@@ -27,7 +27,7 @@ const PreferencePop = () => {
               </tr>
               <tr>
                 <th> Caste Preference </th>
-                <td> 	Any Brahmin</td>
+                <td> Any Brahmin</td>
               </tr>
               <tr>
                 <th> Occupation Country </th>

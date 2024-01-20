@@ -22,8 +22,6 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 
 const Sidebar = () => {
-   
-
   return (
     <Box className="sidebar-main-container">
      
@@ -74,7 +72,7 @@ const Sidebar = () => {
                 <PersonIcon />
               </ListItemIcon>
               <Link className="links active" to='/user/profile'>
-              {/* <ListItemText  primary="Profile" /> */}
+               {/* <ListItemText  primary="Profile" />  */}
               <h4 className="sidebar-lists">Profile  </h4>
               </Link>
             </ListItemButton>

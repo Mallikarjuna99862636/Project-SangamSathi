@@ -5,12 +5,12 @@ import icon2 from "../../../assets/images/love-letter.png";
 import icon3 from "../../../assets/images/chat.png";
 import userdp from "../../../assets/images/profile-pic.jpg";
 import silverimg from '../../../assets/images/silverImg.jpg';
-import "./page1.scss";
+import "./dashboardInitialpage.scss";
 import { Link } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-const Page1 = () => {
+const DashboardInitialPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [selectedCardDetails, setSelectedCardDetails] = useState({});
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
@@ -411,4 +411,4 @@ const Page1 = () => {
   );
 };
 
-export default Page1;
+export default DashboardInitialPage;

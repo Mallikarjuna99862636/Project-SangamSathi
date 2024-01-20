@@ -11,9 +11,10 @@ import {
   Step
 } from "@mui/material";
 import logo5 from "../../assets/images/sangam-sathi-logo.png";
-import FirstPage from "./personalForm/FirstPage";
-import SecondPage from "./socialAndCarrer/SecondPage";
-import ThirdPage from "./loginDetails1/ThirdPage";
+import PersonalForm from "./personalForm/PersonalForm";
+import SocialAndCarrer from "./socialAndCarrer/SocialAndCarrer";
+import LoginDetails from "./loginDetails1/LoginDetails";
+import {Link}  from 'react-router-dom'
 
 const steps = [
   { label1: "Personal", label2: "First step description" },
@@ -50,11 +51,11 @@ const Regstrationform1 = () => {
   function getStepContent(step) {
     switch (step) {
       case 0:
-        return <FirstPage onFirstPageComplete={handleFirstPageComplete} />;
+        return <PersonalForm onFirstPageComplete={handleFirstPageComplete} />;
       case 1:
-        return <SecondPage onSecondPageComplete={handleSecondPageComplete} />;
+        return <SocialAndCarrer onSecondPageComplete={handleSecondPageComplete} />;
       case 2:
-        return <ThirdPage onThirdPageComplete={handleThirdPageComplete} />;
+        return <LoginDetails onThirdPageComplete={handleThirdPageComplete} />;
       default:
         throw new Error("Unknown step");
     }
@@ -62,7 +63,9 @@ const Regstrationform1 = () => {
   return (
     <Box className="register-main-page">
       <Box sx={{ padding: "20px 20px 0px 20px" }}>
+      <Link to="/">
         <img src={logo5} alt="sangam-sathi-icon" />
+        </Link>
       </Box>
       <Container sx={{ width: "77%" }}>
         <Paper

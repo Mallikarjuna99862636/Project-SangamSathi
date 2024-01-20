@@ -9,7 +9,7 @@ import { Container, styled } from '@mui/material';
 import PersonalDetails from './personalForm/PersonalDetails';
 import SocialCarrerForm from './socialAndCarrerForm/SocialCarrerForm';
 import LoginDetails from './loginDetails/LoginDetails';
-import './RegistrationForm.css'
+import './registrationform.css'
 import logo  from '../../assets/images/sangam-sathi-logo.png'
 
 const steps = [

@@ -11,7 +11,7 @@ import "./about.scss";
 import CancelIcon from "@mui/icons-material/Cancel";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 
-const About = ({render}) => {
+const About = ({ render }) => {
   const [pincode, setPincode] = useState("583115");
   const [address, setAddress] = useState("Bengalore");
   const [occupationCountry, setOccupationCountry] = useState("India");
@@ -42,8 +42,6 @@ const About = ({render}) => {
     setOpenLanguage(false);
   };
 
-  
-
   const handlePinAddressSubmit = (e) => {
     e.preventDefault();
     const newAddress = e.target.elements.address.value;
@@ -51,16 +49,15 @@ const About = ({render}) => {
     setAddress(newAddress);
     setPincode(newPincode);
     handleCloseDialog();
-    render(true)
+    render(true);
   };
-
 
   const handleCountrySubmit = (e) => {
     e.preventDefault();
     const newoccupationCountry = e.target.elements.occupationCountry.value;
     setOccupationCountry(newoccupationCountry);
     handleCloseCountryDialog();
-    render(true)
+    render(true);
   };
 
   const handleLanguageSubmit = (e) => {
@@ -68,12 +65,9 @@ const About = ({render}) => {
     const newLanguage = e.target.elements.language.value;
     setLanguage(newLanguage);
     handleCloseLanguageDialog();
-    render(true)
+    render(true);
   };
 
-  
-
-  
   return (
     <Box className="about-main-container">
       <Stack className="about-stack-container">
@@ -120,7 +114,11 @@ const About = ({render}) => {
                 <th> Occupation Country</th>
                 <td>
                   {" "}
-                  {occupationCountry} <EditNoteIcon onClick={handleOpenCountryDialog} className="edit-icon" />
+                  {occupationCountry}{" "}
+                  <EditNoteIcon
+                    onClick={handleOpenCountryDialog}
+                    className="edit-icon"
+                  />
                 </td>
               </tr>
             </tbody>
@@ -154,7 +152,11 @@ const About = ({render}) => {
                 <th> Language </th>
                 <td>
                   {" "}
-                  {language} <EditNoteIcon onClick={handleOpenLanguageDialog} className="edit-icon" />
+                  {language}{" "}
+                  <EditNoteIcon
+                    onClick={handleOpenLanguageDialog}
+                    className="edit-icon"
+                  />
                 </td>
               </tr>
               <tr>
@@ -165,7 +167,7 @@ const About = ({render}) => {
           </table>
         </Box>
       </Stack>
-       {/* This Dialog is for Address And Pin Changes  */}
+      {/* This Dialog is for Address And Pin Changes  */}
       <Dialog
         maxWidth="md"
         open={openAddressPin}
@@ -205,7 +207,7 @@ const About = ({render}) => {
                 name="address"
                 className="addess-textarea"
                 value={address}
-                 onChange={(e) => setAddress(e.target.value)}
+                onChange={(e) => setAddress(e.target.value)}
               ></textarea>
             </Box>
             <Box className="addess-edit-popup-div3">
@@ -253,7 +255,9 @@ const About = ({render}) => {
         <Box className="addess-edit-popup-list">
           <DialogContent maxWidth="md" style={{ padding: "0px" }}>
             <Box className="addess-edit-popup-div1">
-              <h3 className="addess-edit-popup-heading">Edit Occupation Country</h3>
+              <h3 className="addess-edit-popup-heading">
+                Edit Occupation Country
+              </h3>
               <DialogActions>
                 <CancelIcon
                   className="addess-edit-cancel-icon"
@@ -263,8 +267,11 @@ const About = ({render}) => {
             </Box>
           </DialogContent>
           <form className="addess-edit-div" onSubmit={handleCountrySubmit}>
-              <Box className="addess-edit-popup-div3">
-              <label htmlFor="occupationCountry" className="addess-edit-popup-div3-label">
+            <Box className="addess-edit-popup-div3">
+              <label
+                htmlFor="occupationCountry"
+                className="addess-edit-popup-div3-label"
+              >
                 {" "}
                 Occupation Country{" "}
               </label>
@@ -279,7 +286,13 @@ const About = ({render}) => {
             </Box>
             <Divider />
             <Box className="edit-changes-button">
-              <button className="close-button" onClick={handleCloseCountryDialog}> Close</button>
+              <button
+                className="close-button"
+                onClick={handleCloseCountryDialog}
+              >
+                {" "}
+                Close
+              </button>
               <button type="submit" className="save-changes-button">
                 {" "}
                 Save Changes
@@ -288,8 +301,8 @@ const About = ({render}) => {
           </form>
         </Box>
       </Dialog>
-       {/* This Dialog is for Language Changes  */}
-       <Dialog
+      {/* This Dialog is for Language Changes  */}
+      <Dialog
         maxWidth="md"
         open={openLanguage}
         onClose={handleCloseLanguageDialog}
@@ -318,8 +331,11 @@ const About = ({render}) => {
             </Box>
           </DialogContent>
           <form className="addess-edit-div" onSubmit={handleLanguageSubmit}>
-          <Box className="addess-edit-popup-div3">
-              <label htmlFor="language" className="addess-edit-popup-div3-label">
+            <Box className="addess-edit-popup-div3">
+              <label
+                htmlFor="language"
+                className="addess-edit-popup-div3-label"
+              >
                 {" "}
                 Language{" "}
               </label>
@@ -334,7 +350,13 @@ const About = ({render}) => {
             </Box>
             <Divider />
             <Box className="edit-changes-button">
-              <button className="close-button" onClick={handleCloseLanguageDialog}> Close</button>
+              <button
+                className="close-button"
+                onClick={handleCloseLanguageDialog}
+              >
+                {" "}
+                Close
+              </button>
               <button type="submit" className="save-changes-button">
                 {" "}
                 Save Changes

@@ -13,9 +13,9 @@ import json from "../../../Jsondata/data.json";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import "./firstpage1.scss";
+import "./personalform.scss";
 
-const FirstPage = ({ onFirstPageComplete }) => {
+const PersonalForm = ({ onFirstPageComplete }) => {
   const data = json;
   const [parent, setParent] = useState(null);
   const [age, setAge] = useState("");
@@ -27,11 +27,15 @@ const FirstPage = ({ onFirstPageComplete }) => {
   const [pincode, setPincode] = useState(null);
   const [isFirstPageComplete, setIsFirstPageComplete] = useState(false);
   const [isPincode, setisPincode] = useState(true);
+  const [userName, setUserName] = useState('');
+  const [userAddress, setUserAddress] = useState('');
 
 
   useEffect(() => {
     setIsFirstPageComplete(
-      age !== "" &&
+      userName !== "" &&
+      userAddress !== "" &&
+        age !== "" &&
         selectedDate !== null &&
         parent !== null &&
         height !== null &&
@@ -40,7 +44,7 @@ const FirstPage = ({ onFirstPageComplete }) => {
         city !== null &&
         pincode.trim().length === 6
     );
-  }, [age, selectedDate, parent, height, country, state, city, pincode]);
+  }, [age, selectedDate, parent, height, country, state, city, pincode,userName , userAddress]);
 
   useEffect(() => {
     onFirstPageComplete(isFirstPageComplete);
@@ -181,6 +185,8 @@ const FirstPage = ({ onFirstPageComplete }) => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+               value={userName}
+               onChange={(e)=>setUserName(e.target.value)}
                 required
                 id="user-name"
                 placeholder="Please enter name"
@@ -192,6 +198,8 @@ const FirstPage = ({ onFirstPageComplete }) => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
+              value={userAddress}
+               onChange={(e)=>setUserAddress(e.target.value)}
                 required
                 id="user-address"
                 placeholder="Please Enter Address"
@@ -301,4 +309,4 @@ const FirstPage = ({ onFirstPageComplete }) => {
   );
 };
 
-export default FirstPage;
+export default PersonalForm;

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import {TextField} from '@mui/material'
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
- import {  Stack } from "@mui/material";
+ import {  Stack , Select, TextField} from "@mui/material";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import './personaldetails.scss'
+
 const PersonalDetails = () => {
     
   const [date, setDate] = useState(null);
@@ -47,7 +47,7 @@ const PersonalDetails = () => {
 
 
   return (
-    <Stack spacing={3} direction="row" sx={{ padding: "5px 10px 10px 20px" }}>
+    <Stack className="personal-main-container" spacing={3} direction="row">
       <Stack  spacing={1} direction="column">
       <label htmlFor="demo-select-small" style={{ textAlign : 'left' , fontWeight : '700' , color : 'white'}}>  Create Profile For </label>
         <FormControl sx={{ m: 1, minWidth: 500 , backgroundColor : 'white'}} size="small">

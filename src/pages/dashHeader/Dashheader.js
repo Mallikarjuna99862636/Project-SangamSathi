@@ -35,28 +35,31 @@ const App = styled(AppBar)`
 
 const Dashheader = () => {
   const navigate = useNavigate();
+  const usermail = "rama@gmail.com"
+  const password = "123456"
   const [open, setOpen] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
-  const [usermail, setUsermail] = useState("rama@gmail.com");
-  const [password, setPassword] = useState("1234");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleOpenProfileDetailsDialog = () => {
     setOpenDialog(true);
+    setOpen(null);
+
   };
 
   const handleCloseProfileDetailsDialog = () => {
-    setOpenDialog(true);
+    setOpenDialog(false);
   };
 
   const handleOpenProfileDialog = () => {
     setOpenProfile(true);
+    setOpen(null);
   };
 
   const handleClosProfileDialog = () => {
-    setOpenProfile(true);
+    setOpenProfile(false);
   };
 
   const handleLogout = () => {

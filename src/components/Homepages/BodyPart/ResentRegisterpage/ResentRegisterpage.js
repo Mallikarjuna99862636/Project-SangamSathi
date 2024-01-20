@@ -9,20 +9,18 @@ import {
   Stack,
   Badge,
 } from "@mui/material";
- import "./ResentRegister.scss"
+ import "./resentregister.scss"
 import Carousel from "react-material-ui-carousel";
 import { useDispatch } from "react-redux";
 import { dataDetailsRequest } from "../../../../Redux/reduxData/DataRedux";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import DraftsIcon from "@mui/icons-material/Drafts";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
+import sangamLogo from '../../../../assets/images/SS_tagline.png'
 
 
 const ResentRegisterpage = () => {
   const dispatch = useDispatch();
-  // const datas = useSelector((state) => state?.dataValue.data);
-  // console.log(datas, "datas");
-
   useEffect(() => {
     dispatch(dataDetailsRequest());
   }, [dispatch]);
@@ -50,27 +48,44 @@ const ResentRegisterpage = () => {
       const cards = cardData.slice(i, i + numberOfCardsPerSlide);
 
       cardSets.push(
-        <Box key={i}  sx={{ display: "flex", justifyContent: "space-around" }}>
+        <Box key={i}  className="resent-card-details-div" >
           {cards.map((card, index) => (
-            <Card key={index} sx={{ maxWidth: 345, margin: "30px auto" }}>
+            <Card key={index} className="resent-card-details-sub-div" >
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={card.image}
-                  alt={card.name}
-                />
-                <CardContent>
-                  <Box>
-                    <Typography>REGNO :- {card.address?.zipcode}</Typography>
-                  </Box>
-                  <Box>
-                    <Typography>Name :- {card.name}</Typography>
-                    <Typography>Age :- {card.id}</Typography>
-                    <Typography>Caste :- {card.username}</Typography>
-                    <Typography>Education :- {card.name}</Typography>
-                    <Typography>Occupation:- {card.address?.street}</Typography>
-                    <Typography>City:- {card.address?.street}</Typography>
+                <img className="sangam-logo" src={sangamLogo} alt="Sangam-logo" />
+                {/* <h4 className="regno-heading">REGNO:- &nbsp; SGM6316</h4> */}
+                <CardContent sx={{padding : '5px' }}>
+                <h4 className="regno-heading">REGNO:- &nbsp; SGM6316</h4>
+                  <Box className="table-div">
+                 
+                     <table className="table">
+                        <tbody>
+                          <tr>
+                            <th>Name:-</th>
+                            <td> Naveen</td>
+                          </tr>
+                          <tr>
+                            <th>Age:-</th>
+                            <td> 26</td>
+                          </tr>
+                          <tr>
+                            <th>Caste:-</th>
+                            <td> God</td>
+                          </tr>
+                          <tr>
+                            <th>Education:-</th>
+                            <td> Diploma</td>
+                          </tr>
+                          <tr>
+                            <th>Occupation:-</th>
+                            <td>Mechanical Engg</td>
+                          </tr>
+                          <tr>
+                            <th>City:-</th>
+                            <td> Bengalore</td>
+                          </tr>
+                        </tbody>
+                     </table>
                   </Box>
                 </CardContent>
               </CardActionArea>
@@ -88,15 +103,15 @@ const ResentRegisterpage = () => {
         {" "}
         RECENT REGISTERS{" "}
       </h4>
-      <Carousel
+       <Carousel
         className="image-slider"
-        animation="slide"
-        indicators={false}
-        timeout={300}
+         animation="slide"
+         indicators={false}
+         timeout={300}
         swipe={true}
       >
         {renderCards()}
-      </Carousel>
+      </Carousel> 
       <Box className="resent-div-container-1">
         <Box>
           <Typography variant="h4" component="div" className="custom-heading">

@@ -31,7 +31,7 @@ const Requests = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setUserCard(data.slice(0,2));
+        setUserCard(data.slice(0, 2));
       })
       .catch((error) => console.log(error));
   };

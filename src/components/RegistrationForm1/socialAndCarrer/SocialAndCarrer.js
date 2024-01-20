@@ -9,10 +9,10 @@ import {
   InputLabel,
   MenuItem,
 } from "@mui/material";
-import "./secondpage.scss";
+import "./socialandcarrer.scss";
 import jsonData  from '../../../Jsondata/data.json'
 
-const SecondPage = ({ onSecondPageComplete }) => {
+const SocialAndCarrer = ({ onSecondPageComplete }) => {
   const datas = jsonData;
   console.log(datas , "Json datas")
   const religion = "Hindu";
@@ -270,4 +270,4 @@ const SecondPage = ({ onSecondPageComplete }) => {
   );
 };
 
-export default SecondPage;
+export default SocialAndCarrer;

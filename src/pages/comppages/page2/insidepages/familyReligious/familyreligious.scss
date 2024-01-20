@@ -174,16 +174,17 @@
           }
         }
         .table-body {
-          .table-heading-unmarried{
+          .table-heading-unmarried {
             background-color: #fff;
             font-weight: 500;
             border-bottom: 2px solid #eee;
             padding: 10px 25px;
             color: #252324;
 
-            .elder-brother-textfield , .younger-brother-textfield{
+            .elder-brother-textfield,
+            .younger-brother-textfield {
               width: 100%;
-              padding: 6px  16px;
+              padding: 6px 16px;
               font-size: 14px;
               line-height: 1.42857143;
               color: #252328;
@@ -197,21 +198,22 @@
                 -webkit-box-shadow ease-in-out 0.15s;
             }
 
-            .younger-brother-textfield{
-            padding: 6px  7px;
+            .younger-brother-textfield {
+              padding: 6px 7px;
             }
           }
 
-          .table-heading-married{
+          .table-heading-married {
             background-color: #fff;
             font-weight: 500;
             border-bottom: 2px solid #eee;
             padding: 10px 25px;
             color: #252324;
 
-            .elder-brother-textfield , .younger-brother-textfield{
+            .elder-brother-textfield,
+            .younger-brother-textfield {
               width: 100%;
-              padding: 6px  16px;
+              padding: 6px 16px;
               font-size: 14px;
               line-height: 1.42857143;
               color: #252328;
@@ -225,12 +227,10 @@
                 -webkit-box-shadow ease-in-out 0.15s;
             }
 
-            .younger-brother-textfield{
-            padding: 6px  7px;
+            .younger-brother-textfield {
+              padding: 6px 7px;
             }
           }
-
-
         }
       }
     }
@@ -255,16 +255,17 @@
           }
         }
         .table-body {
-          .table-heading-unmarried{
+          .table-heading-unmarried {
             background-color: #fff;
             font-weight: 500;
             border-bottom: 2px solid #eee;
             padding: 10px 25px;
             color: #252324;
 
-            .elder-sister-textfield , .younger-sister-textfield{
+            .elder-sister-textfield,
+            .younger-sister-textfield {
               width: 100%;
-              padding: 6px  16px;
+              padding: 6px 16px;
               font-size: 14px;
               line-height: 1.42857143;
               color: #252328;
@@ -278,20 +279,21 @@
                 -webkit-box-shadow ease-in-out 0.15s;
             }
 
-            .younger-sister-textfield{
-            padding: 6px  7px;
+            .younger-sister-textfield {
+              padding: 6px 7px;
             }
           }
-          .table-heading-married{
+          .table-heading-married {
             background-color: #fff;
             font-weight: 500;
             border-bottom: 2px solid #eee;
             padding: 10px 25px;
             color: #252324;
 
-            .elder-sister-textfield , .younger-sister-textfield{
+            .elder-sister-textfield,
+            .younger-sister-textfield {
               width: 100%;
-              padding: 6px  16px;
+              padding: 6px 16px;
               font-size: 14px;
               line-height: 1.42857143;
               color: #252328;
@@ -305,8 +307,8 @@
                 -webkit-box-shadow ease-in-out 0.15s;
             }
 
-            .younger-sister-textfield{
-            padding: 6px  7px;
+            .younger-sister-textfield {
+              padding: 6px 7px;
             }
           }
         }
@@ -363,12 +365,11 @@
       }
     }
   }
-   
 }
 
- // This is css For Sub Caste modify
+// This is css For Sub Caste modify
 
- .popmodify-edit-popup-list {
+.popmodify-edit-popup-list {
   .popmodify-edit-popup-div1 {
     display: flex;
     justify-content: space-between;
@@ -435,10 +436,6 @@
       }
     }
 
-   
-
-    
-
     //  Buttons Css
     .edit-changes-button {
       padding: 10px;
@@ -489,5 +486,4 @@
       }
     }
   }
-   
 }

@@ -9,7 +9,7 @@ import Dashheader from "../../dashHeader/Dashheader";
 import Sidebar from "../../sidebar/Sidebar";
 
 const MyInterests = () => {
-  const count = 1
+  const count = 1;
   const [values, setValues] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -33,25 +33,35 @@ const MyInterests = () => {
 
   return (
     <>
-    <Dashheader/>
-    <Sidebar/>
-    <Box className="myinterests-page-container">
-      <Box className="myinterests-header-part">
-        <h3 className="myinterests-user-name">Interested Profile</h3>
-        <Divider />
-      </Box>
-      <Box className="myinterests-tabs-list">
-        <Box>
-          <Tabs className="myinterests-tabs" value={values} onChange={handleChange}>
-            <Tab className="tab-names-list-01" label={`Accepted (${count})`} />
-            <Tab className="tab-names-list-02" label={`Requests (${count})`} />
-            <Tab className="tab-names-list-03" label={`Sent (${count})`} />
-            <Tab className="tab-names-list-04" label={`Pending (${count})`} />
-          </Tabs>
-          <Box className="tabs-content">{renderContents()}</Box>
+      <Dashheader />
+      <Sidebar />
+      <Box className="myinterests-page-container">
+        <Box className="myinterests-header-part">
+          <h3 className="myinterests-user-name">Interested Profile</h3>
+          <Divider />
+        </Box>
+        <Box className="myinterests-tabs-list">
+          <Box>
+            <Tabs
+              className="myinterests-tabs"
+              value={values}
+              onChange={handleChange}
+            >
+              <Tab
+                className="tab-names-list-01"
+                label={`Accepted (${count})`}
+              />
+              <Tab
+                className="tab-names-list-02"
+                label={`Requests (${count})`}
+              />
+              <Tab className="tab-names-list-03" label={`Sent (${count})`} />
+              <Tab className="tab-names-list-04" label={`Pending (${count})`} />
+            </Tabs>
+            <Box className="tabs-content">{renderContents()}</Box>
+          </Box>
         </Box>
       </Box>
-    </Box>
     </>
   );
 };

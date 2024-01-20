@@ -1,16 +1,18 @@
 import React from "react";
 import { Box, styled, Stack, Breadcrumbs, List, ListItem } from "@mui/material";
 import "./registration.scss";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Link, useNavigate } from "react-router-dom";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import DisabledByDefaultIcon from "@mui/icons-material/DisabledByDefault";
-import FeaturedVideoIcon from "@mui/icons-material/FeaturedVideo";
-import Footer from "../Homepages/Footer-Part/Footer";
+import {
+  CheckBox,
+  DisabledByDefault,
+  FeaturedVideo,
+  NavigateNext
+} from "@mui/icons-material";
+import Footer from "../homePages/footerPart/Footer";
 import logo4 from "../../assets/images/sangam-sathi-logo.png";
-import securePayment from '../../assets/images/secure-payment.png'
+import securePayment from "../../assets/images/secure-payment.png";
 
-const CheckedIcon = styled(CheckBoxIcon)`
+const CheckedIcon = styled(CheckBox)`
   color: green;
 `;
 
@@ -58,8 +60,9 @@ const RegistrationPage = () => {
         </h3>
       </Box>
       <Box className="reg-container-div-1">
-        <img src={logo4} alt="sangam-sathi-logo" />
-
+        <Link to="/">
+          <img src={logo4} alt="sangam-sathi-logo" />
+        </Link>
         <button className="login-button" onClick={handleLogin}>
           {" "}
           Login{" "}
@@ -70,7 +73,7 @@ const RegistrationPage = () => {
           <Stack className="reg-stack-1" direction="row" spacing={2}>
             <Breadcrumbs
               separator={
-                <NavigateNextIcon fontSize="small" sx={{ color: "white" }} />
+                <NavigateNext fontSize="small" sx={{ color: "white" }} />
               }
               aria-label="breadcrumb"
               sx={{ marginTop: "50px" }}
@@ -133,7 +136,7 @@ const RegistrationPage = () => {
                   <CheckedIcon />
                 </ListItemsSilver>
                 <ListItemsSilver>
-                  <DisabledByDefaultIcon style={{ color: "red" }} />
+                  <DisabledByDefault style={{ color: "red" }} />
                 </ListItemsSilver>
               </List>
             </Box>
@@ -181,7 +184,7 @@ const RegistrationPage = () => {
                   <CheckedIcon />
                 </ListItemsSilver>
                 <ListItemsSilver>
-                  <DisabledByDefaultIcon style={{ color: "red" }} />
+                  <DisabledByDefault style={{ color: "red" }} />
                 </ListItemsSilver>
               </List>
             </Box>
@@ -258,7 +261,11 @@ const RegistrationPage = () => {
         </Box>
         <Stack direction="row" spacing={3} className="trusted-stack">
           <Box className="container-card1">
-          <img className="security-icon-img" src={securePayment} alt="securePayment" />
+            <img
+              className="security-icon-img"
+              src={securePayment}
+              alt="securePayment"
+            />
             <Box>
               <h4 className="trusted-heading-2"> Secure Payment </h4>
               <h4 className="trusted-heading-3">
@@ -273,9 +280,9 @@ const RegistrationPage = () => {
               We accept all of the following credit cards.{" "}
             </h4>
             <Box sx={{ textAlign: "left" }}>
-              <FeaturedVideoIcon fontSize="large" />
-              <FeaturedVideoIcon fontSize="large" />
-              <FeaturedVideoIcon fontSize="large" />
+              <FeaturedVideo fontSize="large" />
+              <FeaturedVideo fontSize="large" />
+              <FeaturedVideo fontSize="large" />
             </Box>
           </Box>
         </Stack>

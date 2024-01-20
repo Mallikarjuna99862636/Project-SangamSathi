@@ -10,7 +10,7 @@ import {
   Stack,
 } from "@mui/material";
 import "./lifestyle.scss";
-import CancelIcon from "@mui/icons-material/Cancel";
+import {Cancel} from "@mui/icons-material";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import jsondata from "../../../../../Jsondata/data.json";
 
@@ -135,7 +135,7 @@ const LifeStyle = ({render}) => {
                 Life Style & Appearence
               </h3>
               <DialogActions>
-                <CancelIcon
+                <Cancel
                   className="popmodify-edit-cancel-icon"
                   onClick={handleCloseDialog}
                 />
