@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import logo5 from "../../assets/images/sangam-sathi-logo.png";
 import "./logoutconfirm.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link  } from "react-router-dom";
 
 const LogoutConfirm = () => {
   const navigate = useNavigate();
@@ -13,7 +13,9 @@ const LogoutConfirm = () => {
   return (
     <Box className="confirm-logout-div-1">
       <Box className="confirm-logout-div-2">
-        <img src={logo5} alt="sangam-sathi-logo" />
+      <Link to="/">
+        <img  src={logo5} alt="sangam-sathi-logo" />
+        </Link>
       </Box>
       <Box className="confirm-logout-div-3">
         <Box className="confirm-logout-div-4">

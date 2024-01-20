@@ -1,0 +1,140 @@
+.companyabout-container {
+  font-size: 14px;
+  border-bottom: 1px solid #ea3535;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  min-height: 30px;
+  background-color: #ff4d4d;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .companyabout-heading-1,
+  .companyabout-heading-2 {
+    font-size: 13px;
+    margin: 5px 0px 5px 80px;
+    text-align: initial;
+    flex: 1;
+    font-weight: 500;
+  }
+
+  .companyabout-heading-2 {
+    text-align: center;
+  }
+}
+
+.companyabout-container-div-1 {
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: relative;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    padding: 0px 40px !important;
+    margin-left: 40px;
+  }
+
+  .companyabout-login-button {
+    padding: 10px 15px;
+    height: 41px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #00bda7;
+    margin-right: 130px;
+    width: 90px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    transition: all 0.5s;
+    white-space: normal !important;
+    cursor: pointer;
+  }
+}
+
+.companyabout-container-div-2 {
+  background-image: url("../../assets/images/website-banner/ABOUT.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 340px;
+  background-position: center;
+  border-bottom: transparent;
+}
+
+.companyabout-main-content {
+  margin: 0px auto;
+  text-align: center;
+  width: 56%;
+  h2 {
+    color: #252328;
+    margin: 0px 0px 15px 0px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+  }
+  .companyabout-para {
+    font-size: 21px;
+    font-weight: 400;
+    color: #252328;
+    line-height: 31px;
+    word-wrap: break-word;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 70px;
+  }
+  .companyabout-main-logo {
+    padding-top: 80px;
+    margin-bottom: 20px;
+
+    .heart-icon {
+      font-size: 70px;
+      line-height: 2.1;
+      padding: 20px 20px;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #ff4d4d !important;
+    }
+  }
+}
+
+//   Second Para Div
+
+.section-title-div {
+ 
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  .companyabout-section-title {
+    margin: 0px auto;
+    width: 80%;
+    margin-bottom: 60px;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #6f6d72;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+
+    h2 {
+      font-size: 28px;
+      line-height: 38px;
+      color: #252328;
+      margin: 0px 0px 15px 0px;
+      font-weight: 400;
+    }
+    p{
+        margin: 0px 0px 20px 0px;
+        text-align: justify;
+    }
+  }
+}

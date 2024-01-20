@@ -2,12 +2,15 @@ import React from "react";
 import { Box, Divider } from "@mui/material";
 import "./registrationsuccess.scss";
 import logo1 from "../../assets/images/sangam-sathi-logo.png";
+import {Link}  from 'react-router-dom'
 
 const RegistrationSuccess = () => {
   return (
     <Box className="RegistrationSuccess">
       <Box className="first-box">
-        <img src={logo1} alt="sangam-sathi-logo" />
+      <Link to="/">
+        <img style={{padding : '20px'}} src={logo1} alt="sangam-sathi-logo" />
+        </Link>
       </Box>
       <Box className="second-box">
         <Divider />

@@ -16,6 +16,8 @@ import MyInterests from "../pages/comppages/myInterests/MyInterests";
 import AssistanceServices from "../pages/comppages/assistanceServices/AssistanceServices";
 import ViewAll from "../pages/comppages/viewAll/ViewAll";
 import Search from "../pages/comppages/search/Search";
+import CompanyAbout from "../components/companyAbout/CompanyAbout";
+import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
 
 const AppRoutes = () => {
   return (
@@ -30,6 +32,8 @@ const AppRoutes = () => {
           <Route path="registrationconfirm" element={<RegistrationConfirm />} />
           <Route path="registrationsuccess" element={<RegistrationSuccess />} />
           <Route path="confirmlogout" element={<LogoutConfirm />} />
+          <Route path="aboutcompany" element={<CompanyAbout />} />
+          <Route path="companypromoter" element={<CompanyPromoter />} />
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
           <Route path="user">

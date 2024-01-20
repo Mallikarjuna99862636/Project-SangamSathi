@@ -2,12 +2,15 @@ import React from "react";
 import { Box, Divider, TextField, Stack } from "@mui/material";
 import "./registrationconfirm.scss";
 import logo from "../../assets/images/sangam-sathi-logo.png";
+import {Link}  from 'react-router-dom'
 
 const RegistrationConfirm = () => {
   return (
     <Box className="confirm-page-div-1">
       <Box>
+      <Link to="/">
         <img src={logo} alt="sangam-sathi-icon" />
+        </Link>
       </Box>
       <Box className="confirm-page-div-2">
         <h4 className="confirm-page-heading-1">Proceed Towards Payment</h4>
