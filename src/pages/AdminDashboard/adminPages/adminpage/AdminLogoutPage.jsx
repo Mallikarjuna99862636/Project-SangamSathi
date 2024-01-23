@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../../src/images/logo.png";
 import { useNavigate } from "react-router-dom";
-import "../../../pages/admin/adminpage/adminpagedesign.scss";
+import "./adminpagedesign.scss";
 
 const AdminLogoutPage = () => {
   const navigate = useNavigate();

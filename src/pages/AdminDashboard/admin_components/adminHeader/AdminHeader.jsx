@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import logo from "../../../images/logo.png";
-import profile from "../../../images/adminprofile.JPG";
+import logo from "../../../../assets/images/sangam-sathi-logo.png";
+import profile from "../../../../assets/images/admin-pic.jpg";
 import { useNavigate } from "react-router-dom";
 import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
@@ -11,9 +11,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-import "./header.scss";
+import "./adminheader.scss";
 
-const Header = () => {
+const AdminHeader = () => {
   const [showsetting, setShowSetting] = useState(false);
   const [showprofile, setShowProfile] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
@@ -182,4 +182,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AdminHeader;

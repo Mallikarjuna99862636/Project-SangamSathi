@@ -3,9 +3,9 @@ import { FaUsers } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./dashboard.scss";
+import "./initialadmindashboard.scss";
 
-function DashBoard() {
+function InitialAdminDashboard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -281,4 +281,4 @@ function DashBoard() {
   );
 }
 
-export default DashBoard;
+export default InitialAdminDashboard;

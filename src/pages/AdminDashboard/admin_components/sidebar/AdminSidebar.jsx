@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Nav, Button, Collapse } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -8,12 +8,12 @@ import { FaUsers } from "react-icons/fa6";
 import { FaColumns } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 import { IoIosNotifications } from "react-icons/io";
-import profile from "../../../images/adminprofile.JPG";
+import profile from "../../../../assets/images/admin-pic.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
-import "./sidebar.scss";
+import "./adminsidebar.scss";
 
-const Sidebar = () => {
+const AdminSidebar = () => {
   const [openSections, setOpenSections] = useState({
     section1: false,
     section2: false,
@@ -255,4 +255,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default AdminSidebar;

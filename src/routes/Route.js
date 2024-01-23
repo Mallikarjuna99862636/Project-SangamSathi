@@ -18,6 +18,7 @@ import ViewAll from "../pages/comppages/viewAll/ViewAll";
 import Search from "../pages/comppages/search/Search";
 import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
+import AdminDashboard from "../pages/AdminDashboard/adminPages/adminDashboard/AdminDashboard";
 
 const AppRoutes = () => {
   return (
@@ -49,6 +50,9 @@ const AppRoutes = () => {
             <Route path="view-all" element={<ViewAll />} />
             <Route path="search" element={<Search />} />
             <Route path="confirmlogout" element={<UserDashboard />} />
+          </Route>
+          <Route path="admin">
+          <Route path="dashboard" element={<AdminDashboard/>}  /> 
           </Route>
         </Route>
       </Routes>
