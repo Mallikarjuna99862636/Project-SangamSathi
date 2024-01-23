@@ -226,7 +226,7 @@ const About = ({ render }) => {
             </Box>
             <Divider />
             <Box className="edit-changes-button">
-              <button className="close-button"> Close</button>
+              <button className="close-button" onClick={handleCloseDialog}> Close</button>
               <button type="submit" className="save-changes-button">
                 {" "}
                 Save Changes

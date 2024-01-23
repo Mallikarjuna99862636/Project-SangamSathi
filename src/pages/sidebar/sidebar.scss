@@ -37,7 +37,7 @@
     flex-direction: column;
     text-decoration: none;
 
-    .sidebar-lists{
+    .sidebar-lists {
       margin: 0;
       font-size: 15px;
       font-weight: 500;
@@ -48,12 +48,8 @@
     margin: 3px 0px;
     color: #626262;
     border-bottom: 1px solid #ebebeb;
-    &:hover{
+    &:hover {
       background-color: aqua;
     }
-    
-
   }
- 
-
 }

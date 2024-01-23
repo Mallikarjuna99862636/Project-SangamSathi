@@ -9,7 +9,7 @@ import {
   ListItemButton,
   Stack,
 } from "@mui/material";
-import "./sidebaar.scss";
+import "./sidebar.scss";
 import { Link } from "react-router-dom";
 import profilephoto  from '../../assets/images/profile-pic.jpg'
 import ExploreIcon from "@mui/icons-material/Explore";
