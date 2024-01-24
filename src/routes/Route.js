@@ -10,15 +10,16 @@ import UserDashboard from "../pages/userDashboard/UserDashboard";
 import LogoutConfirm from "../components/logoutConfirm/LogoutConfirm";
 import TableData from "../components/table/TableData";
 import ExtraCodeDiv from "../components/codeExtra/ExtraCodeDiv";
-import Profile from "../pages/comppages/page2/Profile";
-import MyMatches from "../pages/comppages/myMatch/MyMatches";
-import MyInterests from "../pages/comppages/myInterests/MyInterests";
-import AssistanceServices from "../pages/comppages/assistanceServices/AssistanceServices";
-import ViewAll from "../pages/comppages/viewAll/ViewAll";
-import Search from "../pages/comppages/search/Search";
+import Profile from "../pages/userDashboard/comppages/page2/Profile";
+import MyMatches from "../pages/userDashboard/comppages/myMatch/MyMatches";
+import MyInterests from "../pages/userDashboard/comppages/myInterests/MyInterests";
+import AssistanceServices from "../pages/userDashboard/comppages/assistanceServices/AssistanceServices";
+import ViewAll from "../pages/userDashboard/comppages/viewAll/ViewAll";
+import Search from "../pages/userDashboard/comppages/search/Search";
 import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
-import AdminDashboard from "../pages/AdminDashboard/adminPages/adminDashboard/AdminDashboard";
+import AdminSidebar from "../pages/adminDashboard1/adminSidebar/AdminSidebar";
+import AdminDashboard1 from "../pages/adminDashboard1/adminDashboard/AdminDashboard1";
 
 const AppRoutes = () => {
   return (
@@ -52,7 +53,8 @@ const AppRoutes = () => {
             <Route path="confirmlogout" element={<UserDashboard />} />
           </Route>
           <Route path="admin">
-          <Route path="dashboard" element={<AdminDashboard/>}  /> 
+          <Route path="dashboard" element={<AdminDashboard1/>}  /> 
+          <Route path="sidebar" element={<AdminSidebar/>}  /> 
           </Route>
         </Route>
       </Routes>

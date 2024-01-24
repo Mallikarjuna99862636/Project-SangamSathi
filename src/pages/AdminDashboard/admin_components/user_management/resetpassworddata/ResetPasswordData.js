@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../resetpassworddata/resetpassworddata.scss";
+import "./resetpassworddata.scss";
 import axios from "axios";
 import { FaRegEdit } from "react-icons/fa";
 const ResetPasswordData = () => {

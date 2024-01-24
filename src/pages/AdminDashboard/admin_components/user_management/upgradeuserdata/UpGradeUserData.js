@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../upgradeuserdata/upgradeuserdata.scss";
+import "./upgradeuserdata.scss";
 import { FaCheck } from "react-icons/fa6";
 
 const UpGradeUserData = () => {

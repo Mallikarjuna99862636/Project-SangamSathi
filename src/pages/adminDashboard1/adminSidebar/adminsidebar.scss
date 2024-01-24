@@ -1,0 +1,56 @@
+.sidebar-main-container {
+    width: 100px;
+    position: fixed;
+    top: 64;
+    float: left;
+    background-color: rgb(56, 7, 7);
+  
+    .profile-details-div {
+      box-sizing: border-box;
+  
+      .img-div {
+        padding: 19px 5px 5px 21px;
+  
+        .profile-photo {
+          width: 60px;
+          height: 60px;
+          border: 1px solid black;
+          border-radius: 50%;
+        }
+      }
+  
+      .user-name {
+        margin-bottom: 0px;
+        font-size: 16px;
+        margin-top: 18px;
+        font-weight: 600;
+      }
+  
+      .user-age {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  
+    .links {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+  
+      .sidebar-lists {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  
+    .list-items-buttons {
+      margin: 3px 0px;
+      color: #626262;
+      border-bottom: 1px solid #ebebeb;
+      &:hover {
+        background-color: aqua;
+      }
+    }
+  }
+  

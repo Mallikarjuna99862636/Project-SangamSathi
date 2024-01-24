@@ -1,7 +1,7 @@
 import React from "react";
-import Dashheader from "../dashHeader/Dashheader";
-import Sidebar from "../sidebar/Sidebar";
-import DashboardInitialPage from "../comppages/dashboardPage/DashboardInitialPage";
+import Dashheader from "./dashHeader/Dashheader";
+import Sidebar from "./sidebar/Sidebar";
+import DashboardInitialPage from "./comppages/dashboardPage/DashboardInitialPage";
 import "./userdashboard.scss";
 
 const UserDashboard = () => { 

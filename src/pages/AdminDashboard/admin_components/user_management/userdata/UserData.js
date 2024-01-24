@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../userdata/userdata.scss";
+import "./userdata.scss";
 import axios from "axios";
 import { FaCheck } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";

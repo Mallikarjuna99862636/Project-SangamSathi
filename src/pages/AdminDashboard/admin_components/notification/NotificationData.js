@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./notification.scss";
 import axios from "axios";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+
 const NotificationData = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);

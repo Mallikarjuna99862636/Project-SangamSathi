@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../renewalsdata/renewal.scss'
+import './renewal.scss'
 import axios from "axios";
 
 const RenewalsData = () => {

@@ -3,6 +3,7 @@ import Header from "../../../components/admin_components/header/Header";
 import Sidebar from '../../../components/admin_components/sidebar/Sidebar';
 import PayToPromotersData from '../../../components/admin_components/promoter_management/paytopromotersdata/PayToPromotersData';
 import './promoter_managementpage.scss'
+
 const PayToPromotersPage = () => {
   return (
     <div className="main-admin-div">

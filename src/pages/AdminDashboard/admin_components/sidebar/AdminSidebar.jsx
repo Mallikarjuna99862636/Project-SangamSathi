@@ -91,7 +91,7 @@ const AdminSidebar = () => {
             <Nav className="flex-column">
               <Link to="/admin/user">User</Link>
               <Link to="/admin/upgrade">Upgrade Users</Link>
-              <Link to="/admin/renewals">Renewals</Link>
+              <Link to="/admin/renewals">Upgrade Users</Link>
               <Link to="/admin/resetpassword">Reset Password</Link>
               <Link to="/admin/imageverification">Image Verification</Link>
             </Nav>
