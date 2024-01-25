@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Divider, Stack } from "@mui/material";
+import { Box, Divider, Stack} from "@mui/material";
 import icon1 from "../../../../assets/images/wedding-arch.png";
 import icon2 from "../../../../assets/images/love-letter.png";
 import icon3 from "../../../../assets/images/chat.png";
@@ -398,6 +398,7 @@ const DashboardInitialPage = () => {
           </Carousel>
         </Box>
       </Box>
+        
     </Box>
   );
 };

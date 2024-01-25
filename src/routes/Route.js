@@ -18,8 +18,8 @@ import ViewAll from "../pages/userDashboard/comppages/viewAll/ViewAll";
 import Search from "../pages/userDashboard/comppages/search/Search";
 import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
-import AdminSidebar from "../pages/adminDashboard1/adminSidebar/AdminSidebar";
 import AdminDashboard1 from "../pages/adminDashboard1/adminDashboard/AdminDashboard1";
+import Users from "../pages/adminDashboard1/adminPages/userManagment/users/Users";
 
 const AppRoutes = () => {
   return (
@@ -54,7 +54,7 @@ const AppRoutes = () => {
           </Route>
           <Route path="admin">
             <Route path="dashboard" element={<AdminDashboard1 />} />
-            <Route path="sidebar" element={<AdminSidebar />} />
+            <Route path="users" element={<Users />} />
           </Route>
         </Route>
       </Routes>
