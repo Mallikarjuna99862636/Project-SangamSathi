@@ -41,7 +41,7 @@ const AppRoutes = () => {
           <Route path="user">
             <Route path="dashboard" element={<UserDashboard />} />
             <Route path="profile" element={<Profile />} />
-            
+
             <Route path="my-matches" element={<MyMatches />} />
             <Route path="my-interests" element={<MyInterests />} />
             <Route
@@ -53,8 +53,8 @@ const AppRoutes = () => {
             <Route path="confirmlogout" element={<UserDashboard />} />
           </Route>
           <Route path="admin">
-          <Route path="dashboard" element={<AdminDashboard1/>}  /> 
-          <Route path="sidebar" element={<AdminSidebar/>}  /> 
+            <Route path="dashboard" element={<AdminDashboard1 />} />
+            <Route path="sidebar" element={<AdminSidebar />} />
           </Route>
         </Route>
       </Routes>

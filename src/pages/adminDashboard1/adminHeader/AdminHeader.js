@@ -15,14 +15,14 @@ import {
   Dialog,
 } from "@mui/material";
 import sangamlogo from "../../../assets/images/sangam-sathi-logo.png";
-import profileimg from "../../../assets/images/profile-pic.jpg";
+import adminimg from "../../../assets/images/admin-pic.jpg";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router-dom";
 import CancelIcon from "@mui/icons-material/Cancel";
-import userdps from "../../assets/images/profile-pic.jpg";
+import userdps from "../../../assets/images/profile-pic.jpg";
 import StarIcon from '@mui/icons-material/Star';
 import "./adminheader.scss";
 
@@ -88,7 +88,7 @@ const AdminHeader = () => {
               {" "}
               <img
                 className="profile-img"
-                src={profileimg}
+                src={adminimg}
                 alt="profile-pic"
               />{" "}
             </Avatar>

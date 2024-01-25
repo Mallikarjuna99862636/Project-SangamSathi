@@ -2,6 +2,7 @@ import React from "react";
 import "./admindashboard1.scss";
 import AdminHeader from "../adminHeader/AdminHeader";
 import AdminSidebar from "../adminSidebar/AdminSidebar";
+import AdminInitialPage from "../adminPages/admInInitialPage/AdminInitialPage";
 
 const AdminDashboard1 = () => { 
   return (
@@ -9,7 +10,7 @@ const AdminDashboard1 = () => {
       <AdminHeader/>
       <AdminSidebar/>
       <div className="content-page">
-       <h1> hello </h1>
+      <AdminInitialPage/>
       </div>
     </div>
   );
