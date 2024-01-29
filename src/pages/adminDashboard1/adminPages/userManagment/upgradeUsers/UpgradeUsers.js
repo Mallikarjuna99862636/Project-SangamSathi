@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./upgradeusers.scss";
-import { FaCheck } from "react-icons/fa6";
+import CheckSharpIcon from '@mui/icons-material/CheckSharp';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
@@ -15,6 +15,7 @@ const UpgradeUsers = () => {
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
   const [showActive, setShowActive] = useState(false);
+  console.log(setShowActive)
   //Data fetching
   useEffect(() => {
     const fetchData = async () => {
@@ -44,9 +45,6 @@ const UpgradeUsers = () => {
     );
   });
 
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
 
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
@@ -129,7 +127,7 @@ const UpgradeUsers = () => {
                 </td>
                 <td className="upgrade-user-status-btn">
                   <button className="btn">
-                    <FaCheck /> <br />
+                    <CheckSharpIcon /> <br />
                     UPGRADE
                   </button>
                 </td>

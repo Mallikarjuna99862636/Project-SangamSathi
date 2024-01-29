@@ -1,22 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./users.scss";
 import axios from "axios";
-import { FaCheck } from "react-icons/fa6";
-import { MdDelete } from "react-icons/md";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Select,
-  MenuItem,
-  InputLabel,
-  FormControl,
-  Input,
-  Button,
-} from "@mui/material";
+import CheckSharpIcon from '@mui/icons-material/CheckSharp';
+import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
@@ -30,6 +16,7 @@ const Users = () => {
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
   const [showActive, setShowActive] = useState(true);
+  console.log(setShowActive)
 
   //Data fetching
   useEffect(() => {
@@ -82,34 +69,7 @@ const Users = () => {
       <div className="user-data">
         <div className="fist-head">
           <h4 className="user-heading">Users</h4>
-          {/* <FormControl variant="outlined">
-            <InputLabel id="user-type-label">User Type</InputLabel>
-            <Select className="select-items" labelId="user-type-label" id="user-type" label="User Type">
-              <MenuItem value="">
-                <em>All Users</em>
-              </MenuItem>
-              <MenuItem value="premium">Premium Users</MenuItem>
-              <MenuItem value="silver">Silver Users</MenuItem>
-              <MenuItem value="free">Free Users</MenuItem>
-            </Select>
-          </FormControl> */}
-          {/* <FormControl variant="outlined">
-          <InputLabel id="user-type-label">User Type</InputLabel>
-          <Select
-                size="small"
-                className="select-type-user"
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                label="User Type"
-                // value={selectParentType}
-                // onChange={(e) => setSelectParentType(e.target.value)}
-              >
-                <MenuItem value="premium">Premium Users</MenuItem>
-                <MenuItem value="silver">Silver Users</MenuItem>
-                <MenuItem value="free">Free Users</MenuItem>
-              </Select>
-              </FormControl> */}
-          <select name="" id="">
+          <select name="" id="" className="select-type-user">
             <option value="" selected>
               All Users
             </option>
@@ -122,14 +82,7 @@ const Users = () => {
         <div className="second-head">
           <div className="rows-per-page">
             <label>Show </label>
-            {/* <FormControl>
-              <Select value={rowsPerPage} onChange={handleRowsPerPageChange}>
-                <MenuItem value={5}>5</MenuItem>
-                <MenuItem value={10}>10</MenuItem>
-                <MenuItem value={15}>15</MenuItem>
-                <MenuItem value={20}>20</MenuItem>
-              </Select>
-            </FormControl> */}
+           
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
               <option value={10}>10</option>
@@ -155,64 +108,6 @@ const Users = () => {
         </div>
         <br />
         <div class="table-responsive third-head">
-          {/* <TableContainer>
-            <Table>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Registration No</TableCell>
-                  <TableCell>Name</TableCell>
-                  <TableCell>Email Id</TableCell>
-                  <TableCell>Gender</TableCell>
-                  <TableCell>User_Type</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>Change Status</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {filterCurrentRowData.map((row, index) => (
-                  <TableRow key={row.id}>
-                    <TableCell>-</TableCell>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.email}</TableCell>
-                    <TableCell>M/F</TableCell>
-                    <TableCell>-</TableCell>
-                    <TableCell className="userdata-status">
-                      {showActive ? (
-                        <span className="status-span">
-                          <p id="active-status"></p>Active
-                        </span>
-                      ) : (
-                        <span className="status-span">
-                          <p id="pending-status"></p>Pending
-                        </span>
-                      )}
-                    </TableCell>
-                    <TableCell className="userdata-status-change">
-                      {showActive ? (
-                        <Button
-                          className="pending-status-btn"
-                          variant="contained"
-                          color="secondary"
-                        >
-                          <MdDelete /> <br />
-                          INACTIVE
-                        </Button>
-                      ) : (
-                        <Button
-                          className="active-status-btn"
-                          variant="contained"
-                          color="primary"
-                        >
-                          <FaCheck /> <br />
-                          ACTIVE
-                        </Button>
-                      )}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer> */}
           <table class="table table-div">
             <thead>
               <tr>
@@ -249,12 +144,12 @@ const Users = () => {
                   <td className="userdata-status-change">
                     {showActive ? (
                       <button className="pending-status-btn">
-                        <MdDelete /> <br />
+                        <DeleteSharpIcon /> <br />
                         INACTIVE
                       </button>
                     ) : (
                       <button className="active-status-btn">
-                        <FaCheck /> <br />
+                        <CheckSharpIcon /> <br />
                         ACTIVE
                       </button>
                     )}
@@ -265,26 +160,6 @@ const Users = () => {
           </table>
         </div>
         <div className="fourth-div">
-          {/* <div className="pagination">
-            <div>
-              <h5>
-                Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
-                {records.length} Entries
-              </h5>
-            </div>
-            <div className="btn-div">
-              <button onClick={handlehandle} disabled={currentPage === 1}>
-                Prev
-              </button>
-              ...
-              <button
-                onClick={handlenext}
-                disabled={currentPage === totalPages}
-              >
-                Next
-              </button>
-            </div>
-          </div> */}
           <div className="pagination">
             <div>
               <h5>

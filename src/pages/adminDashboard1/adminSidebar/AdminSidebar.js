@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -13,14 +13,16 @@ import {
 } from "@mui/material";
 import "./adminsidebar.scss";
 import adminphoto from "../../../assets/images/admin-pic.jpg";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import ExploreIcon from "@mui/icons-material/Explore";
-import GroupIcon from "@mui/icons-material/Group";
-import ListAltIcon from "@mui/icons-material/ListAlt";
-import EmailIcon from "@mui/icons-material/Email";
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import {
+  ExpandLess,
+  ExpandMore,
+  Explore,
+  Group,
+  ListAlt,
+  Email,
+  Notifications,
+  ImportContacts,
+} from "@mui/icons-material";
 
 const AdminSidebar = () => {
   const [open, setOpen] = useState(false);
@@ -29,6 +31,14 @@ const AdminSidebar = () => {
   const [fourOpen, setFourOpen] = useState(false);
   const [fiveOpen, setFiveOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.pathname === "/admin/users") {
+      setOpen(false); 
+    }
+  }, [location.pathname]);
 
   const handleClick1 = () => {
     setOpen(!open);
@@ -48,8 +58,28 @@ const AdminSidebar = () => {
     setFiveOpen(!fiveOpen);
   };
 
-  const handlemailClick = () => {
-    navigate("/forgotpassword");
+  const handlAdminDashboard = () => {
+    navigate("/admin/dashboard");
+  };
+
+  const handlAdminUsers = () => {
+    navigate("/admin/users");
+    setOpen(false);
+  };
+  const handlAdminUpgradeUsers = () => {
+    navigate("/admin/upgradeusers");
+  };
+  const handlAdminRenewals = () => {
+    navigate("/admin/renewals");
+  };
+  const handlAdminTempUsers = () => {
+    navigate("/admin/tempusers");
+  };
+  const handlAdminResetPass = () => {
+    navigate("/admin/resetpassword");
+  };
+  const handlAdminImgVerify = () => {
+    navigate("/admin/imageverification");
   };
 
   return (
@@ -62,6 +92,7 @@ const AdminSidebar = () => {
             width: "270px",
             marginTop: "65px",
             boxSizing: "border-box",
+            overflow : 'hidden'
           },
         }}
         variant="permanent"
@@ -83,46 +114,104 @@ const AdminSidebar = () => {
         </Stack>
         <Divider />
         <List
-          sx={{ width: "100%", maxWidth: 300, bgcolor: "background.paper" }}
+          sx={{ width: "100%", maxWidth: 300, paddingTop: "0px" }}
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          <ListItemButton onClick={handlemailClick}>
+          <ListItemButton
+            onClick={handlAdminDashboard}
+            style={{
+              backgroundColor:
+                location.pathname === "/admin/dashboard" ? "red" : "initial",
+            }}
+          >
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <ExploreIcon />
+              <Explore />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItemButton>
           <ListItemButton onClick={handleClick1}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <ListAltIcon />
+              <ListAlt />
             </ListItemIcon>
             <ListItemText primary="User Managemnet" />
             {open ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminUsers}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/users" ? "red" : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Users" />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminUpgradeUsers}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/upgradeusers"
+                      ? "red"
+                      : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Upgrade Users" />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminRenewals}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/renewals"
+                      ? "red"
+                      : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Renewals" />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminTempUsers}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/tempusers"
+                      ? "red"
+                      : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Temp Users" />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminResetPass}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/resetpassword"
+                      ? "red"
+                      : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Reset Password" />
               </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
+              <ListItemButton
+                sx={{ pl: 4 }}
+                onClick={handlAdminImgVerify}
+                style={{
+                  backgroundColor:
+                    location.pathname === "/admin/imageverification"
+                      ? "red"
+                      : "initial",
+                }}
+              >
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Image Verification" />
               </ListItemButton>
@@ -130,7 +219,7 @@ const AdminSidebar = () => {
           </Collapse>
           <ListItemButton onClick={handleClick2}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <ListAltIcon />
+              <ListAlt />
             </ListItemIcon>
             <ListItemText primary="Assistance Services" />
             {secondOpen ? <ExpandLess /> : <ExpandMore />}
@@ -153,7 +242,7 @@ const AdminSidebar = () => {
           </Collapse>
           <ListItemButton onClick={handleClick3}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <GroupIcon />
+              <Group />
             </ListItemIcon>
             <ListItemText primary="Promoter Management" />
             {thirdOpen ? <ExpandLess /> : <ExpandMore />}
@@ -180,7 +269,7 @@ const AdminSidebar = () => {
           </Collapse>
           <ListItemButton onClick={handleClick4}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <ImportContactsIcon />
+              <ImportContacts />
             </ListItemIcon>
             <ListItemText primary="Receipts" />
             {fourOpen ? <ExpandLess /> : <ExpandMore />}
@@ -203,7 +292,7 @@ const AdminSidebar = () => {
           </Collapse>
           <ListItemButton onClick={handleClick5}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <EmailIcon />
+              <Email />
             </ListItemIcon>
             <ListItemText primary="Reports" />
             {fiveOpen ? <ExpandLess /> : <ExpandMore />}
@@ -226,7 +315,7 @@ const AdminSidebar = () => {
           </Collapse>
           <ListItemButton>
             <ListItemIcon sx={{ minWidth: "40px" }}>
-              <NotificationsIcon />
+              <Notifications />
             </ListItemIcon>
             <ListItemText primary="Notifications" />
           </ListItemButton>

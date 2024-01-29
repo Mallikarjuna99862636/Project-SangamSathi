@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./resetpassword.scss";
 import axios from "axios";
-import { FaRegEdit } from "react-icons/fa";
+import EditSharpIcon from '@mui/icons-material/EditSharp';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
@@ -15,6 +15,7 @@ const ResetPassword = () => {
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
   const [showActive,setShowActive]=useState(false)
+  console.log(setShowActive)
   //Data fetching
   useEffect(() => {
     const fetchData = async () => {
@@ -105,7 +106,7 @@ const ResetPassword = () => {
                   <td>{row.email}</td>
                   <td>Abcd#1234</td>
                   <td className="reset-password-status">{showActive? <span className="status-span"><p className="active-status"></p>Active</span>:<span className="status-span" ><p className="pending-status"></p>Pending</span>}</td>
-                  <td className="reset-password-btn"><button><FaRegEdit /> <br/>change password</button></td>
+                  <td className="reset-password-btn"><button><EditSharpIcon /> <br/>change password</button></td>
                 </tr>
               ))}
             </tbody>

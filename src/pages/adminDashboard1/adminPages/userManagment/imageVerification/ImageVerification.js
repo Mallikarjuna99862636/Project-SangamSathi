@@ -13,7 +13,8 @@ const ImageVerification = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
-  const [showActive,setShowActive]=useState(false)
+  const [showActive, setShowActive] = useState(false);
+  console.log(setShowActive)
   //Data fetching
   useEffect(() => {
     const fetchData = async () => {
@@ -43,8 +44,6 @@ const ImageVerification = () => {
     );
   });
 
-
-
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
     setRowsPerPage(newRowsPerPage);
@@ -59,8 +58,8 @@ const ImageVerification = () => {
   }
   return (
     <>
-    <AdminHeader/>
-    <AdminSidebar/>
+      <AdminHeader />
+      <AdminSidebar />
       <div className="imageverification-user">
         <div className="fist-head">
           <h4>Pending Image Verification</h4>
@@ -79,8 +78,16 @@ const ImageVerification = () => {
           </div>
 
           <div className="search-div">
-            <label htmlFor="search" id="search-id">Search : </label>
-            <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
+            <label htmlFor="search" id="search-id">
+              Search :{" "}
+            </label>
+            <input
+              type="text"
+              id="search"
+              onChange={searchhandle}
+              placeholder="Search"
+              autoComplete="off"
+            />
           </div>
         </div>
         <br />
@@ -88,10 +95,10 @@ const ImageVerification = () => {
           <table className="table table-div">
             <thead>
               <tr>
-              <th>Registration No</th>
+                <th>Registration No</th>
                 <th>Name</th>
                 <th>Email Id</th>
-                <th>Gender</th>                
+                <th>Gender</th>
                 <th>User_Type</th>
                 <th>Image Status</th>
                 <th>Notify</th>
@@ -108,31 +115,57 @@ const ImageVerification = () => {
                   <td>-</td>
                   <td>Upload</td>
                   <td>NA</td>
-                  <td className="imageverification-status">{showActive? <span className="status-span"><p id="active-status"></p>Active</span>:<span className="status-span" ><p id="pending-status"></p>Pending</span>}</td>
+                  <td className="imageverification-status">
+                   {showActive ? (
+                      <span className="status-span">
+                        <p id="active-status"></p>Active
+                      </span>
+                    ) : (
+                      <span className="status-span">
+                        <p id="pending-status"></p>Pending1
+                      </span>
+                      
+                    )} 
+                    {/* {showActive ? (
+                      <div className="active-div">
+                      <p> <div className="status-indicator active"></div>Active</p>
+     
+                      </div>
+                    ) : (
+                      <div className="pending-div">
+                      <p><div className="status-indicator pending"></div>Pending </p>
+                      </div>
+                    )} */}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         <div className="fourth-div">
-        <div className="pagination">
-          <div>
-          <h5>
-          Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
-          </h5>
+          <div className="pagination">
+            <div>
+              <h5>
+                Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
+                {records.length} Entries
+              </h5>
+            </div>
+            <div className="btn-div">
+              <button onClick={handlehandle} disabled={currentPage === 1}>
+                Prev
+              </button>
+              ...
+              <button
+                onClick={handlenext}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
           </div>
-          <div className="btn-div">
-            <button onClick={handlehandle} disabled={currentPage === 1}>
-              Prev
-            </button>...
-            <button onClick={handlenext} disabled={currentPage === totalPages}>
-              Next
-            </button>
-          </div>
-        </div>
         </div>
       </div>
-      </>
+    </>
   );
 };
 

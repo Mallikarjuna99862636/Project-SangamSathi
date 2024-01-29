@@ -15,6 +15,7 @@ const Renewals = () => {
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
   const [showActive, setShowActive] = useState(false);
+  console.log(setShowActive)
 
   //Data fetching
   useEffect(() => {
@@ -45,10 +46,7 @@ const Renewals = () => {
     );
   });
 
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
-
+  
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
     setRowsPerPage(newRowsPerPage);

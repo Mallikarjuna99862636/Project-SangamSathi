@@ -69,6 +69,7 @@
               padding: 10px 20px;
               border-bottom: 1px solid #beb7b7;
               color: #6e6a6a;
+              text-align: justify;
             }
   
             .imageverification-status {
@@ -78,14 +79,71 @@
                   width: 10px;
                   height: 10px;
                   border-radius: 20px;
+                  margin: 0;
                 }
                 #pending-status {
                   background-color: red;
                   width: 10px;
                   height: 10px;
                   border-radius: 20px;
+                  margin: 0;
                 }
               }
+            .status-span {
+                display: inline-block;
+                  margin-right: 10px; 
+
+                  .status-indicator {
+                   
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 5px; /* Adjust as needed */
+                  }
+
+                  .active-status{
+                    margin: 0;
+                  }
+                  .pending-status{
+                    margin: 0;
+                  }
+                  .active {
+                    margin: 0;
+                    background-color: green;
+                  }
+        
+                  .pending {
+                    background-color: red;
+                  }
+              }
+              
+            
+            // .active-div , .pending-div{
+            //     display: flex;
+            //     .status-indicator {
+            //         width: 10px;
+            //         height: 10px;
+            //         border-radius: 50%;
+            //         // display: inline-block;
+            //       }
+        
+            //       .active {
+            //         background-color: green;
+
+
+            //       }
+
+            //       .pending {
+            //         background-color: red;
+            //       }
+            // }
+
+           
+    
+              
+    
+             
             }
           }
         }

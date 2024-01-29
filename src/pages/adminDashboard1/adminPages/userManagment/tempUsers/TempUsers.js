@@ -14,7 +14,6 @@ const TempUsers = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
-  const [showActive, setShowActive] = useState(false);
 
   //Data fetching
   useEffect(() => {
