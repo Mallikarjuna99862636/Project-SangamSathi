@@ -26,6 +26,7 @@
       display: flex;
       align-items: center;
       color: #5f5e61;
+      justify-content: space-between;
       .rows-per-page{
         position: relative;
         left: 10px;
@@ -38,7 +39,6 @@
           padding: 5px;
           border-radius: 5px;
           width: 60px;
-          border: none;
           outline: none;
         }
       }
@@ -49,13 +49,11 @@
           font-size: 1.1em;
           margin-right: 10px;
         }
-        input {
-          border: none;
+        .search-field {
           outline: none;
           height: 40px;
-          border-radius: 5px;
           padding-left: 10px;
-        }
+      }
       }
     }
     .third-head {
@@ -65,6 +63,7 @@
             th {
               padding: 10px 20px;
               border-bottom: 1px solid #beb7b7;
+              text-align: justify;
             }
           }
         }
@@ -130,6 +129,8 @@
     .fourth-div {
       margin-top: 20px;
       .pagination {
+        display: flex;
+        justify-content: space-between;
         div {
           padding-left: 10px;
           padding-right: 100px;

@@ -93,7 +93,7 @@ const Users = () => {
               <MenuItem value="free">Free Users</MenuItem>
             </Select>
           </FormControl> */}
-          <FormControl variant="outlined">
+          {/* <FormControl variant="outlined">
           <InputLabel id="user-type-label">User Type</InputLabel>
           <Select
                 size="small"
@@ -108,20 +108,34 @@ const Users = () => {
                 <MenuItem value="silver">Silver Users</MenuItem>
                 <MenuItem value="free">Free Users</MenuItem>
               </Select>
-              </FormControl>
+              </FormControl> */}
+          <select name="" id="">
+            <option value="" selected>
+              All Users
+            </option>
+            <option value="">Premium Users</option>
+            <option value="">Silver Users</option>
+            <option value="">Free Users</option>
+          </select>
         </div>
         <br />
         <div className="second-head">
           <div className="rows-per-page">
             <label>Show </label>
-            <FormControl>
+            {/* <FormControl>
               <Select value={rowsPerPage} onChange={handleRowsPerPageChange}>
                 <MenuItem value={5}>5</MenuItem>
                 <MenuItem value={10}>10</MenuItem>
                 <MenuItem value={15}>15</MenuItem>
                 <MenuItem value={20}>20</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
+            <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
+              <option value={5}>5</option>
+              <option value={10}>10</option>
+              <option value={15}>15</option>
+              <option value={20}>20</option>
+            </select>
             <label>Entries</label>
           </div>
 
@@ -129,7 +143,8 @@ const Users = () => {
             <label htmlFor="search" id="search-id">
               Search :{" "}
             </label>
-            <Input
+            <input
+              className="search-field"
               type="text"
               id="search"
               onChange={searchhandle}
@@ -140,7 +155,7 @@ const Users = () => {
         </div>
         <br />
         <div class="table-responsive third-head">
-          <TableContainer>
+          {/* <TableContainer>
             <Table>
               <TableHead>
                 <TableRow>
@@ -197,9 +212,79 @@ const Users = () => {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>
+          </TableContainer> */}
+          <table class="table table-div">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Registration No</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Gender</th>
+                <th>User_Type</th>
+                <th>Satus</th>
+                <th>Change Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filterCurrentRowData.map((row, index) => (
+                <tr key={row.id}>
+                 <td>{row.id}</td>
+                  <td>-</td>
+                  <td>{row.name}</td>
+                  <td>{row.email}</td>
+                  <td>M/F</td>
+                  <td>-</td>
+                  <td className="userdata-status">
+                    {showActive ? (
+                      <span className="status-span">
+                        <p id="active-status"></p>Active
+                      </span>
+                    ) : (
+                      <span className="status-span">
+                        <p id="pending-status"></p>Pending
+                      </span>
+                    )}
+                  </td>
+                  <td className="userdata-status-change">
+                    {showActive ? (
+                      <button className="pending-status-btn">
+                        <MdDelete /> <br />
+                        INACTIVE
+                      </button>
+                    ) : (
+                      <button className="active-status-btn">
+                        <FaCheck /> <br />
+                        ACTIVE
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
         <div className="fourth-div">
+          {/* <div className="pagination">
+            <div>
+              <h5>
+                Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
+                {records.length} Entries
+              </h5>
+            </div>
+            <div className="btn-div">
+              <button onClick={handlehandle} disabled={currentPage === 1}>
+                Prev
+              </button>
+              ...
+              <button
+                onClick={handlenext}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </div>
+          </div> */}
           <div className="pagination">
             <div>
               <h5>

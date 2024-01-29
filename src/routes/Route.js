@@ -20,6 +20,11 @@ import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
 import AdminDashboard1 from "../pages/adminDashboard1/adminDashboard/AdminDashboard1";
 import Users from "../pages/adminDashboard1/adminPages/userManagment/users/Users";
+import UpgradeUsers from "../pages/adminDashboard1/adminPages/userManagment/upgradeUsers/UpgradeUsers";
+import Renewals from "../pages/adminDashboard1/adminPages/userManagment/Renewals/Renewals";
+import TempUsers from "../pages/adminDashboard1/adminPages/userManagment/tempUsers/TempUsers";
+import ResetPassword from "../pages/adminDashboard1/adminPages/userManagment/resetPassword/ResetPassword";
+import ImageVerification from "../pages/adminDashboard1/adminPages/userManagment/imageVerification/ImageVerification";
 
 const AppRoutes = () => {
   return (
@@ -55,6 +60,11 @@ const AppRoutes = () => {
           <Route path="admin">
             <Route path="dashboard" element={<AdminDashboard1 />} />
             <Route path="users" element={<Users />} />
+            <Route path="upgradeusers" element={<UpgradeUsers/>} />
+            <Route path="renewals" element={<Renewals/>} />
+            <Route path="tempusers" element={<TempUsers/>} />
+            <Route path="resetpassword" element={<ResetPassword/>} />
+            <Route path="imageverification" element={<ImageVerification/>} />
           </Route>
         </Route>
       </Routes>
