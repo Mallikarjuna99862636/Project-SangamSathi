@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./promoterusers.scss";
+import "./promoters.scss";
+import { FaCheck } from "react-icons/fa6";
+import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
-const PromotersUsers = () => {
+const Promoters = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [records, setRecords] = useState([]);
@@ -13,7 +15,8 @@ const PromotersUsers = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
-
+  const [showActive,setShowActive]=useState(false)
+  console.log(setShowActive)
   //Data fetching
   useEffect(() => {
     const fetchData = async () => {
@@ -43,8 +46,7 @@ const PromotersUsers = () => {
     );
   });
 
-
-
+  
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
     setRowsPerPage(newRowsPerPage);
@@ -59,13 +61,27 @@ const PromotersUsers = () => {
   }
   return (
     <>
-    <AdminHeader/>
-    <AdminSidebar/>
-    <div className="promoter-user">
+     <AdminHeader/>
+     <AdminSidebar/>
+    <div className="promoterdata-user">
       <div className="fist-head">
-        <h4>Promoter Users</h4>
+        <h4>Promoters</h4>
+        <select name="" id="">
+          <option value="" selected>
+            All Users
+          </option>
+          <option value="">Premium Users</option>
+          <option value="">Silver Users</option>
+          <option value="">Free Users</option>
+        </select>
       </div>
       <br />
+      <div className="radio-input-div">
+        <input type="radio" id="all" name="select-one" required/>All
+        <input type="radio" id="active" name="select-one"/>Active
+        <input type="radio" id="inactive" name="select-one"/>Inactive
+        <input type="radio" id="Pending" name="select-one"/>Pending
+      </div>
       <div className="second-head">
         <div className="rows-per-page">
           <label>Show </label>
@@ -93,15 +109,16 @@ const PromotersUsers = () => {
       </div>
       <br />
       <div className="table-responsive third-head">
-        <table className="table table-div">
+        <table className=" table table-div">
           <thead>
             <tr>
               <th>Promoter Name</th>
-              <th>Promocode</th>
+              <th >Promoter Code</th>
               <th>Mobile</th>
-              <th>Assistance Users</th>
-              <th>Total Users</th>
-              <th>Action</th>
+              <th>Email Id</th>
+              <th>Promoter Type</th>
+              <th>Status</th>
+              <th>Change Status</th>
             </tr>
           </thead>
           <tbody>
@@ -110,10 +127,11 @@ const PromotersUsers = () => {
                 <td>{row.name}</td>
                 <td>-</td>
                 <td>{row.phone}</td>
+                <td>{row.email}</td>
                 <td>-</td>
-                <td>-</td>
-                <td className="promoter-action-btn"><button id="act-btn">details</button></td>
-              </tr>
+                <td className="promoter-status">{showActive? <span className="promoter-status-span"><p id="active-status"></p>Active</span>:<span className="promoter-status-span" ><p id="pending-status"></p>Pending</span>}</td>
+                  <td className="promoter-status-change-btn">{showActive? <button className="promoter-pending-status-btn"><MdDelete /> <br />INACTIVE</button>:<button className="promoter-active-status-btn"><FaCheck/> <br />ACTIVE</button>}</td>
+                </tr>
             ))}
           </tbody>
         </table>
@@ -142,4 +160,4 @@ const PromotersUsers = () => {
   );
 };
 
-export default PromotersUsers;
+export default Promoters;

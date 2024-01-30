@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./promoterusers.scss";
+import "./paytopromoters.scss";
 import axios from "axios";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
-const PromotersUsers = () => {
+const PayToPromoters = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [records, setRecords] = useState([]);
@@ -43,7 +43,7 @@ const PromotersUsers = () => {
     );
   });
 
-
+ 
 
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
@@ -61,9 +61,9 @@ const PromotersUsers = () => {
     <>
     <AdminHeader/>
     <AdminSidebar/>
-    <div className="promoter-user">
+    <div className="paytopromoter-user">
       <div className="fist-head">
-        <h4>Promoter Users</h4>
+        <h4>Pay To Promoters</h4>
       </div>
       <br />
       <div className="second-head">
@@ -80,7 +80,7 @@ const PromotersUsers = () => {
 
         <div className="search-div">
           <label htmlFor="search" id="search-id">
-            Search :{" "}
+            Search :
           </label>
           <input
             type="text"
@@ -97,11 +97,11 @@ const PromotersUsers = () => {
           <thead>
             <tr>
               <th>Promoter Name</th>
-              <th>Promocode</th>
-              <th>Mobile</th>
-              <th>Assistance Users</th>
-              <th>Total Users</th>
-              <th>Action</th>
+              <th>Promoter Code</th>
+              <th>Total Earnings</th>
+              <th>Paid</th>
+              <th>Payable</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -109,10 +109,12 @@ const PromotersUsers = () => {
               <tr key={row.id}>
                 <td>{row.name}</td>
                 <td>-</td>
-                <td>{row.phone}</td>
-                <td>-</td>
-                <td>-</td>
-                <td className="promoter-action-btn"><button id="act-btn">details</button></td>
+                <td>Rs.{row?.address?.zipcode} </td>
+                <td>Rs. {row?.address?.zipcode}</td>
+                <td>Rs. {row?.address?.zipcode}</td>
+                <td className="paynow-div">
+                  <button>Pay Now</button>
+                </td>
               </tr>
             ))}
           </tbody>
@@ -142,4 +144,4 @@ const PromotersUsers = () => {
   );
 };
 
-export default PromotersUsers;
+export default PayToPromoters;

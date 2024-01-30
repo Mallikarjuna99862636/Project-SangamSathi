@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./success.scss";
+import "./promotersusers.scss";
 import axios from "axios";
+import AdminHeader from "../../../adminHeader/AdminHeader";
+import AdminSidebar from "../../../adminSidebar/AdminSidebar";
 
-const SuccessData = () => {
+const PromoterUsers = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [records, setRecords] = useState([]);
@@ -41,7 +43,7 @@ const SuccessData = () => {
     );
   });
 
-  
+ 
 
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
@@ -56,12 +58,23 @@ const SuccessData = () => {
     setCurrentPage(currentPage + 1);
   }
   return (
-      <div className="success-user">
-        <div className="fist-head">
-          {/* <h4></h4> */}
-        </div>
-        <br />
-        <div className="second-head">
+    <>
+    <AdminHeader/>
+    <AdminSidebar/>
+    <div className="promotersmanagement-user">
+      <div className="fist-head">
+        <h4>PromoterUsers</h4>
+        <select name="" id="" >
+            <option value="" selected>
+              All Users
+            </option>
+            <option value="">Premium Users</option>
+            <option value="">Silver Users</option>
+            <option value="">Free Users</option>
+          </select>
+      </div>
+      <br />
+      <div className="second-head">
           <div className="rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
@@ -78,53 +91,61 @@ const SuccessData = () => {
             <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
           </div>
         </div>
-        <br />
-        <div className="table-responsive third-head">
-          <table className="table table-div">
-            <thead>
-              <tr>
-              <th>Registration No</th>
-                <th>Name</th>
-                <th>Email Id</th>
-                <th>Mobile No</th>                
-                <th>Caste</th>
-                <th>User Type</th>
+      <br />
+      <div className="table-responsive third-head">
+        <table className="table table-div">
+          <thead>
+            <tr>
+              <th>promoters name</th>
+              <th>Promocode</th>
+              <th>Mobile</th>
+              <th>Free Users</th>
+              <th>Premium Users</th>
+              <th>Silver Users</th>
+              <th>Total Users</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filterCurrentRowData.map((row, index) => (
+              <tr key={row.id}>
+                <td>{row.name}</td>
+                <td>-</td>
+                <td>{row.phone}</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td className="action-button">
+                  <button id="action-btn">DETAILS</button>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {filterCurrentRowData.map((row, index) => (
-                <tr key={row.id}>
-                  <td>-</td>
-                  <td>{row.name}</td>
-                  <td>{row.email}</td>
-                  <td>{row.phone}</td>
-                  <td>Here Caste</td>
-                  <td>free/silver User</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="fourth-div">
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className="fourth-div">
         <div className="pagination">
           <div>
-          <h5>
-          Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
-          </h5>
+            <h5>
+              Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
+              {records.length} Entries
+            </h5>
           </div>
           <div className="btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
-            </button>...
+            </button>
+            ...
             <button onClick={handlenext} disabled={currentPage === totalPages}>
               Next
             </button>
           </div>
         </div>
-        </div>
       </div>
-    
+    </div>
+    </>
   );
 };
 
-export default SuccessData;
+export default PromoterUsers;

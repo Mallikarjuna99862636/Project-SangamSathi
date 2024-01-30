@@ -1,6 +1,10 @@
-.reset-password-user {
-    padding: 10px;
-  
+.promotersmanagement-user {
+    height: 100vh;
+    overflow-y: auto;
+    margin: 65px 0px 0px 270px;
+    box-sizing: border-box;
+    height: calc(100% - 65px);
+    width: calc(100% - 270px);
     .fist-head {
       display: flex;
       justify-content: space-between;
@@ -16,6 +20,7 @@
     .second-head {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       color: #5f5e61;
       .rows-per-page {
         position: relative;
@@ -29,7 +34,6 @@
           padding: 5px;
           border-radius: 5px;
           width: 60px;
-          border: none;
           outline: none;
         }
       }
@@ -41,10 +45,8 @@
           margin-right: 10px;
         }
         input {
-          border: none;
           outline: none;
           height: 40px;
-          border-radius: 5px;
           padding-left: 10px;
         }
       }
@@ -63,55 +65,20 @@
         tbody {
           tr {
             td {
-              padding: 10px 20px;
+                padding: 10px 79px 10px 20px;
               border-bottom: 1px solid #beb7b7;
               color: #6e6a6a;
               text-align: justify;
             }
-            .reset-password-status {
-                .status-span {
-                  .active-status {
-                    background-color: rgb(61, 172, 61);
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 20px;
-                  }
-                  .pending-status{
-                    background-color: red;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 20px;
-                  }
-                }
-              }
-          .reset-password-btn {
-            button {
-              color: #9047fb;
-              background-color: #f2e9ff;
-              border-color: #9047fb;
-              font-size: 13px;
-              font-weight: 400;
-              font-size: 0.7em;
-              width: 110px;
-              height: 60px;
-              border-radius: 2px;
-              text-transform: uppercase;
-              &:hover{
-                background-color: #9047fb;
-                color: white;
-                transition: all 1s;
-              }
-            }
-          }
-          
           }
         }
       }
     }
-  
     .fourth-div {
       margin-top: 20px;
       .pagination {
+        display: flex;
+        justify-content: space-between;
         div {
           padding-left: 10px;
           padding-right: 100px;

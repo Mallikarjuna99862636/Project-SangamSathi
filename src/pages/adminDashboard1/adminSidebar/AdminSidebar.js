@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation , Link } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -30,7 +30,6 @@ const AdminSidebar = () => {
   const [thirdOpen, setThirtOpen] = useState(false);
   const [fourOpen, setFourOpen] = useState(false);
   const [fiveOpen, setFiveOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
 
 
@@ -58,29 +57,7 @@ const AdminSidebar = () => {
     setFiveOpen(!fiveOpen);
   };
 
-  const handlAdminDashboard = () => {
-    navigate("/admin/dashboard");
-  };
-
-  const handlAdminUsers = () => {
-    navigate("/admin/users");
-    setOpen(false);
-  };
-  const handlAdminUpgradeUsers = () => {
-    navigate("/admin/upgradeusers");
-  };
-  const handlAdminRenewals = () => {
-    navigate("/admin/renewals");
-  };
-  const handlAdminTempUsers = () => {
-    navigate("/admin/tempusers");
-  };
-  const handlAdminResetPass = () => {
-    navigate("/admin/resetpassword");
-  };
-  const handlAdminImgVerify = () => {
-    navigate("/admin/imageverification");
-  };
+ 
 
   return (
     <Box className="admin-dashboard-main-div">
@@ -98,8 +75,8 @@ const AdminSidebar = () => {
         variant="permanent"
         anchor="left"
       >
-        <Stack className="profile-details-div" spacing={2} direction="row">
-          <Box className="img-div">
+        <Stack className="admin-profile-details-div"  direction="row">
+          <Box className="admin-img-div">
             <img
               className="admin-photo"
               src={adminphoto}
@@ -107,8 +84,8 @@ const AdminSidebar = () => {
             />
           </Box>
           <Box>
-            <h3 className="user-name"> Rama S</h3>
-            <p className="user-age"> 32 Years Old</p>
+            <h3 className="admin-user-name"> Rama S</h3>
+            <p className="admin-user-age"> 32 Years Old</p>
           </Box>
           <Box></Box>
         </Stack>
@@ -118,8 +95,9 @@ const AdminSidebar = () => {
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
+         <Link  className="admin-nav-link" to="/admin/dashboard">
           <ListItemButton
-            onClick={handlAdminDashboard}
+          className="admin-list-items-buttons"
             style={{
               backgroundColor:
                 location.pathname === "/admin/dashboard" ? "red" : "initial",
@@ -130,6 +108,7 @@ const AdminSidebar = () => {
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItemButton>
+          </Link>
           <ListItemButton onClick={handleClick1}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ListAlt />
@@ -139,9 +118,10 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
+            <Link  className="admin-nav-link" to="/admin/users">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminUsers}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/users" ? "red" : "initial",
@@ -150,9 +130,11 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Users" />
               </ListItemButton>
+              </Link>
+              <Link  className="admin-nav-link" to="/admin/upgradeusers">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminUpgradeUsers}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/upgradeusers"
@@ -163,9 +145,11 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Upgrade Users" />
               </ListItemButton>
+              </Link>
+              <Link  className="admin-nav-link" to="/admin/renewals">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminRenewals}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/renewals"
@@ -176,9 +160,11 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Renewals" />
               </ListItemButton>
+              </Link>
+              <Link  className="admin-nav-link" to="/admin/tempusers">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminTempUsers}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/tempusers"
@@ -189,9 +175,11 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Temp Users" />
               </ListItemButton>
+              </Link>
+              <Link  className="admin-nav-link" to="/admin/resetpassword">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminResetPass}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/resetpassword"
@@ -202,9 +190,11 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Reset Password" />
               </ListItemButton>
+              </Link>
+              <Link  className="admin-nav-link" to="/admin/imageverification">
               <ListItemButton
                 sx={{ pl: 4 }}
-                onClick={handlAdminImgVerify}
+                className="admin-list-items-buttons"
                 style={{
                   backgroundColor:
                     location.pathname === "/admin/imageverification"
@@ -215,6 +205,7 @@ const AdminSidebar = () => {
                 <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
                 <ListItemText primary="Image Verification" />
               </ListItemButton>
+              </Link>
             </List>
           </Collapse>
           <ListItemButton onClick={handleClick2}>

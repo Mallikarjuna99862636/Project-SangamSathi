@@ -5,7 +5,7 @@ const initialState = {
   error: "",
   data: "",
   user: null,
-  loggedIn : false
+  loggedIn: false,
 };
 
 export const dataRedux = createSlice({
@@ -17,16 +17,16 @@ export const dataRedux = createSlice({
       const newState = {
         ...state,
         isLoading: true,
-        user : userdata
+        user: userdata,
       };
       return newState;
     },
     userLogout: (state) => {
-    const  userresp = null;
+      const userresp = null;
       const newState = {
         ...state,
         isLoading: true,
-        user : userresp
+        user: userresp,
       };
       return newState;
     },
@@ -71,7 +71,7 @@ export const {
   dataDetailsSuccess,
   dataDetailsRequest,
   userLogin,
-  userLogout
+  userLogout,
 } = dataRedux.actions;
 
 export const selectUser = (state) => state.user.user;

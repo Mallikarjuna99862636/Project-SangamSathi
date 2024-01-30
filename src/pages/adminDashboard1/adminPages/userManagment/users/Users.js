@@ -73,9 +73,9 @@ const Users = () => {
             <option value="" selected>
               All Users
             </option>
-            <option value="">Premium Users</option>
-            <option value="">Silver Users</option>
-            <option value="">Free Users</option>
+            <option value="premium">Premium Users</option>
+            <option value="silver">Silver Users</option>
+            <option value="free">Free Users</option>
           </select>
         </div>
         <br />

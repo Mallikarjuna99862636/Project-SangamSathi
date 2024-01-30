@@ -1,4 +1,4 @@
-.upgrade-user {
+.promoterdata-user {
     height: 100vh;
     overflow-y: auto;
     margin: 65px 0px 0px 270px;
@@ -17,13 +17,43 @@
       h4 {
         font-weight: bold;
       }
+  
+      select {
+        position: relative;
+        right: 105px;
+        border: 1px solid #5f5e61;
+        outline: none;
+        appearance: none;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 2px 1px rgba(0, 0, 0, 0.075);
+        height: 50px;
+        padding: 6px 29px;
+        border: 1px solid #e8e8e8;
+        color: #5f5e61;
+        font-size: 1rem;
+  
+        option {
+          padding: 10px;
+        }
+      }
     }
+  
+    .radio-input-div {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      color: #5f5e61;
+      input {
+        margin: 0 5px;
+      }
+    }
+  
     .second-head {
       display: flex;
       align-items: center;
-      color: #5f5e61;
       justify-content: space-between;
-      .rows-per-page {
+      color: #5f5e61;
+      .rows-per-page{
         position: relative;
         left: 10px;
         label {
@@ -71,16 +101,15 @@
               color: #6e6a6a;
               text-align: justify;
             }
-  
-            .upgrade-user-status {
-              .status-span {
-                .active-status {
-                  background-color: rgb(61, 172, 61);
+            .promoter-status {
+              .promoter-status-span {
+                #active-status {
+                //   background-color: rgb(61, 172, 61);
                   width: 10px;
                   height: 10px;
                   border-radius: 20px;
                 }
-                .pending-status {
+                #pending-status {
                   background-color: red;
                   width: 10px;
                   height: 10px;
@@ -88,19 +117,33 @@
                 }
               }
             }
-            .upgrade-user-status-btn {
-              .btn {
-                color: #9047fb;
-                background-color: #f2e9ff;
-                border:1px solid  #9047fb;
-                font-size: 0.9em;
-                margin: 5px;
+            .promoter-status-change-btn {
+              .promoter-pending-status-btn {
+                color: #ff7b7b;
+                background-color: #ffeded;
+                border: 1px solid;
+                // border-color: #ff7b7b;
+                font-size: 0.8em;
+                width: 95px;
                 height: 50px;
                 border-radius: 2px;
-                width: 100%;
   
                 &:hover {
-                  background-color: #9047fb;
+                  background-color: #ff7b7b;
+                  color: white;
+                transition: all 1s;
+                }
+              }
+              .promoter-active-status-btn {
+                color: rgb(66, 199, 66);
+                background-color: #ffeded;
+                border: 1px solid rgb(66, 199, 66);
+                font-size: 0.8em;
+                width: 95px;
+                height: 50px;
+                border-radius: 2px;
+                &:hover {
+                  background-color: rgb(37, 200, 37);
                   color: white;
                   transition: all 1s;
                 }
@@ -110,10 +153,8 @@
         }
       }
     }
-  
     .fourth-div {
       margin-top: 20px;
-      
       .pagination {
         display: flex;
         justify-content: space-between;

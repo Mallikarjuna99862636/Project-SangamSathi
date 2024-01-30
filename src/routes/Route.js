@@ -25,6 +25,13 @@ import Renewals from "../pages/adminDashboard1/adminPages/userManagment/Renewals
 import TempUsers from "../pages/adminDashboard1/adminPages/userManagment/tempUsers/TempUsers";
 import ResetPassword from "../pages/adminDashboard1/adminPages/userManagment/resetPassword/ResetPassword";
 import ImageVerification from "../pages/adminDashboard1/adminPages/userManagment/imageVerification/ImageVerification";
+import Pending from "../pages/adminDashboard1/adminPages/assistanceServices/pending/Pending";
+import Success from "../pages/adminDashboard1/adminPages/assistanceServices/success/Success";
+import PromotersUsers from "../pages/adminDashboard1/adminPages/assistanceServices/promoterUsers/PromoterUsers";
+import Promoters from "../pages/adminDashboard1/adminPages/promoterManagement/promoters/Promoters";
+import PromoterUsers from "../pages/adminDashboard1/adminPages/promoterManagement/promotersUsers/PromotersUsers";
+import PromotersEarning from "../pages/adminDashboard1/adminPages/promoterManagement/promoterEaring/PromoterEaring";
+import PayToPromoters from "../pages/adminDashboard1/adminPages/promoterManagement/payToPromoters/PayToPromoter";
 
 const AppRoutes = () => {
   return (
@@ -65,6 +72,13 @@ const AppRoutes = () => {
             <Route path="tempusers" element={<TempUsers/>} />
             <Route path="resetpassword" element={<ResetPassword/>} />
             <Route path="imageverification" element={<ImageVerification/>} />
+            <Route path="assistancepending" element={<Pending/>} />
+            <Route path="assistancesuccess" element={<Success/>} />
+            <Route path="promoterusers" element={<PromotersUsers/>} />
+            <Route path="promoters" element={<Promoters/>} />
+            <Route path="promocodeusers" element={<PromoterUsers/>} />
+            <Route path="promotersearning" element={<PromotersEarning/>} />
+            <Route path="paytopromoters" element={<PayToPromoters/>} />
           </Route>
         </Route>
       </Routes>
