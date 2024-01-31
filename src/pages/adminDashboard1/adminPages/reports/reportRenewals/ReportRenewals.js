@@ -72,11 +72,11 @@ const ReportRenewals = () => {
       <AdminHeader />
       <AdminSidebar />
       <div className="renewal-report-user">
-        <div className="fist-head">
+        <div className="renewal-report-fist-head">
           <h4>Renewals</h4>
         </div>
         <br />
-        <div className="date-div">
+        <div className="renewal-report-date-div">
           <table>
             <tr>
               <td>
@@ -107,8 +107,8 @@ const ReportRenewals = () => {
           </table>
           <br />
         </div>
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="renewal-report-second-head">
+          <div className="renewal-report-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -119,8 +119,8 @@ const ReportRenewals = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">
+          <div className="renewal-report-search-div">
+            <label htmlFor="search" id="renewal-report-search-id">
               Search :{" "}
             </label>
             <input
@@ -167,15 +167,15 @@ const ReportRenewals = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-          <div className="pagination">
+        <div className="renewal-report-fourth-div">
+          <div className="renewal-report-pagination">
             <div>
               <h5>
                 Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
                 {records.length} Entries
               </h5>
             </div>
-            <div className="btn-div">
+            <div className="renewal-report-btn-div">
               <button onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>

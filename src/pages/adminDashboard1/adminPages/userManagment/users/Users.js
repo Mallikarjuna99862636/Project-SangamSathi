@@ -67,9 +67,9 @@ const Users = () => {
       <AdminHeader />
       <AdminSidebar />
       <div className="user-data">
-        <div className="fist-head">
+        <div className="user-fist-head">
           <h4 className="user-heading">Users</h4>
-          <select name="" id="" className="select-type-user">
+          <select name="" id="" className="user-select-type-user">
             <option value="" selected>
               All Users
             </option>
@@ -79,8 +79,8 @@ const Users = () => {
           </select>
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="user-second-head">
+          <div className="user-rows-per-page">
             <label>Show </label>
            
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
@@ -92,8 +92,8 @@ const Users = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">
+          <div className="user-search-div">
+            <label htmlFor="search" id="user-search-id">
               Search :{" "}
             </label>
             <input
@@ -107,7 +107,7 @@ const Users = () => {
           </div>
         </div>
         <br />
-        <div class="table-responsive third-head">
+        <div class="user-table-responsive third-head">
           <table class="table table-div">
             <thead>
               <tr>
@@ -159,15 +159,15 @@ const Users = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-          <div className="pagination">
+        <div className="user-fourth-div">
+          <div className="user-pagination">
             <div>
               <h5>
                 Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
                 {records.length} Entries
               </h5>
             </div>
-            <div className="btn-div">
+            <div className="user-btn-div">
               <button onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>

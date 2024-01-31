@@ -61,17 +61,17 @@ const TempUsers = () => {
       <AdminHeader />
       <AdminSidebar />
       <div className="temp-user">
-        <div className="fist-head">
+        <div className="temp-user-fist-head">
           <div>
             <h4>Temp Users</h4>
           </div>
           <div>
-            <button className="validate-button"> Validate</button>
+            <button className="temp-user-validate-button"> Validate</button>
           </div>
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="temp-user-second-head">
+          <div className="temp-user-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -82,8 +82,8 @@ const TempUsers = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">
+          <div className="temp-user-search-div">
+            <label htmlFor="search" id="temp-user-search-id">
               Search :{" "}
             </label>
             <input
@@ -134,15 +134,15 @@ const TempUsers = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-          <div className="pagination">
+        <div className="temp-user-fourth-div">
+          <div className="temp-user-pagination">
             <div>
               <h5>
                 Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
                 {records.length} Entries
               </h5>
             </div>
-            <div className="btn-div">
+            <div className="temp-user-btn-div">
               <button onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>

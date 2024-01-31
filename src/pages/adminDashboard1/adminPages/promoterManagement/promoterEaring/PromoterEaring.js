@@ -61,12 +61,12 @@ const PromotersEarning = () => {
     <AdminHeader/>
     <AdminSidebar/>
     <div className="promotersmanagement-user">
-      <div className="fist-head">
+      <div className="promotersmanagement-fist-head">
         <h4>Promoters Earning</h4>
       </div>
       <br />
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="promotersmanagement-second-head">
+        <div className="promotersmanagement-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -77,8 +77,8 @@ const PromotersEarning = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="promotersmanagement-search-div">
+          <label htmlFor="search" id="promotersmanagement-search-id">
             Search :
           </label>
           <input
@@ -115,15 +115,15 @@ const PromotersEarning = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="promotersmanagement-fourth-div">
+        <div className="promotersmanagement-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="promotersmanagement-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>

@@ -62,12 +62,12 @@ const PayToPromoters = () => {
     <AdminHeader/>
     <AdminSidebar/>
     <div className="paytopromoter-user">
-      <div className="fist-head">
+      <div className="paytopromoter-fist-head">
         <h4>Pay To Promoters</h4>
       </div>
       <br />
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="paytopromoter-second-head">
+        <div className="paytopromoter-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -78,8 +78,8 @@ const PayToPromoters = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="paytopromoter-search-div">
+          <label htmlFor="search" id="paytopromoter-search-id">
             Search :
           </label>
           <input
@@ -120,15 +120,15 @@ const PayToPromoters = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="paytopromoter-fourth-div">
+        <div className="paytopromoter-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="paytopromoter-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>

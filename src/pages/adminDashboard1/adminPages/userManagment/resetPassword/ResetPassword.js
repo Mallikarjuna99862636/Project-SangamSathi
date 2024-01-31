@@ -64,12 +64,12 @@ const ResetPassword = () => {
      <AdminHeader/>
      <AdminSidebar/>
       <div className="reset-password-user">
-        <div className="fist-head">
+        <div className="reset-password-fist-head">
           <h4>Reset Password</h4>
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="reset-password-second-head">
+          <div className="reset-password-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -80,8 +80,8 @@ const ResetPassword = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">Search : </label>
+          <div className="reset-password-search-div">
+            <label htmlFor="search" id="reset-password-search-id">Search : </label>
             <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
           </div>
         </div>
@@ -112,14 +112,14 @@ const ResetPassword = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-        <div className="pagination">
+        <div className="reset-password-fourth-div">
+        <div className="reset-password-pagination">
           <div>
           <h5>
           Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
           </h5>
           </div>
-          <div className="btn-div">
+          <div className="reset-password-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>...

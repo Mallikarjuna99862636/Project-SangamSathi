@@ -62,12 +62,12 @@ const PromotersUsers = () => {
     <AdminHeader/>
     <AdminSidebar/>
     <div className="promoter-user">
-      <div className="fist-head">
+      <div className="promoter-fist-head">
         <h4>Promoter Users</h4>
       </div>
       <br />
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="promoter-second-head">
+        <div className="promoter-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -78,8 +78,8 @@ const PromotersUsers = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="promoter-search-div">
+          <label htmlFor="search" id="promoter-search-id">
             Search :{" "}
           </label>
           <input
@@ -118,15 +118,15 @@ const PromotersUsers = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="promoter-fourth-div">
+        <div className="promoter-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="promoter-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>
@@ -137,7 +137,7 @@ const PromotersUsers = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>  
     </>
   );
 };

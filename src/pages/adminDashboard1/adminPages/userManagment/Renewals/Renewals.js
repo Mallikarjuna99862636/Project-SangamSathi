@@ -64,12 +64,12 @@ const Renewals = () => {
     <AdminHeader/>
     <AdminSidebar/>
       <div className="renewal-user">
-        <div className="fist-head">
+        <div className="renewal-fist-head">
           <h4>Renewals</h4>
           </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="renewal-second-head">
+          <div className="renewal-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -80,8 +80,8 @@ const Renewals = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">Search : </label>
+          <div className="renewal-search-div">
+            <label htmlFor="search" id="renewal-search-id">Search : </label>
             <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
           </div>
         </div>
@@ -129,14 +129,14 @@ const Renewals = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-        <div className="pagination">
+        <div className="renewal-fourth-div">
+        <div className="renewal-pagination">
           <div>
           <h5>
           Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
           </h5>
           </div>
-          <div className="btn-div">
+          <div className="renewal-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>...

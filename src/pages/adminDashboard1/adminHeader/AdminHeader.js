@@ -59,7 +59,7 @@ const AdminHeader = () => {
     setOpen(null);
   };
 
-  const handleClosProfileDialog = () => {
+  const handleCloseProfileDialog = () => {
     setOpenProfile(false);
   };
 
@@ -87,7 +87,7 @@ const AdminHeader = () => {
           <Stack direction="row">
             <Badge
               badgeContent={4}
-              color="primary"
+              color="error"
               overlap="circular"
               sx={{ position: "relative", left: "-40px", top: "10px" }}
             >
@@ -109,8 +109,9 @@ const AdminHeader = () => {
               aria-haspopup="true"
               onClick={handleClick}
               color="inherit"
+              sx={{ textTransform : 'lowercase'}}
             >
-              email <ArrowDropDownIcon />
+              {usermail} <ArrowDropDownIcon />
             </Button>
             <Menu
               id="simple-menu"
@@ -231,11 +232,11 @@ const AdminHeader = () => {
           </form>
         </Box>
       </Dialog>
-      {/* This Dialog is for  User Name and Password Changes  */}
+      {/* This Dialog is for Img Profilr pic Changes  */}
       <Dialog
         maxWidth="md"
         open={openProfile}
-        onClose={handleClosProfileDialog}
+        onClose={handleCloseProfileDialog}
         PaperProps={{
           style: {
             width: "35%",
@@ -257,7 +258,7 @@ const AdminHeader = () => {
               <DialogActions>
                 <CancelIcon
                   className="addess-edit-cancel-icon"
-                  onClick={handleClosProfileDialog}
+                  onClick={handleCloseProfileDialog}
                 />
               </DialogActions>
             </Box>
@@ -275,7 +276,7 @@ const AdminHeader = () => {
             <Box className="edit-changes-button">
               <button
                 className="close-button"
-                onClick={handleClosProfileDialog}
+                onClick={handleCloseProfileDialog}
               >
                 {" "}
                 Submit

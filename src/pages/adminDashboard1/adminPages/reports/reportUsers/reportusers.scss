@@ -6,7 +6,7 @@
     height: calc(100% - 65px);
     width: calc(100% - 270px);
   
-    .fist-head {
+    .user-report-fist-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,10 +15,14 @@
       padding-left: 20px;
   
       h4 {
-        font-weight: bold;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        margin: 10px 0px;
       }
     }
-    .date-div {
+    .user-report-date-div {
       margin-left: 20px;
       margin-bottom: 20px;
       table {
@@ -36,24 +40,34 @@
               color: #6e6a6a;
             }
             button {
-              margin-left: 30px;
-              width: 120px;
-              height: 46px;
+               border: none;
+               margin-left: 30px;
               color: #fff;
               background-color: #18a2b9;
               border-color: #18a2b9;
+              padding: 14px 22px;
+              font-size: 12px;
+              font-weight: 500;
+              border-radius: 2px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              -webkit-transition: all 0.5s;
+              -moz-transition: all 0.5s;
+              transition: all 0.5s;
+              word-wrap: break-word;
+              white-space: normal !important;
             }
           }
         }
       }
     }
   
-    .second-head {
+    .user-report-second-head {
       display: flex;
       align-items: center;
       color: #5f5e61;
       justify-content: space-between;
-      .rows-per-page {
+      .user-report-rows-per-page {
         position: relative;
         left: 10px;
         label {
@@ -68,10 +82,10 @@
           outline: none;
         }
       }
-      .search-div {
+      .user-report-search-div {
         margin-left: 200px;
   
-        #search-id {
+        #user-report-search-id {
           font-size: 1.1em;
           margin-right: 10px;
         }
@@ -119,9 +133,9 @@
         }
       }
     }
-    .fourth-div {
+    .user-report-fourth-div {
       margin-top: 20px;
-      .pagination {
+      .user-report-pagination {
         display: flex;
         justify-content: space-between;
         div {
@@ -134,7 +148,7 @@
             font-size: 1em;
           }
         }
-        .btn-div {
+        .user-report-btn-div {
           button {
             padding: 7px 30px;
             margin: 5px 10px;

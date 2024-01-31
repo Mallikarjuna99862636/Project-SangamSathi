@@ -6,7 +6,7 @@
     height: calc(100% - 65px);
     width: calc(100% - 270px);
   
-    .fist-head {
+    .user-fist-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,20 +15,24 @@
       padding-left: 20px;
   
       h4 {
-        font-weight: bold;
+        text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      margin: 10px 0px;
       }
-    .select-type-user{
+    .user-select-type-user{
         width: 150px;
         margin-right: 20px;
         padding: 10px;
     }
     }
-    .second-head {
+    .user-second-head {
       display: flex;
       align-items: center;
       color: #5f5e61;
       justify-content: space-between;
-      .rows-per-page{
+      .user-rows-per-page{
         position: relative;
         left: 10px;
         label {
@@ -43,10 +47,10 @@
           outline: none;
         }
       }
-      .search-div {
+      .user-search-div {
         margin-left: 200px;
   
-        #search-id {
+        #user-search-id {
           font-size: 1.1em;
           margin-right: 10px;
         }
@@ -128,9 +132,9 @@
         }
       }
     }
-    .fourth-div {
+    .user-fourth-div {
       margin-top: 20px;
-      .pagination {
+      .user-pagination {
         display: flex;
         justify-content: space-between;
         div {
@@ -143,7 +147,7 @@
             font-size: 1em;
           }
         }
-        .btn-div {
+        .user-btn-div {
           button {
             padding: 7px 30px;
             margin: 5px 10px;

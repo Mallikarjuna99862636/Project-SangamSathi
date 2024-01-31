@@ -5,7 +5,7 @@
     box-sizing: border-box;
     height: calc(100% - 65px);
     width: calc(100% - 270px);
-    .fist-head {
+    .promotersmanagement-fist-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -14,15 +14,19 @@
       padding-left: 20px;
   
       h4 {
-        font-weight: bold;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        margin: 10px 0px;
       }
     }
-    .second-head {
+    .promotersmanagement-second-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       color: #5f5e61;
-      .rows-per-page {
+      .promotersmanagement-rows-per-page {
         position: relative;
         left: 10px;
         label {
@@ -37,10 +41,10 @@
           outline: none;
         }
       }
-      .search-div {
+      .promotersmanagement-search-div {
         margin-left: 200px;
   
-        #search-id {
+        #promotersmanagement-search-id {
           font-size: 1.1em;
           margin-right: 10px;
         }
@@ -74,9 +78,9 @@
         }
       }
     }
-    .fourth-div {
+    .promotersmanagement-fourth-div {
       margin-top: 20px;
-      .pagination {
+      .promotersmanagement-pagination {
         display: flex;
         justify-content: space-between;
         div {
@@ -89,7 +93,7 @@
             font-size: 1em;
           }
         }
-        .btn-div {
+        .promotersmanagement-btn-div {
           button {
             padding: 7px 30px;
             margin: 5px 10px;

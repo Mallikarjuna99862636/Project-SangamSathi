@@ -74,11 +74,11 @@ const ReportReceipts = () => {
     <AdminHeader/>
     <AdminSidebar/>
     <div className="receipt-report-user">
-      <div className="fist-head">
+      <div className="receipt-report-fist-head">
         <h4>Receipts</h4>
       </div>
       <br />
-      <div className="date-div">
+      <div className="receipt-report-date-div">
         <table>
           <tr>
             <td>
@@ -109,8 +109,8 @@ const ReportReceipts = () => {
         </table>
       </div>
       <br />
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="receipt-report-second-head">
+        <div className="receipt-report-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -121,8 +121,8 @@ const ReportReceipts = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="receipt-report-search-div">
+          <label htmlFor="search" id="receipt-reportsearch-id">
             Search :{" "}
           </label>
           <input
@@ -173,15 +173,15 @@ const ReportReceipts = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="receipt-report-fourth-div">
+        <div className="receipt-report-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="receipt-report-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>

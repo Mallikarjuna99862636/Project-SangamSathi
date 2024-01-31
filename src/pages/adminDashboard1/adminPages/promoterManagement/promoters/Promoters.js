@@ -64,7 +64,7 @@ const Promoters = () => {
      <AdminHeader/>
      <AdminSidebar/>
     <div className="promoterdata-user">
-      <div className="fist-head">
+      <div className="promoterdata-fist-head">
         <h4>Promoters</h4>
         <select name="" id="">
           <option value="" selected>
@@ -76,14 +76,14 @@ const Promoters = () => {
         </select>
       </div>
       <br />
-      <div className="radio-input-div">
+      <div className="promoterdata-radio-input-div">
         <input type="radio" id="all" name="select-one" required/>All
         <input type="radio" id="active" name="select-one"/>Active
         <input type="radio" id="inactive" name="select-one"/>Inactive
         <input type="radio" id="Pending" name="select-one"/>Pending
       </div>
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="promoterdata-second-head">
+        <div className="promoterdata-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -94,8 +94,8 @@ const Promoters = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="promoterdata-search-div">
+          <label htmlFor="search" id="promoterdata-search-id">
             Search :{" "}
           </label>
           <input
@@ -136,15 +136,15 @@ const Promoters = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="promoterdata-fourth-div">
+        <div className="promoterdata-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="promoterdata-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>

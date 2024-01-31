@@ -6,7 +6,7 @@
     height: calc(100% - 65px);
     width: calc(100% - 270px);
   
-    .fist-head {
+    .promoterdata-fist-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,7 +15,11 @@
       padding-left: 20px;
   
       h4 {
-        font-weight: bold;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        margin: 10px 0px;
       }
   
       select {
@@ -39,21 +43,22 @@
       }
     }
   
-    .radio-input-div {
+    .promoterdata-radio-input-div {
       padding: 0 20px;
       margin-bottom: 30px;
       color: #5f5e61;
+      text-align: justify;
       input {
         margin: 0 5px;
       }
     }
   
-    .second-head {
+    .promoterdata-second-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       color: #5f5e61;
-      .rows-per-page{
+      .promoterdata-rows-per-page{
         position: relative;
         left: 10px;
         label {
@@ -68,10 +73,10 @@
           outline: none;
         }
       }
-      .search-div {
+      .promoterdata-search-div {
         margin-left: 200px;
   
-        #search-id {
+        #promoterdata-search-id {
           font-size: 1.1em;
           margin-right: 10px;
         }
@@ -153,9 +158,9 @@
         }
       }
     }
-    .fourth-div {
+    .promoterdata-fourth-div {
       margin-top: 20px;
-      .pagination {
+      .promoterdata-pagination {
         display: flex;
         justify-content: space-between;
         div {
@@ -168,7 +173,7 @@
             font-size: 1em;
           }
         }
-        .btn-div {
+        .promoterdata-btn-div {
           button {
             padding: 7px 30px;
             margin: 5px 10px;

@@ -62,12 +62,12 @@ const Success = () => {
     <AdminHeader/>
     <AdminSidebar/>
       <div className="success-user">
-        <div className="fist-head">
+        <div className="success-fist-head">
           {/* <h4></h4> */}
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="success-second-head">
+          <div className="success-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -78,8 +78,8 @@ const Success = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">Search : </label>
+          <div className="success-search-div">
+            <label htmlFor="search" id="success-search-id">Search : </label>
             <input type="text" id="search" onChange={searchhandle} placeholder="Search" autoComplete="off"/>
           </div>
         </div>
@@ -110,14 +110,14 @@ const Success = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-        <div className="pagination">
+        <div className="success-fourth-div">
+        <div className="success-pagination">
           <div>
           <h5>
           Showing {indexOfFirstRow + 1} to {indexOfLastRow} of {records.length}  Entries
           </h5>
           </div>
-          <div className="btn-div">
+          <div className="success-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>...

@@ -10,6 +10,9 @@ import {
   ListItemText,
   Collapse,
   Stack,
+  Dialog,
+  DialogContent,
+  DialogActions,
 } from "@mui/material";
 import "./adminsidebar.scss";
 import adminphoto from "../../../assets/images/admin-pic.jpg";
@@ -22,6 +25,7 @@ import {
   Email,
   Notifications,
   ImportContacts,
+  Cancel
 } from "@mui/icons-material";
 
 const AdminSidebar = () => {
@@ -31,6 +35,17 @@ const AdminSidebar = () => {
   const [fourOpen, setFourOpen] = useState(false);
   const [fiveOpen, setFiveOpen] = useState(false);
   const location = useLocation();
+  const [openProfile, setOpenProfile] = useState(false);
+
+  const handleOpenProfileDialog = () => {
+    setOpenProfile(true);
+    setOpen(null);
+  };
+
+  const handleCloseProfileDialog = () => {
+    setOpenProfile(false);
+  };
+
 
   useEffect(() => {
     if (location.pathname === "/admin/users") {
@@ -82,7 +97,7 @@ const AdminSidebar = () => {
           </Box>
           <Box>
             <h3 className="admin-user-name"> Rama S</h3>
-            <p className="admin-user-age"> 32 Years Old</p>
+           <button className="profile-edit-button" onClick={handleOpenProfileDialog} > <p className="admin-user-age"> Edit Profile</p></button>
           </Box>
           <Box></Box>
         </Stack>
@@ -440,7 +455,65 @@ const AdminSidebar = () => {
           </Link>
         </List>
       </Drawer>
+        {/* This Dialog is for Img Profilr pic Changes  */}
+        <Dialog
+        maxWidth="md"
+        open={openProfile}
+        onClose={handleCloseProfileDialog}
+        PaperProps={{
+          style: {
+            width: "35%",
+            position: "fixed",
+            top: "30%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            padding: "0px",
+            overflow: "none",
+          },
+        }}
+      >
+        <Box className="addess-edit-popup-list">
+          <DialogContent maxWidth="md" style={{ padding: "0px" }}>
+            <Box className="addess-edit-popup-div1">
+              <h3 className="addess-edit-popup-heading">
+                Change Profile Image
+              </h3>
+              <DialogActions>
+                <Cancel
+                  className="addess-edit-cancel-icon"
+                  onClick={handleCloseProfileDialog}
+                />
+              </DialogActions>
+            </Box>
+          </DialogContent>
+          <form className="addess-edit-div">
+            <Box className="addess-edit-popup-div3" sx={{ display: "flex" }}>
+              <Box className="profile-img-div">
+                <figure>
+                  <img className="header-user-dp" src={adminphoto} alt="user-dp" />
+                </figure>
+              </Box>
+              <input type="file" className="select-user-dp" />
+            </Box>
+
+            <Box className="edit-changes-button">
+              <button
+                className="close-button"
+                onClick={handleCloseProfileDialog}
+              >
+                {" "}
+                Submit
+              </button>
+              <button type="submit" className="save-changes-button">
+                {" "}
+                Close
+              </button>
+            </Box>
+          </form>
+        </Box>
+      </Dialog>
     </Box>
+
   );
 };
 

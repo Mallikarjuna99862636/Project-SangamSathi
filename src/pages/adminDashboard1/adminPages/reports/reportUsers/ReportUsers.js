@@ -72,11 +72,11 @@ const ReportUsers = () => {
     <AdminHeader/>
     <AdminSidebar/>
     <div className="user-report">
-      <div className="fist-head">
+      <div className="user-report-fist-head">
         <h4>Users Reports</h4>
       </div>
       <br />
-      <div className="date-div">
+      <div className="user-report-date-div">
         <table>
           <tr>
             <td>
@@ -107,8 +107,8 @@ const ReportUsers = () => {
         </table>
       </div>
       <br />
-      <div className="second-head">
-        <div className="rows-per-page">
+      <div className="user-report-second-head">
+        <div className="user-report-rows-per-page">
           <label>Show </label>
           <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
             <option value={5}>5</option>
@@ -119,8 +119,8 @@ const ReportUsers = () => {
           <label>Entries</label>
         </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
+        <div className="user-report-search-div">
+          <label htmlFor="search" id="user-report-search-id">
             Search :{" "}
           </label>
           <input
@@ -167,15 +167,15 @@ const ReportUsers = () => {
           </tbody>
         </table>
       </div>
-      <div className="fourth-div">
-        <div className="pagination">
+      <div className="user-report-fourth-div">
+        <div className="user-report-pagination">
           <div>
             <h5>
               Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
               {records.length} Entries
             </h5>
           </div>
-          <div className="btn-div">
+          <div className="user-report-btn-div">
             <button onClick={handlehandle} disabled={currentPage === 1}>
               Prev
             </button>

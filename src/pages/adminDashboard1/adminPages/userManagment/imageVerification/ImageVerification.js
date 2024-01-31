@@ -61,12 +61,12 @@ const ImageVerification = () => {
       <AdminHeader />
       <AdminSidebar />
       <div className="imageverification-user">
-        <div className="fist-head">
+        <div className="imageverification-fist-head">
           <h4>Pending Image Verification</h4>
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="imageverification-second-head">
+          <div className="imageverification-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -77,8 +77,8 @@ const ImageVerification = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">
+          <div className="imageverification-search-div">
+            <label htmlFor="search" id="imageverification-search-id">
               Search :{" "}
             </label>
             <input
@@ -91,7 +91,7 @@ const ImageVerification = () => {
           </div>
         </div>
         <br />
-        <div className="table-responsive third-head">
+        <div className="imageverification-table-responsive third-head">
           <table className="table table-div">
             <thead>
               <tr>
@@ -142,15 +142,15 @@ const ImageVerification = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-          <div className="pagination">
+        <div className="imageverification-fourth-div">
+          <div className="imageverification-pagination">
             <div>
               <h5>
                 Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
                 {records.length} Entries
               </h5>
             </div>
-            <div className="btn-div">
+            <div className="imageverification-btn-div">
               <button onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>

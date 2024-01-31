@@ -4,7 +4,7 @@ import axios from "axios";
 import { FaCheck } from "react-icons/fa6";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
-
+import { Pagination } from '@mui/material';
 
 const Pending = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,7 +18,7 @@ const Pending = () => {
   const currentRows = records.slice(indexOfFirstRow, indexOfLastRow);
   const totalPages = Math.ceil(records.length / rowsPerPage);
 
-  //Data fetching
+  // Data fetching
   useEffect(() => {
     const fetchData = async () => {
       await axios
@@ -30,11 +30,12 @@ const Pending = () => {
     console.warn(1);
   }, []);
 
-  //set the search state
+  // Set the search state
   const searchhandle = (event) => {
     setSearch(event.target.value);
   };
-  //filter the currentrow data
+
+  // Filter the current row data
   const filterCurrentRowData = currentRows.filter((data) => {
     return (
       search === null ||
@@ -47,164 +48,184 @@ const Pending = () => {
     );
   });
 
-
+  // Filter data after submitting
   const aftersubmit = currentRows.filter(data => {
     if (submit) {
-        return (
-            search === null ||
-            data.id.toString().includes(showSearchData.toString()) ||
-            data.name.toLowerCase().includes(showSearchData.toLowerCase()) ||
-            data.username.toLowerCase().includes(showSearchData.toLowerCase()) ||
-            data.email.toLowerCase().includes(showSearchData.toLowerCase()) ||
-            data.phone.toLowerCase().includes(showSearchData.toLowerCase()) ||
-            (data.address && data.address.city.toLowerCase().includes(showSearchData.toLowerCase()))
-        );
+      return (
+        search === null ||
+        data.id.toString().includes(showSearchData.toString()) ||
+        data.name.toLowerCase().includes(showSearchData.toLowerCase()) ||
+        data.username.toLowerCase().includes(showSearchData.toLowerCase()) ||
+        data.email.toLowerCase().includes(showSearchData.toLowerCase()) ||
+        data.phone.toLowerCase().includes(showSearchData.toLowerCase()) ||
+        (data.address && data.address.city.toLowerCase().includes(showSearchData.toLowerCase()))
+      );
     } else {
-        return true; 
+      return true; 
     }
-});
+  });
 
-  
-
+  // Handle change in rows per page
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
     setRowsPerPage(newRowsPerPage);
     setCurrentPage(1);
   };
-  function handlehandle() {
+
+  // Handle previous button click
+  function handlePrev() {
     setCurrentPage(currentPage - 1);
   }
 
-  function handlenext() {
+  // Handle next button click
+  function handleNext() {
     setCurrentPage(currentPage + 1);
   }
 
-  function showsearchdata(e) {
+  // Handle search data input
+  function handleSearchData(e) {
     setShowSearchData(e.target.value);
     setSubmit(false);
   }
-  function submitresult() {
+
+  // Handle search submit
+  function handleSubmit() {
     setSubmit(true);
   }
+
+  // Handle page change in pagination component
+  function handleChange(event, value) {
+    setCurrentPage(value);
+  }
+
   return (
     <>
-    <AdminHeader/>
-    <AdminSidebar/>
-    <div className="pending-user">
-      <div className="fist-head">
-        <h4>Search For Email ID</h4>
-        <div id="email-div">
-          <input
-            type="email"
-            placeholder="Enter Email ID"
-            onChange={showsearchdata}
-          />
-          <button onClick={submitresult}>SEARCH</button>
+      <AdminHeader/>
+      <AdminSidebar/>
+      <div className="pending-user">
+        <div className="pending-fist-head">
+          <h4>Search For Email ID</h4>
+          <div id="pending-email-div">
+            <input
+              type="email"
+              placeholder="Enter Email ID"
+              onChange={handleSearchData}
+            />
+            <button onClick={handleSubmit}>SEARCH</button>
+          </div>
         </div>
-      </div>
-      <br />
-      <div className="second-head">
-        <div className="rows-per-page">
-          <label>Show </label>
-          <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
-            <option value={5}>5</option>
-            <option value={10}>10</option>
-            <option value={15}>15</option>
-            <option value={20}>20</option>
-          </select>
-          <label>Entries</label>
-        </div>
+        <br />
+        <div className="pending-second-head">
+          <div className="pending-rows-per-page">
+            <label>Show </label>
+            <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
+              <option value={5}>5</option>
+              <option value={10}>10</option>
+              <option value={15}>15</option>
+              <option value={20}>20</option>
+            </select>
+            <label>Entries</label>
+          </div>
 
-        <div className="search-div">
-          <label htmlFor="search" id="search-id">
-            Search :{" "}
-          </label>
-          <input
-            type="text"
-            id="search"
-            onChange={searchhandle}
-            placeholder="Search"
-            autoComplete="off"
-          />
-        </div>
-      </div>
-      <br />
-      <div className="table-responsive third-head">
-        <table className="table table-div">
-          <thead>
-            <tr>
-              <th>Registration No</th>
-              <th>Name</th>
-              <th>Email Id</th>
-              <th>Mobile No</th>
-              <th>Caste</th>
-              <th>User type</th>
-              <th>Assistance</th>
-            </tr>
-          </thead>
-          <tbody>
-            {submit ? (
-              <>
-                {aftersubmit.map((row, index) => (
-                  <tr key={row.id}>
-                    <td>-</td>
-                    <td>{row.name}</td>
-                    <td>{row.email}</td>
-                    <td>{row.phone}</td>
-                    <td>caste here</td>
-                    <td>free/silver users</td>
-                    <td className="assistance-active">
-                      <button className="btn">
-                        <FaCheck /> <br />
-                        ACTIVE
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </>
-            ) : (
-              <>
-                {filterCurrentRowData.map((row, index) => (
-                  <tr key={row.id}>
-                  <td>-</td>
-                    <td>{row.name}</td>
-                    <td>{row.email}</td>
-                    <td>{row.phone}</td>
-                    <td>caste here</td>
-                    <td>free/silver users</td>
-                    <td className="assistance-active">
-                      <button className="btn">
-                        <FaCheck /> <br />
-                        ACTIVE
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </>
-            )}
-          </tbody>
-        </table>
-      </div>
-      <div className="fourth-div">
-        <div className="pagination">
-          <div>
-            <h5>
-              Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
-              {records.length} Entries
-            </h5>
-          </div>
-          <div className="btn-div">
-            <button onClick={handlehandle} disabled={currentPage === 1}>
-              Prev
-            </button>
-            ...
-            <button onClick={handlenext} disabled={currentPage === totalPages}>
-              Next
-            </button>
+          <div className="pending-search-div">
+            <label htmlFor="search" id="pending-search-id">
+              Search :{" "}
+            </label>
+            <input
+              type="text"
+              id="search"
+              onChange={searchhandle}
+              placeholder="Search"
+              autoComplete="off"
+            />
           </div>
         </div>
+        <br />
+        <div className="table-responsive third-head">
+          <table className="table table-div">
+            <thead>
+              <tr>
+                <th>Registration No</th>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Mobile No</th>
+                <th>Caste</th>
+                <th>User type</th>
+                <th>Assistance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {submit ? (
+                <>
+                  {aftersubmit.map((row, index) => (
+                    <tr key={row.id}>
+                      <td>-</td>
+                      <td>{row.name}</td>
+                      <td>{row.email}</td>
+                      <td>{row.phone}</td>
+                      <td>caste here</td>
+                      <td>free/silver users</td>
+                      <td className="assistance-active">
+                        <button className="btn">
+                          <FaCheck /> <br />
+                          ACTIVE
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {filterCurrentRowData.map((row, index) => (
+                    <tr key={row.id}>
+                      <td>-</td>
+                      <td>{row.name}</td>
+                      <td>{row.email}</td>
+                      <td>{row.phone}</td>
+                      <td>caste here</td>
+                      <td>free/silver users</td>
+                      <td className="assistance-active">
+                        <button className="btn">
+                          <FaCheck /> <br />
+                          ACTIVE
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </>
+              )}
+            </tbody>
+          </table>
+        </div>
+        <div className="pending-fourth-div">
+          <div className="pending-pagination">
+            <div>
+              <h5>
+                Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
+                {records.length} Entries
+              </h5>
+            </div>
+            <div className="pending-btn-div">
+              <button className="prev-button" onClick={handlePrev} disabled={currentPage === 1}>
+                Prev
+              </button>
+              <div className="pending-pagination-count-div">
+              <Pagination
+              className="pending-pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+              />
+              </div>
+              <button className="nxt-btn" onClick={handleNext} disabled={currentPage === totalPages}>
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 };

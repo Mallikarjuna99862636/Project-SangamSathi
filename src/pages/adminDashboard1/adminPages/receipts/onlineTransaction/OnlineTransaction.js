@@ -61,12 +61,12 @@ const OnlineTransaction = () => {
       <AdminHeader />
       <AdminSidebar />
       <div className="onlinetransaction-user">
-        <div className="fist-head">
+        <div className="onlinetransaction-fist-head">
           <h4>Online Transaction</h4>
         </div>
         <br />
-        <div className="second-head">
-          <div className="rows-per-page">
+        <div className="onlinetransaction-second-head">
+          <div className="onlinetransaction-rows-per-page">
             <label>Show </label>
             <select value={rowsPerPage} onChange={handleRowsPerPageChange}>
               <option value={5}>5</option>
@@ -77,8 +77,8 @@ const OnlineTransaction = () => {
             <label>Entries</label>
           </div>
 
-          <div className="search-div">
-            <label htmlFor="search" id="search-id">
+          <div className="onlinetransaction-search-div">
+            <label htmlFor="search" id="onlinetransaction-search-id">
               Search :{" "}
             </label>
             <input
@@ -129,15 +129,15 @@ const OnlineTransaction = () => {
             </tbody>
           </table>
         </div>
-        <div className="fourth-div">
-          <div className="pagination">
+        <div className="onlinetransaction-fourth-div">
+          <div className="onlinetransaction-pagination">
             <div>
               <h5>
                 Showing {indexOfFirstRow + 1} to {indexOfLastRow} of{" "}
                 {records.length} Entries
               </h5>
             </div>
-            <div className="btn-div">
+            <div className="onlinetransaction-btn-div">
               <button onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>

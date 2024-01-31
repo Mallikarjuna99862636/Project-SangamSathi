@@ -6,7 +6,7 @@
     height: calc(100% - 65px);
     width: calc(100% - 270px);
   
-    .fist-head {
+    .paytopromoter-fist-head {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,15 +15,20 @@
       padding-left: 20px;
   
       h4 {
-        font-weight: bold;
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        margin: 10px 0px;
       }
     }
   
-    .second-head {
+    .paytopromoter-second-head {
       display: flex;
       align-items: center;
       color: #5f5e61;
-      .rows-per-page {
+      justify-content: space-between;
+      .paytopromoter-rows-per-page {
         position: relative;
         left: 10px;
         label {
@@ -35,22 +40,19 @@
           padding: 5px;
           border-radius: 5px;
           width: 60px;
-          border: none;
           outline: none;
         }
       }
-      .search-div {
+      .paytopromoter-search-div {
         margin-left: 200px;
   
-        #search-id {
+        #paytopromoter-search-id {
           font-size: 1.1em;
           margin-right: 10px;
         }
         input {
-          border: none;
           outline: none;
           height: 40px;
-          border-radius: 5px;
           padding-left: 10px;
         }
       }
@@ -98,9 +100,12 @@
         }
       }
     }
-    .fourth-div {
+    .paytopromoter-fourth-div {
+      
       margin-top: 20px;
-      .pagination {
+      .paytopromoter-pagination {
+        display: flex;
+        justify-content: space-between;
         div {
           padding-left: 10px;
           padding-right: 100px;
@@ -111,7 +116,7 @@
             font-size: 1em;
           }
         }
-        .btn-div {
+        .paytopromoter-btn-div {
           button {
             padding: 7px 30px;
             margin: 5px 10px;
