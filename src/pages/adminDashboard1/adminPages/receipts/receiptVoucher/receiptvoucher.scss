@@ -1,0 +1,166 @@
+.receipt-page-container {
+    height: 100vh;
+    overflow-y: auto;
+    margin: 65px 0px 0px 270px;
+    box-sizing: border-box;
+    height: calc(100% - 65px);
+    width: calc(100% - 270px);
+    .receipt-header-part {
+      padding: 5px 10px;
+      .receipt-user-name {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+    }
+  
+    .receipt-dash-stack-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 15px;
+  
+      .receipt-stack-first-card {
+        border: none;
+        /* box-shadow: 0 0 0 1px rgba(61, 70, 79, .4), 0 1px 3px 0 rgba(61, 70, 79, .4); */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 30px;
+        border-radius: 2px;
+  
+        .receipt-card-div-01 {
+          padding: 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+  
+          .card1-heading-01 {
+            text-align: initial;
+            font-size: 42px;
+            color: #252328;
+            font-weight: 600;
+            line-height: 1;
+            margin: 0px 0px 10px 0px;
+          }
+          .card1-heading-02 {
+            margin: 0;
+            font-size: 14px;
+            line-height: 26px;
+            color: #6f6d72;
+            font-weight: 500;
+            text-align: justify;
+          }
+  
+          .logo-one {
+            margin: 7px 0 0 43px;
+            height: 59px;
+            width: 72px;
+          }
+        }
+  
+        .view-all-link-01 {
+          background: #fff;
+          border-top: 1px solid #e6e5e7;
+          font-size: 14px;
+  
+          .link-one {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+      }
+  
+      .receipt-stack-second-card {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 30px;
+        border-radius: 2px;
+  
+        .card-div-02 {
+          padding: 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+  
+          .card2-heading-01 {
+            text-align: initial;
+            font-size: 42px;
+            color: #252328;
+            font-weight: 600;
+            line-height: 1;
+            margin: 0px 0px 10px 0px;
+          }
+  
+          .card2-heading-02 {
+            margin: 0;
+            font-size: 13px;
+            line-height: 26px;
+            color: #6f6d72;
+            font-weight: 500;
+            text-align: justify;
+          }
+          .logo-one {
+            margin: 7px 0 0 43px;
+            height: 59px;
+            width: 72px;
+          }
+        }
+  
+        .view-all-link-02 {
+          background: #fff;
+          border-top: 1px solid #e6e5e7;
+          font-size: 14px;
+  
+          .link-two {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+      }
+      .receipt-stack-third-card {
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 30px;
+        border-radius: 2px;
+  
+        .card-div-03 {
+          padding: 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+  
+          .card3-heading-01 {
+            text-align: initial;
+            font-size: 42px;
+            color: #252328;
+            font-weight: 600;
+            line-height: 1;
+            margin: 0px 0px 10px 0px;
+          }
+          .card3-heading-02 {
+            margin: 0;
+            font-size: 13px;
+            line-height: 26px;
+            color: #6f6d72;
+            font-weight: 500;
+            text-align: justify;
+          }
+          .logo-one {
+            margin: 7px 0 0 43px;
+            height: 59px;
+            width: 72px;
+          }
+        }
+        .view-all-link-03 {
+          background: #fff;
+          border-top: 1px solid #e6e5e7;
+          font-size: 14px;
+  
+          .link-three {
+            color: black;
+            text-decoration: none;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+}

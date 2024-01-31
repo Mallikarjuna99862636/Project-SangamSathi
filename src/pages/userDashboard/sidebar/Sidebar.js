@@ -63,7 +63,7 @@ const Sidebar = () => {
                 className="list-items-buttons"
                 style={{
                   backgroundColor:
-                    location.pathname === "/user/dashboard" ? "red" : "initial",
+                    location.pathname === "/user/dashboard" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -79,7 +79,7 @@ const Sidebar = () => {
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/user/profile" ? "red" : "initial",
+                    location.pathname === "/user/profile" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -96,7 +96,7 @@ const Sidebar = () => {
                 style={{
                   backgroundColor:
                     location.pathname === "/user/my-matches"
-                      ? "red"
+                      ? "#ffe9e9"
                       : "initial",
                 }}
               >
@@ -114,7 +114,7 @@ const Sidebar = () => {
                 style={{
                   backgroundColor:
                     location.pathname === "/user/my-interests"
-                      ? "red"
+                      ? "#ffe9e9"
                       : "initial",
                 }}
               >
@@ -132,7 +132,7 @@ const Sidebar = () => {
                 style={{
                   backgroundColor:
                     location.pathname === "/user/assistance-services"
-                      ? "red"
+                      ? "#ffe9e9"
                       : "initial",
                 }}
               >
@@ -149,7 +149,7 @@ const Sidebar = () => {
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/user/view-all" ? "red" : "initial",
+                    location.pathname === "/user/view-all" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -165,7 +165,7 @@ const Sidebar = () => {
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/user/search" ? "red" : "initial",
+                    location.pathname === "/user/search" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>

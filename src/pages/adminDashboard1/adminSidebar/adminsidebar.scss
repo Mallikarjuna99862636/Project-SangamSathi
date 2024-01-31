@@ -25,7 +25,15 @@
     font-weight: 600;
   }
 }
+.buttons-list-link{
+  border-bottom: 1px solid #ebebeb;
+    &:hover{
+      background-color: #ebebeb;
+    }
 }
+}
+
+
 
 .admin-nav-link {
   color: black;
@@ -34,7 +42,7 @@
   text-decoration: none;
 
   &:hover{
-    background-color: aqua;
+    background-color: #ebebeb;
   }
 
   .admin-list-items-buttons {
@@ -42,7 +50,7 @@
     color: #626262;
     border-bottom: 1px solid #ebebeb;
     &:hover {
-      background-color: aqua;
+      background-color: #ebebeb;
     }
   }
 }

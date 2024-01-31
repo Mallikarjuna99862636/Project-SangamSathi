@@ -1,4 +1,4 @@
-.assist-online-user {
+.user-report {
     height: 100vh;
     overflow-y: auto;
     margin: 65px 0px 0px 270px;
@@ -17,7 +17,35 @@
       h4 {
         font-weight: bold;
       }
-      
+    }
+    .date-div {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      table {
+        tr {
+          td {
+            label {
+              margin: 10px;
+              height: 40px;
+              color: #6e6a6a;
+              font-size: 1em;
+            }
+            input {
+              width: 150px;
+              padding: 10px;
+              color: #6e6a6a;
+            }
+            button {
+              margin-left: 30px;
+              width: 120px;
+              height: 46px;
+              color: #fff;
+              background-color: #18a2b9;
+              border-color: #18a2b9;
+            }
+          }
+        }
+      }
     }
   
     .second-head {
@@ -25,7 +53,7 @@
       align-items: center;
       color: #5f5e61;
       justify-content: space-between;
-      .rows-per-page{
+      .rows-per-page {
         position: relative;
         left: 10px;
         label {
@@ -61,7 +89,6 @@
             th {
               padding: 10px 20px;
               border-bottom: 1px solid #beb7b7;
-              text-align: justify;
             }
           }
         }
@@ -71,17 +98,16 @@
               padding: 10px 20px;
               border-bottom: 1px solid #beb7b7;
               color: #6e6a6a;
-              text-align: justify;
             }
-            .asst-online-trans-status {
-              .asst-online-status-span {
-                #asst-online-success-status {
+            .user-report-status {
+              .user-report-status-span {
+                #user-report-active-status {
                   background-color: rgb(61, 172, 61);
                   width: 10px;
                   height: 10px;
                   border-radius: 20px;
                 }
-                #asst-online-pending-status {
+                #user-report-pending-status {
                   background-color: red;
                   width: 10px;
                   height: 10px;

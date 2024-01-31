@@ -13,6 +13,7 @@ import {
   DialogContent,
   DialogActions,
   Dialog,
+  Badge,
 } from "@mui/material";
 import sangamlogo from "../../../assets/images/sangam-sathi-logo.png";
 import adminimg from "../../../assets/images/admin-pic.jpg";
@@ -23,7 +24,8 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router-dom";
 import CancelIcon from "@mui/icons-material/Cancel";
 import userdps from "../../../assets/images/profile-pic.jpg";
-import StarIcon from '@mui/icons-material/Star';
+import StarIcon from "@mui/icons-material/Star";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./adminheader.scss";
 
 const App = styled(AppBar)`
@@ -35,8 +37,8 @@ const App = styled(AppBar)`
 
 const AdminHeader = () => {
   const navigate = useNavigate();
-  const usermail = "rama@gmail.com"
-  const password = "123456"
+  const usermail = "rama@gmail.com";
+  const password = "123456";
   const [open, setOpen] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
@@ -46,7 +48,6 @@ const AdminHeader = () => {
   const handleOpenProfileDetailsDialog = () => {
     setOpenDialog(true);
     setOpen(null);
-
   };
 
   const handleCloseProfileDetailsDialog = () => {
@@ -84,6 +85,17 @@ const AdminHeader = () => {
             alt="sangam-sathi-logo"
           />
           <Stack direction="row">
+            <Badge
+              badgeContent={4}
+              color="primary"
+              overlap="circular"
+              sx={{ position: "relative", left: "-40px", top: "10px" }}
+            >
+              <NotificationsIcon
+                className="notify-icon"
+                sx={{ margin: "6px 0px 0px 0px" }}
+              />
+            </Badge>
             <Avatar>
               {" "}
               <img
@@ -165,7 +177,7 @@ const AdminHeader = () => {
                 disabled
               />
               <span className="input-icon">
-                 <PersonIcon/>
+                <PersonIcon />
               </span>
               <input
                 type="password"
@@ -176,8 +188,8 @@ const AdminHeader = () => {
                 required
                 readOnly="readonly"
               />
-               <span className="input-icon-1">
-                 <StarIcon/>
+              <span className="input-icon-1">
+                <StarIcon />
               </span>
               <input
                 type="text"
@@ -187,8 +199,8 @@ const AdminHeader = () => {
                 placeholder="New Password"
                 onChange={(e) => setNewPassword(e.target.value)}
               />
-               <span className="input-icon-2">
-                 <StarIcon/>
+              <span className="input-icon-2">
+                <StarIcon />
               </span>
               <input
                 type="text"
@@ -198,8 +210,8 @@ const AdminHeader = () => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
-               <span className="input-icon-3">
-                 <StarIcon/>
+              <span className="input-icon-3">
+                <StarIcon />
               </span>
             </Box>
             <Divider />

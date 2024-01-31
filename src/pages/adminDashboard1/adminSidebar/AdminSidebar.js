@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation , Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import {
   Box,
   Drawer,
@@ -32,10 +32,9 @@ const AdminSidebar = () => {
   const [fiveOpen, setFiveOpen] = useState(false);
   const location = useLocation();
 
-
   useEffect(() => {
     if (location.pathname === "/admin/users") {
-      setOpen(false); 
+      setOpen(false);
     }
   }, [location.pathname]);
 
@@ -57,8 +56,6 @@ const AdminSidebar = () => {
     setFiveOpen(!fiveOpen);
   };
 
- 
-
   return (
     <Box className="admin-dashboard-main-div">
       <Drawer
@@ -69,13 +66,13 @@ const AdminSidebar = () => {
             width: "270px",
             marginTop: "65px",
             boxSizing: "border-box",
-            overflow : 'hidden'
+            overflow: "hidden",
           },
         }}
         variant="permanent"
         anchor="left"
       >
-        <Stack className="admin-profile-details-div"  direction="row">
+        <Stack className="admin-profile-details-div" direction="row">
           <Box className="admin-img-div">
             <img
               className="admin-photo"
@@ -95,21 +92,21 @@ const AdminSidebar = () => {
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-         <Link  className="admin-nav-link" to="/admin/dashboard">
-          <ListItemButton
-          className="admin-list-items-buttons"
-            style={{
-              backgroundColor:
-                location.pathname === "/admin/dashboard" ? "red" : "initial",
-            }}
-          >
-            <ListItemIcon sx={{ minWidth: "40px" }}>
-              <Explore />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" />
-          </ListItemButton>
+          <Link className="admin-nav-link" to="/admin/dashboard">
+            <ListItemButton
+              className="admin-list-items-buttons"
+              style={{
+                backgroundColor:
+                  location.pathname === "/admin/dashboard" ? "#ffe9e9" : "initial",
+              }}
+            >
+              <ListItemIcon sx={{ minWidth: "40px" }}>
+                <Explore />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
           </Link>
-          <ListItemButton onClick={handleClick1}>
+          <ListItemButton className="buttons-list-link" onClick={handleClick1} >
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ListAlt />
             </ListItemIcon>
@@ -118,97 +115,97 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-            <Link  className="admin-nav-link" to="/admin/users">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/users" ? "red" : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Users" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/users">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/users" ? "#ffe9e9" : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Users" />
+                </ListItemButton>
               </Link>
-              <Link  className="admin-nav-link" to="/admin/upgradeusers">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/upgradeusers"
-                      ? "red"
-                      : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Upgrade Users" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/upgradeusers">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/upgradeusers"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Upgrade Users" />
+                </ListItemButton>
               </Link>
-              <Link  className="admin-nav-link" to="/admin/renewals">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/renewals"
-                      ? "red"
-                      : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Renewals" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/renewals">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/renewals"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Renewals" />
+                </ListItemButton>
               </Link>
-              <Link  className="admin-nav-link" to="/admin/tempusers">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/tempusers"
-                      ? "red"
-                      : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Temp Users" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/tempusers">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/tempusers"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Temp Users" />
+                </ListItemButton>
               </Link>
-              <Link  className="admin-nav-link" to="/admin/resetpassword">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/resetpassword"
-                      ? "red"
-                      : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Reset Password" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/resetpassword">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/resetpassword"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Reset Password" />
+                </ListItemButton>
               </Link>
-              <Link  className="admin-nav-link" to="/admin/imageverification">
-              <ListItemButton
-                sx={{ pl: 4 }}
-                className="admin-list-items-buttons"
-                style={{
-                  backgroundColor:
-                    location.pathname === "/admin/imageverification"
-                      ? "red"
-                      : "initial",
-                }}
-              >
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Image Verification" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/imageverification">
+                <ListItemButton
+                  sx={{ pl: 4 }}
+                  className="admin-list-items-buttons"
+                  style={{
+                    backgroundColor:
+                      location.pathname === "/admin/imageverification"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Image Verification" />
+                </ListItemButton>
               </Link>
             </List>
           </Collapse>
-          <ListItemButton onClick={handleClick2}>
+          <ListItemButton className="buttons-list-link" onClick={handleClick2} >
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ListAlt />
             </ListItemIcon>
@@ -217,21 +214,48 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={secondOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Pending" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Success" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Promoter Users" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/assistancepending">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/assistancepending"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Pending" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/assistancesuccess">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/assistancesuccess"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Success" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/promoterusers">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/promoterusers"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Promoter Users" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
-          <ListItemButton onClick={handleClick3}>
+          <ListItemButton className="buttons-list-link" onClick={handleClick3} >
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <Group />
             </ListItemIcon>
@@ -240,25 +264,61 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={thirdOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Promoters" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Promoters Users" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Promoters Earning" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Pay to Promoters" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/promoters">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/promoters"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Promoters" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/promocodeusers">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/promocodeusers"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Promoters Users" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/promotersearning">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/promotersearning"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Promoters Earning" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/paytopromoters">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/paytopromoters"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Pay to Promoters" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
-          <ListItemButton onClick={handleClick4}>
+          <ListItemButton className="buttons-list-link" onClick={handleClick4}>
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ImportContacts />
             </ListItemIcon>
@@ -267,21 +327,51 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={fourOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Online Transaction" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Assistance Online Transaction" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Receipt Voucher" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/onlinetransaction">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/onlinetransaction"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Online Transaction" />
+                </ListItemButton>
+              </Link>
+              <Link
+                className="admin-nav-link"
+                to="/admin/assistanceonlinetransaction"
+              >
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/assistanceonlinetransaction"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Assistance Online Transaction" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/receiptvoucher">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/receiptvoucher"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Receipt Voucher" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
-          <ListItemButton onClick={handleClick5}>
+          <ListItemButton className="buttons-list-link" onClick={handleClick5} >
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <Email />
             </ListItemIcon>
@@ -290,26 +380,64 @@ const AdminSidebar = () => {
           </ListItemButton>
           <Collapse in={fiveOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Users" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Renewals" />
-              </ListItemButton>
-              <ListItemButton sx={{ pl: 4 }}>
-                <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                <ListItemText primary="Receipts" />
-              </ListItemButton>
+              <Link className="admin-nav-link" to="/admin/usersreports">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/usersreports"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Users" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/renewalsreports">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/renewalsreports"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Renewals" />
+                </ListItemButton>
+              </Link>
+              <Link className="admin-nav-link" to="/admin/receiptsreports">
+                <ListItemButton sx={{ pl: 4 }}
+                style={{
+                    backgroundColor:
+                      location.pathname === "/admin/receiptsreports"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+                >
+                  <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
+                  <ListItemText primary="Receipts" />
+                </ListItemButton>
+              </Link>
             </List>
           </Collapse>
-          <ListItemButton>
-            <ListItemIcon sx={{ minWidth: "40px" }}>
-              <Notifications />
-            </ListItemIcon>
-            <ListItemText primary="Notifications" />
-          </ListItemButton>
+          <Link className="admin-nav-link" to="/admin/notification">
+            <ListItemButton
+            className="buttons-list-link"
+            style={{
+                    backgroundColor:
+                      location.pathname === "/admin/notification"
+                        ? "#ffe9e9"
+                        : "initial",
+                  }}
+            >
+              <ListItemIcon sx={{ minWidth: "40px" }}
+              >
+                <Notifications />
+              </ListItemIcon>
+              <ListItemText primary="Notifications" />
+            </ListItemButton>
+          </Link>
         </List>
       </Drawer>
     </Box>
