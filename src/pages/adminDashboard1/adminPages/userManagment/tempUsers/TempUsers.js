@@ -4,6 +4,7 @@ import axios from "axios";
 import CheckIcon from "@mui/icons-material/Check";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const TempUsers = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -51,6 +52,10 @@ const TempUsers = () => {
   };
   function handlehandle() {
     setCurrentPage(currentPage - 1);
+  }
+
+  function handleChange(event, value) {
+    setCurrentPage(value);
   }
 
   function handlenext() {
@@ -143,11 +148,23 @@ const TempUsers = () => {
               </h5>
             </div>
             <div className="temp-user-btn-div">
-              <button onClick={handlehandle} disabled={currentPage === 1}>
+            <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>
-              ...
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
               <button
+              className="nxt-button"
                 onClick={handlenext}
                 disabled={currentPage === totalPages}
               >

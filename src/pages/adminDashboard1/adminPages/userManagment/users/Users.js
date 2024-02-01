@@ -5,6 +5,7 @@ import CheckSharpIcon from '@mui/icons-material/CheckSharp';
 import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const Users = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,6 +35,10 @@ const Users = () => {
   const searchhandle = (event) => {
     setSearch(event.target.value);
   };
+
+   function handleChange(event, value) {
+    setCurrentPage(value);
+  }
 
   //filter the current row data
   const filterCurrentRowData = currentRows.filter((data) => {
@@ -168,11 +173,23 @@ const Users = () => {
               </h5>
             </div>
             <div className="user-btn-div">
-              <button onClick={handlehandle} disabled={currentPage === 1}>
+              <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>
-              ...
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
               <button
+              className="nxt-button"
                 onClick={handlenext}
                 disabled={currentPage === totalPages}
               >

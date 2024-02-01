@@ -7,7 +7,6 @@ import {
   Divider,
   ListItemIcon,
   ListItemButton,
-  ListItemText,
   Collapse,
   Stack,
   Dialog,
@@ -118,15 +117,21 @@ const AdminSidebar = () => {
               <ListItemIcon sx={{ minWidth: "40px" }}>
                 <Explore />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" />
+              {/* <ListItemText primary="Dashboard" /> */}
+              <h4 className="admin-sidebar-lists">Dashboard</h4>
             </ListItemButton>
           </Link>
           <ListItemButton className="buttons-list-link" onClick={handleClick1} >
+          <div className="button-text-div-1">
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ListAlt />
             </ListItemIcon>
-            <ListItemText primary="User Managemnet" />
-            {open ? <ExpandLess /> : <ExpandMore />}
+            {/* <ListItemText primary="User Managemnet" /> */}
+            <h4 className="admin-sidebar-lists">User Managemnet</h4>
+            </div>
+             <div className="button-text-div-2">
+           {open ? <ExpandLess /> : <ExpandMore />}
+           </div>
           </ListItemButton>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -140,7 +145,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Users" />
+                  {/* <ListItemText primary="Users" /> */}
+                  <h4 className="admin-sidebar-lists">Users </h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/upgradeusers">
@@ -155,7 +161,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Upgrade Users" />
+                  {/* <ListItemText primary="Upgrade Users" /> */}
+                  <h4 className="admin-sidebar-lists">Upgrade Users</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/renewals">
@@ -170,7 +177,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Renewals" />
+                  {/* <ListItemText primary="Renewals" /> */}
+                  <h4 className="admin-sidebar-lists">Renewals</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/tempusers">
@@ -185,7 +193,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Temp Users" />
+                  {/* <ListItemText primary="Temp Users" /> */}
+                  <h4 className="admin-sidebar-lists">Temp Users</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/resetpassword">
@@ -200,7 +209,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Reset Password" />
+                  {/* <ListItemText primary="Reset Password" /> */}
+                  <h4 className="admin-sidebar-lists">Reset Password</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/imageverification">
@@ -215,17 +225,25 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Image Verification" />
+                  {/* <ListItemText primary="Image Verification" /> */}
+                  <h4 className="admin-sidebar-lists">Image Verification</h4>
                 </ListItemButton>
               </Link>
             </List>
           </Collapse>
           <ListItemButton className="buttons-list-link" onClick={handleClick2} >
+          <div className="button-text-div-1">
+            
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ListAlt />
             </ListItemIcon>
-            <ListItemText primary="Assistance Services" />
+            {/* <ListItemText primary="Assistance Services" /> */}
+            <h4 className="admin-sidebar-lists">Assistance Services</h4>
+          </div>
+            <div className="button-text-div-2">
+
             {secondOpen ? <ExpandLess /> : <ExpandMore />}
+            </div>
           </ListItemButton>
           <Collapse in={secondOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -239,7 +257,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Pending" />
+                  {/* <ListItemText primary="Pending" /> */}
+                  <h4 className="admin-sidebar-lists">Pending</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/assistancesuccess">
@@ -252,7 +271,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Success" />
+                  {/* <ListItemText primary="Success" /> */}
+                  <h4 className="admin-sidebar-lists">Success</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/promoterusers">
@@ -265,17 +285,25 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Promoter Users" />
+                  {/* <ListItemText primary="Promoter Users" /> */}
+                  <h4 className="admin-sidebar-lists">Promoter Users</h4>
                 </ListItemButton>
               </Link>
             </List>
           </Collapse>
           <ListItemButton className="buttons-list-link" onClick={handleClick3} >
+          <div className="button-text-div-1">
+
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <Group />
             </ListItemIcon>
-            <ListItemText primary="Promoter Management" />
+            {/* <ListItemText primary="Promoter Management" /> */}
+            <h4 className="admin-sidebar-lists">Promoter Management</h4>
+          </div>
+            <div className="button-text-div-2">
+
             {thirdOpen ? <ExpandLess /> : <ExpandMore />}
+            </div>
           </ListItemButton>
           <Collapse in={thirdOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -289,7 +317,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Promoters" />
+                  {/* <ListItemText primary="Promoters" /> */}
+                  <h4 className="admin-sidebar-lists">Promoters</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/promocodeusers">
@@ -302,7 +331,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Promoters Users" />
+                  {/* <ListItemText primary="Promoters Users" /> */}
+                  <h4 className="admin-sidebar-lists">Promoters Users</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/promotersearning">
@@ -315,7 +345,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Promoters Earning" />
+                  {/* <ListItemText primary="Promoters Earning" /> */}
+                  <h4 className="admin-sidebar-lists">Promoter Earning</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/paytopromoters">
@@ -328,17 +359,24 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Pay to Promoters" />
+                  {/* <ListItemText primary="Pay to Promoters" /> */}
+                  <h4 className="admin-sidebar-lists">Pay to Promoters</h4>
                 </ListItemButton>
               </Link>
             </List>
           </Collapse>
           <ListItemButton className="buttons-list-link" onClick={handleClick4}>
+          <div className="button-text-div-1">
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <ImportContacts />
             </ListItemIcon>
-            <ListItemText primary="Receipts" />
+            {/* <ListItemText primary="Receipts" /> */}
+            <h4 className="admin-sidebar-lists">Receipts</h4>
+            </div>
+            <div className="button-text-div-2">
+
             {fourOpen ? <ExpandLess /> : <ExpandMore />}
+            </div>
           </ListItemButton>
           <Collapse in={fourOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -352,7 +390,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Online Transaction" />
+                  {/* <ListItemText primary="Online Transaction" /> */}
+                  <h4 className="admin-sidebar-lists">Online Transaction</h4>
                 </ListItemButton>
               </Link>
               <Link
@@ -368,7 +407,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Assistance Online Transaction" />
+                  {/* <ListItemText primary="Assistance Online Transaction" /> */}
+                  <h4 className="admin-sidebar-lists">Assistance Online Transaction</h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/receiptvoucher">
@@ -381,17 +421,25 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Receipt Voucher" />
+                  {/* <ListItemText primary="Receipt Voucher" /> */}
+                  <h4 className="admin-sidebar-lists">Receipt Voucher</h4>
                 </ListItemButton>
               </Link>
             </List>
           </Collapse>
           <ListItemButton className="buttons-list-link" onClick={handleClick5} >
+          <div className="button-text-div-1">
+
+         
             <ListItemIcon sx={{ minWidth: "40px" }}>
               <Email />
             </ListItemIcon>
-            <ListItemText primary="Reports" />
+            {/* <ListItemText primary="Reports" /> */}
+            <h4 className="admin-sidebar-lists">Reports </h4>
+            </div>
+            <div className="button-text-div-2">
             {fiveOpen ? <ExpandLess /> : <ExpandMore />}
+            </div>
           </ListItemButton>
           <Collapse in={fiveOpen} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
@@ -405,7 +453,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Users" />
+                  {/* <ListItemText primary="Users" /> */}
+                  <h4 className="admin-sidebar-lists">Users </h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/renewalsreports">
@@ -418,7 +467,8 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Renewals" />
+                  {/* <ListItemText primary="Renewals" /> */}
+                  <h4 className="admin-sidebar-lists">Renewals </h4>
                 </ListItemButton>
               </Link>
               <Link className="admin-nav-link" to="/admin/receiptsreports">
@@ -431,14 +481,15 @@ const AdminSidebar = () => {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: "30px" }}></ListItemIcon>
-                  <ListItemText primary="Receipts" />
+                  {/* <ListItemText primary="Receipts" /> */}
+                  <h4 className="admin-sidebar-lists">Receipts </h4>
                 </ListItemButton>
               </Link>
             </List>
           </Collapse>
           <Link className="admin-nav-link" to="/admin/notification">
             <ListItemButton
-            className="buttons-list-link"
+             className="admin-list-items-buttons"
             style={{
                     backgroundColor:
                       location.pathname === "/admin/notification"
@@ -450,7 +501,8 @@ const AdminSidebar = () => {
               >
                 <Notifications />
               </ListItemIcon>
-              <ListItemText primary="Notifications" />
+              {/* <ListItemText primary="Notifications" /> */}
+              <h4 className="admin-sidebar-lists">Notifications </h4>
             </ListItemButton>
           </Link>
         </List>

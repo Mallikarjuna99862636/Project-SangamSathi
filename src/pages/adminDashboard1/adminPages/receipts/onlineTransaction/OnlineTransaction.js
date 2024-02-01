@@ -3,6 +3,7 @@ import "./onlinetransaction.scss";
 import axios from "axios";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const OnlineTransaction = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -55,6 +56,10 @@ const OnlineTransaction = () => {
 
   function handlenext() {
     setCurrentPage(currentPage + 1);
+  }
+
+  function handleChange(event, value) {
+    setCurrentPage(value);
   }
   return (
     <>
@@ -138,11 +143,23 @@ const OnlineTransaction = () => {
               </h5>
             </div>
             <div className="onlinetransaction-btn-div">
-              <button onClick={handlehandle} disabled={currentPage === 1}>
+            <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
                 Prev
               </button>
-              ...
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
               <button
+              className="nxt-button"
                 onClick={handlenext}
                 disabled={currentPage === totalPages}
               >

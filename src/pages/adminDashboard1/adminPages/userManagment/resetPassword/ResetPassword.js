@@ -4,6 +4,7 @@ import axios from "axios";
 import EditSharpIcon from '@mui/icons-material/EditSharp';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const ResetPassword = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -45,7 +46,9 @@ const ResetPassword = () => {
     );
   });
 
- 
+  function handleChange(event, value) {
+    setCurrentPage(value);
+  }
 
   const handleRowsPerPageChange = (event) => {
     const newRowsPerPage = parseInt(event.target.value, 10);
@@ -120,12 +123,28 @@ const ResetPassword = () => {
           </h5>
           </div>
           <div className="reset-password-btn-div">
-            <button onClick={handlehandle} disabled={currentPage === 1}>
-              Prev
-            </button>...
-            <button onClick={handlenext} disabled={currentPage === totalPages}>
-              Next
-            </button>
+          <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
+                Prev
+              </button>
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
+              <button
+              className="nxt-button"
+                onClick={handlenext}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
           </div>
         </div>
         </div>

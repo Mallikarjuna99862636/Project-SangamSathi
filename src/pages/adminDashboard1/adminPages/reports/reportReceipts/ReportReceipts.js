@@ -3,6 +3,7 @@ import "./reportreceipts.scss";
 import axios from "axios";
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const ReportReceipts = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -69,6 +70,9 @@ const ReportReceipts = () => {
   const handletodate = (e) => {
     setToDate(e.target.value);
   };
+  function handleChange(event, value) {
+    setCurrentPage(value);
+  }
   return (
     <>
     <AdminHeader/>
@@ -182,13 +186,28 @@ const ReportReceipts = () => {
             </h5>
           </div>
           <div className="receipt-report-btn-div">
-            <button onClick={handlehandle} disabled={currentPage === 1}>
-              Prev
-            </button>
-            ...
-            <button onClick={handlenext} disabled={currentPage === totalPages}>
-              Next
-            </button>
+          <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
+                Prev
+              </button>
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
+              <button
+              className="nxt-button"
+                onClick={handlenext}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
           </div>
         </div>
       </div>

@@ -137,9 +137,9 @@
       .user-pagination {
         display: flex;
         justify-content: space-between;
+        padding-right: 30px;
         div {
-          padding-left: 10px;
-          padding-right: 100px;
+          padding-left: 5px;
           display: flex;
           align-items: center;
           h5 {
@@ -148,7 +148,7 @@
           }
         }
         .user-btn-div {
-          button {
+          .prev-button , .nxt-button {
             padding: 7px 30px;
             margin: 5px 10px;
             background-color: rgb(244, 182, 13);
@@ -156,6 +156,10 @@
             border: none;
             border-radius: 5px;
           }
+          .pagination-count-div {
+            margin: 0;
+             
+           }
         }
       }
     }

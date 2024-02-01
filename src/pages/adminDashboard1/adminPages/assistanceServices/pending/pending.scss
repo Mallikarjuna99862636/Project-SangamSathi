@@ -128,10 +128,10 @@
     margin-top: 20px;
     .pending-pagination {
       display: flex;
-      // justify-content: space-between;
+       justify-content: space-between;
       div {
+        margin-right: 20px;
         padding-left: 10px;
-        padding-right: 100px;
         display: flex;
         align-items: center;
         h5 {
@@ -150,9 +150,8 @@
           border-radius: 5px;
         }
         .pending-pagination-count-div {
-          .pending-pagination-count {
-            color: red;
-          }
+         margin: 0;
+          
         }
       }
     }

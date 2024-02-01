@@ -1,74 +1,84 @@
-.admin-dashboard-main-div{
-.admin-profile-details-div {
-  box-sizing: border-box;
+.admin-dashboard-main-div {
+  .admin-profile-details-div {
+    box-sizing: border-box;
 
-  .admin-img-div {
-    padding: 10px 5px 5px 21px;
-    .admin-photo {
-      width: 60px;
-      height: 60px;
-      // border: 1px solid black;
-      border-radius: 50%;
+    .admin-img-div {
+      padding: 10px 5px 5px 21px;
+      .admin-photo {
+        width: 60px;
+        height: 60px;
+        // border: 1px solid black;
+        border-radius: 50%;
+      }
+    }
+
+    .admin-user-name {
+      margin-left: 10px;
+      margin-bottom: 0px;
+      font-size: 16px;
+      margin-top: 18px;
+      font-weight: 600;
+    }
+
+    .profile-edit-button {
+      border: none;
+      background-color: transparent;
+      .admin-user-age {
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
     }
   }
-
-  .admin-user-name {
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 16px;
-    margin-top: 18px;
-    font-weight: 600;
-  }
-
-  .profile-edit-button{
-    border: none;
-    background-color: transparent;
-  .admin-user-age {
-    font-size: 12px;
-    font-weight: 600;
-    margin-left: 10px;
-    cursor: pointer;
-     &:hover{
-      color: red;
-     }
-  }
-}
-}
-.buttons-list-link{
-  border-bottom: 1px solid #ebebeb;
-    &:hover{
+  .buttons-list-link {
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
       background-color: #ebebeb;
     }
-}
-}
 
-
+    .button-text-div-1 {
+      display: flex;
+      align-items: center;
+      .admin-sidebar-lists {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+    .button-text-div-2 {
+      align-items: center;
+    }
+  }
+}
 
 .admin-nav-link {
   color: black;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-
-  &:hover{
+  border-bottom: 1px solid #ebebeb;
+  &:hover {
     background-color: #ebebeb;
   }
 
+  .admin-sidebar-lists {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   .admin-list-items-buttons {
+    border-bottom: 1px solid #ebebeb;
     // margin: 3px 0px;
     color: #626262;
-    border-bottom: 1px solid #ebebeb;
     &:hover {
       background-color: #ebebeb;
     }
   }
 }
-
-
-
-
-   
-  
-   
-  
-  

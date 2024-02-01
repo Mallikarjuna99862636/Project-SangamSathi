@@ -217,6 +217,8 @@ const Pending = () => {
                 onChange={handleChange}
                 hideNextButton
                 hidePrevButton
+                variant="outlined"
+                shape="rounded"
               />
               </div>
               <button className="nxt-btn" onClick={handleNext} disabled={currentPage === totalPages}>

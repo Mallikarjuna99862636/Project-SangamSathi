@@ -4,6 +4,7 @@ import axios from "axios";
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AdminHeader from "../../../adminHeader/AdminHeader";
 import AdminSidebar from "../../../adminSidebar/AdminSidebar";
+import { Pagination } from "@mui/material";
 
 const Renewals = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,6 +60,11 @@ const Renewals = () => {
   function handlenext() {
     setCurrentPage(currentPage + 1);
   }
+
+  function handleChange(event, value) {
+    setCurrentPage(value);
+  }
+
   return (
     <>
     <AdminHeader/>
@@ -137,12 +143,28 @@ const Renewals = () => {
           </h5>
           </div>
           <div className="renewal-btn-div">
-            <button onClick={handlehandle} disabled={currentPage === 1}>
-              Prev
-            </button>...
-            <button onClick={handlenext} disabled={currentPage === totalPages}>
-              Next
-            </button>
+          <button className="prev-button" onClick={handlehandle} disabled={currentPage === 1}>
+                Prev
+              </button>
+              <div className="pagination-count-div">
+              <Pagination
+              className="pagination-count"
+                count={totalPages}
+                page={currentPage}
+                onChange={handleChange}
+                hideNextButton
+                hidePrevButton
+                variant="outlined"
+                shape="rounded"
+              />
+              </div>
+              <button
+              className="nxt-button"
+                onClick={handlenext}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
           </div>
         </div>
         </div>
