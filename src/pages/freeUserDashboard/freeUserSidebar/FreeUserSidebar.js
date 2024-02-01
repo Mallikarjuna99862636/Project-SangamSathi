@@ -57,12 +57,12 @@ const FreeUserSidebar = () => {
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
-            <Link className="links " to="/freeuser/dashboard">
+            <Link className="links " to="/freeuser/fdashboard">
               <ListItemButton
                 className="list-items-buttons"
                 style={{
                   backgroundColor:
-                    location.pathname === "/freeuser/dashboard" ? "#ffe9e9" : "initial",
+                    location.pathname === "/freeuser/fdashboard" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -73,12 +73,12 @@ const FreeUserSidebar = () => {
                 <h4 className="sidebar-lists">Dashboard </h4>
               </ListItemButton>
             </Link>
-            <Link className="links active" to="/freeuser/profile">
+            <Link className="links active" to="/freeuser/fprofile">
               <ListItemButton
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/freeuser/profile" ? "#ffe9e9" : "initial",
+                    location.pathname === "/freeuser/fprofile" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -89,12 +89,12 @@ const FreeUserSidebar = () => {
             </Link>
            
            
-            <Link className="links" to="/freeuser/viewall">
+            <Link className="links" to="/freeuser/fviewall">
               <ListItemButton
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/freeuser/viewall" ? "#ffe9e9" : "initial",
+                    location.pathname === "/freeuser/fviewall" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>
@@ -103,12 +103,12 @@ const FreeUserSidebar = () => {
                 <h4 className="sidebar-lists">View All </h4>
               </ListItemButton>
             </Link>
-            <Link className="links" to="/freeuser/search">
+            <Link className="links" to="/freeuser/fsearch">
               <ListItemButton
                 className="list-items-buttons "
                 style={{
                   backgroundColor:
-                    location.pathname === "/freeuser/search" ? "#ffe9e9" : "initial",
+                    location.pathname === "/freeuser/fsearch" ? "#ffe9e9" : "initial",
                 }}
               >
                 <ListItemIcon sx={{ minWidth: "40px" }}>

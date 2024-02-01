@@ -111,14 +111,14 @@ const FreeUserInitialPage = () => {
         <Box className="dash-sub-div-02">
           <h1 className="dash-heading-01">
       
-            Assistance service available @ 1599/-{" "}
+          Become a Premium Member @899/- For One Year
           </h1>
           <h3 className="dash-heading-02">
           
-            For Selected 10 Profiles (Validity - 60 days){" "}
+          Download Android App and Connect With Matches You Like Within Your Community
           </h3>
           <button className="info-button">
-            <h3 className="info-button-headig">FOR INFO : 9148824442</h3>
+            <h3 className="info-button-headig">Call : +919148824442</h3>
           </button>
         </Box>
       </Box>
@@ -177,9 +177,9 @@ const FreeUserInitialPage = () => {
         </Box>
       </Stack>
 
-      <Box className="sub-div-one">
+      {/* <Box className="sub-div-one">
         <Box className="sub-div-two">
-          <h2 className="sub-heading-one">Interested Profile</h2>
+          <h2 className="sub-heading-one">Recent Register</h2>
         </Box>
         <Stack className="sub-card-stack-div">
           <Box className="sub-div-card1">
@@ -213,7 +213,6 @@ const FreeUserInitialPage = () => {
               </Box>
             </Box>
           </Box>
-          {/* Second Div   */}
 
           <Box className="sub-div-card2">
             <Box className="img-div-1">
@@ -244,110 +243,6 @@ const FreeUserInitialPage = () => {
               </Box>
             </Box>
           </Box>
-          {/* Third Div Start here  */}
-          <Box className="sub-div-card2">
-            <Box className="img-div-1">
-              <Box className="sub-img-div-1">
-                <figure>
-                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
-                </figure>
-              </Box>
-            </Box>
-            <Box className="sub-div1-card2">
-              <Link className="sub-div1-link-1">
-                <h2 className="sub-div1-heading-1"> Naveen Kumar</h2>
-              </Link>
-              <p className="sub-div1-para-1"> Diploma , Bengalore</p>
-            </Box>
-            <Box className="sub-div2-card2">
-              <Box className="sub-div3-card2">
-                <span className="sub-div3-age-1">23</span>
-                <span className="sub-div3-text-1">Age</span>
-              </Box>
-              <Box className="sub-div4-card2">
-                <span className="sub-div4-age-1">5.4</span>
-                <span className="sub-div4-text-1">Height</span>
-              </Box>
-              <Box className="sub-div5-card2">
-                <span className="sub-div5-age-1">SGM333</span>
-                <span className="sub-div5-text-1">Reg No</span>
-              </Box>
-            </Box>
-          </Box>
-        </Stack>
-      </Box>
-
-      {/* Second Recent Register div  */}
-
-      <Box className="sub-div-one">
-        <Box className="sub-div-two">
-          <h2 className="sub-heading-one">Recent Register</h2>
-        </Box>
-        <Stack className="sub-card-stack-div">
-          <Box className="sub-div-card1">
-            <Box className="img-div">
-              <Box className="sub-img-div">
-                <figure>
-                  {" "}
-                  <img className="card-user-dp" src={userdp} alt="user-dp" />
-                </figure>
-              </Box>
-            </Box>
-            <Box className="sub-div1-card1">
-              <Link className="sub-div1-link">
-                <h2 className="sub-div1-heading"> Naveen Kumar</h2>
-              </Link>
-              <p className="sub-div1-para"> Diploma , Bengalore</p>
-            </Box>
-            <Box className="sub-div2-card1">
-              <Box className="sub-div3-card1">
-                <span className="sub-div3-age">23</span>
-                <span className="sub-div3-text">Age</span>
-              </Box>
-              <Box className="sub-div4-card1">
-                <span className="sub-div4-age">5.4</span>
-                <span className="sub-div4-text">Height</span>
-              </Box>
-              <Box className="sub-div5-card1">
-                <span className="sub-div5-age">SGM333</span>
-                <span className="sub-div5-text">Reg No</span>
-              </Box>
-            </Box>
-          </Box>
-          {/* Second Div   */}
-
-          <Box className="sub-div-card2">
-            <Box className="img-div-1">
-              <Box className="sub-img-div-1">
-                <figure>
-                  <img className="card-user-dp-1" src={userdp} alt="user-dp" />
-                </figure>
-              </Box>
-            </Box>
-            <Box className="sub-div1-card2">
-              <Link className="sub-div1-link-1">
-                <h2 className="sub-div1-heading-1"> Naveen Kumar</h2>
-              </Link>
-              <p className="sub-div1-para-1"> Diploma , Bengalore</p>
-            </Box>
-            <Box className="sub-div2-card2">
-              <Box className="sub-div3-card2">
-                <span className="sub-div3-age-1">23</span>
-                <span className="sub-div3-text-1">Age</span>
-              </Box>
-              <Box className="sub-div4-card2">
-                <span className="sub-div4-age-1">5.4</span>
-                <span className="sub-div4-text-1">Height</span>
-              </Box>
-              <Box className="sub-div5-card2">
-                <span className="sub-div5-age-1">SGM333</span>
-                <span className="sub-div5-text-1">Reg No</span>
-              </Box>
-            </Box>
-          </Box>
-
-          {/* Third Div Start here  */}
-
           <Box className="sub-div-card2">
             <Box className="img-div-1">
               <Box className="sub-img-div-1">
@@ -378,13 +273,14 @@ const FreeUserInitialPage = () => {
             </Box>
           </Box>
         </Stack>
-      </Box>
+      </Box> */}
 
+     
       {/* Third Request Sent   Div  */}
 
       <Box className="sub-div-one">
         <Box className="sub-div-two">
-          <h2 className="sub-heading-one">Request Sent</h2>
+          <h2 className="sub-heading-one">Recent Register</h2>
         </Box>
         <Box>
           <Carousel
@@ -397,7 +293,7 @@ const FreeUserInitialPage = () => {
             {renderCards()}
           </Carousel>
         </Box>
-      </Box>
+      </Box> 
         
     </Box>
   );

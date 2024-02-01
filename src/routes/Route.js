@@ -113,10 +113,10 @@ const AppRoutes = () => {
             {/* This Is Free User Routing  */}
 
             <Route path="freeuser">
-               <Route path="dashboard" element={<FreeUserDashboard/>}/>
-               <Route path="profile" element={<FreeUserProfile/>}/>
-               <Route path="viewall" element={<FreeUserViewAll/>}/>
-               <Route path="search" element={<FreeUserSearch/>}/>
+               <Route path="fdashboard" element={<FreeUserDashboard/>}/>
+               <Route path="fprofile" element={<FreeUserProfile/>}/>
+               <Route path="fviewall" element={<FreeUserViewAll/>}/>
+               <Route path="fsearch" element={<FreeUserSearch/>}/>
             </Route>
 
         </Route>

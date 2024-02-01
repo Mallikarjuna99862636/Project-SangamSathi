@@ -95,11 +95,13 @@ const FreeUserSearch = () => {
                   label=" Caste Preference"
                   value={caste}
                   onChange={(e) => setCaste(e.target.value)}
+                  disabled
                 >
                   {datas[0].casteValues.map((item, index) => (
                     <MenuItem value={index}>{item} </MenuItem>
                   ))}
                 </Select>
+                <h3 className="warn-heading">Option available only for Paid User</h3>
               </FormControl>
             </Grid>
             <Grid>
