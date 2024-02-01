@@ -46,6 +46,7 @@
     align-items: center;
     color: #5f5e61;
     justify-content: space-between;
+
     .notification-rows-per-page {
       position: relative;
       left: 10px;
@@ -63,7 +64,7 @@
     }
     .notification-search-div {
       margin-left: 200px;
-
+       margin-right: 30px;
       #notification-search-id {
         font-size: 1.1em;
         margin-right: 10px;

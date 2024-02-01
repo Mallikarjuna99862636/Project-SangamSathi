@@ -57,13 +57,13 @@ const Footer = () => {
         </Box>
         <Box className="contaner3">
           <h3 className="about-heading-1">ABOUT COMPANY</h3>
-          <Link to="/aboutcompany" className="footer-nav-links">
+          <Link to="/about" className="footer-nav-links">
             <p className="about-heading-2">About us</p>
           </Link>
-          <Link to="/companypromoter" className="footer-nav-links">
+          <Link to="/promoter" className="footer-nav-links">
             <p className="about-heading-3">Promoter</p>
           </Link>
-          <Link className="footer-nav-links">
+          <Link to="/contact" className="footer-nav-links">
             <p className="about-heading-4">Contact us</p>
           </Link>
           <Link className="footer-nav-links">

@@ -39,6 +39,7 @@ import ReportUsers from "../pages/adminDashboard1/adminPages/reports/reportUsers
 import ReportRenewals from "../pages/adminDashboard1/adminPages/reports/reportRenewals/ReportRenewals";
 import ReportReceipts from "../pages/adminDashboard1/adminPages/reports/reportReceipts/ReportReceipts";
 import Notification from "../pages/adminDashboard1/adminPages/notification/Notification";
+import CompanyContact from "../components/companyContact/CompanyContact";
 
 const AppRoutes = () => {
   return (
@@ -53,8 +54,9 @@ const AppRoutes = () => {
           <Route path="registrationconfirm" element={<RegistrationConfirm />} />
           <Route path="registrationsuccess" element={<RegistrationSuccess />} />
           <Route path="confirmlogout" element={<LogoutConfirm />} />
-          <Route path="aboutcompany" element={<CompanyAbout />} />
-          <Route path="companypromoter" element={<CompanyPromoter />} />
+          <Route path="about" element={<CompanyAbout />} />
+          <Route path="promoter" element={<CompanyPromoter />} />
+          <Route path="contact" element={<CompanyContact />} />
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
           <Route path="user">
