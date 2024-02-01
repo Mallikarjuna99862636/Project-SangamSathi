@@ -1,0 +1,211 @@
+.about-main-container {
+  margin: 30px;
+  .about-stack-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .first-table-data {
+    .table-one-heading {
+      text-align: initial;
+      color: #252328;
+      margin: 0px 0px 15px 0px;
+      font-weight: 600;
+      font-family: "Rubik", sans-serif;
+    }
+
+    .edit-icon {
+      padding-left: 5px;
+      position: relative;
+      top: 7px;
+    }
+
+    .table-1 th {
+      font-size: 16px;
+      text-align: initial;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 40px;
+      color: #252324;
+    }
+
+    .table-1 td {
+      color: #6f6d72;
+      text-align: left;
+      background-color: #fdfdfd;
+      border-bottom: 1px solid #eee;
+      padding: 10px 50px 10px 60px;
+      vertical-align: baseline;
+      border-top: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .second-table-data {
+    .table-two-heading {
+      text-align: initial;
+      color: #252328;
+      margin: 0px 0px 15px 0px;
+      font-weight: 600;
+    }
+
+    .edit-icon {
+      padding-left: 5px;
+      position: relative;
+      top: 7px;
+    }
+
+    .table-2 th {
+      font-size: 16px;
+      text-align: initial;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 14px 85px 14px 16px;
+      color: #252324;
+    }
+
+    .table-2 td {
+      color: #6f6d72;
+      text-align: left;
+      background-color: #fdfdfd;
+      border-bottom: 1px solid #eee;
+      padding: 10px 137px 10px 60px;
+      vertical-align: baseline;
+      border-top: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+// Address And Pin Change PopUp Dialog
+
+.addess-edit-popup-list {
+  .addess-edit-popup-div1 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #ff4d4d;
+    .addess-edit-popup-heading {
+      margin: 0;
+    }
+    .addess-edit-cancel-icon {
+      margin-top: -6px;
+    }
+  }
+
+  //  Main Content Css like Textarea button input text
+
+  .addess-edit-div {
+    padding: 10px;
+    .addess-edit-popup-div2 {
+      .addess-edit-popup-div2-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #5f5e61;
+        line-height: 2.3;
+      }
+      .addess-textarea {
+        width: 90%;
+        outline: none;
+        height: auto;
+        color: #343031;
+        background-color: #fff;
+        background-image: none;
+        border: 2px solid #e6e5e7;
+        border-radius: 2px;
+        padding: 12px 16px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out 0.15s,
+          -webkit-box-shadow ease-in-out 0.15s;
+      }
+    }
+    .addess-edit-popup-div3 {
+      .addess-edit-popup-div3-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #5f5e61;
+        line-height: 2.3;
+      }
+      .addess-pincode {
+        margin-bottom: 10px;
+        width: 90%;
+        height: auto;
+        color: #343031;
+        background-color: #fff;
+        background-image: none;
+        border: 2px solid #e6e5e7;
+        border-radius: 2px;
+        padding: 12px 16px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: border-color ease-in-out 0.15s,
+          -webkit-box-shadow ease-in-out 0.15s;
+      }
+    }
+
+    //  Buttons Css
+    .edit-changes-button {
+      padding: 10px;
+      display: flex;
+      justify-content: end;
+      .close-button {
+        margin: 5px;
+        border: none;
+        font-size: 13px;
+        height: 50px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #dc3645;
+        border-color: #dc3645;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        word-wrap: break-word;
+        white-space: normal !important;
+      }
+
+      .save-changes-button {
+        margin: 5px;
+        border: none;
+        font-size: 13px;
+        height: 50px;
+        font-weight: 400;
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        word-wrap: break-word;
+        white-space: normal !important;
+      }
+    }
+  }
+}

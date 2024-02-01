@@ -6,16 +6,15 @@ import RegistrationForm from "../components/Registrationform/RegistrationForm";
 import RegistrationSuccess from "../components/registrationSuccess/RegistrationSuccess";
 import Regstrationform1 from "../components/registrationForm1/RegstrationForm1";
 import RegistrationConfirm from "../components/registrationConfirm/RegistrationConfirm";
-import UserDashboard from "../pages/userDashboard/UserDashboard";
 import LogoutConfirm from "../components/logoutConfirm/LogoutConfirm";
 import TableData from "../components/table/TableData";
 import ExtraCodeDiv from "../components/codeExtra/ExtraCodeDiv";
-import Profile from "../pages/userDashboard/comppages/page2/Profile";
-import MyMatches from "../pages/userDashboard/comppages/myMatch/MyMatches";
-import MyInterests from "../pages/userDashboard/comppages/myInterests/MyInterests";
-import AssistanceServices from "../pages/userDashboard/comppages/assistanceServices/AssistanceServices";
-import ViewAll from "../pages/userDashboard/comppages/viewAll/ViewAll";
-import Search from "../pages/userDashboard/comppages/search/Search";
+import Profile from "../pages/premiumUserDashboard/comppages/page2/Profile";
+import MyMatches from "../pages/premiumUserDashboard/comppages/myMatch/MyMatches";
+import MyInterests from "../pages/premiumUserDashboard/comppages/myInterests/MyInterests";
+import AssistanceServices from "../pages/premiumUserDashboard/comppages/assistanceServices/AssistanceServices";
+import ViewAll from "../pages/premiumUserDashboard/comppages/viewAll/ViewAll";
+import Search from "../pages/premiumUserDashboard/comppages/search/Search";
 import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
 import AdminDashboard1 from "../pages/adminDashboard1/adminDashboard/AdminDashboard1";
@@ -40,6 +39,7 @@ import ReportRenewals from "../pages/adminDashboard1/adminPages/reports/reportRe
 import ReportReceipts from "../pages/adminDashboard1/adminPages/reports/reportReceipts/ReportReceipts";
 import Notification from "../pages/adminDashboard1/adminPages/notification/Notification";
 import CompanyContact from "../components/companyContact/CompanyContact";
+import PremiumUserDashboard from "../pages/premiumUserDashboard/PremiumUserDashboard";
 
 const AppRoutes = () => {
   return (
@@ -60,8 +60,8 @@ const AppRoutes = () => {
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
           <Route path="user">
-            <Route path="dashboard" element={<UserDashboard />} />
-            <Route path="profile" element={<Profile />} />
+            <Route path="dashboard" element={<PremiumUserDashboard />} />
+            <Route path="profile" element={<Profile/>} />
 
             <Route path="my-matches" element={<MyMatches />} />
             <Route path="my-interests" element={<MyInterests />} />
@@ -71,7 +71,7 @@ const AppRoutes = () => {
             />
             <Route path="view-all" element={<ViewAll />} />
             <Route path="search" element={<Search />} />
-            <Route path="confirmlogout" element={<UserDashboard />} />
+            {/* <Route path="confirmlogout" element={<PremiumUserDashboard />} /> */}
           </Route>
           <Route path="admin">
             <Route path="dashboard" element={<AdminDashboard1 />} />
