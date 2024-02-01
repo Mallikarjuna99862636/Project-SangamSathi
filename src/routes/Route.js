@@ -17,29 +17,33 @@ import ViewAll from "../pages/premiumUserDashboard/comppages/viewAll/ViewAll";
 import Search from "../pages/premiumUserDashboard/comppages/search/Search";
 import CompanyAbout from "../components/companyAbout/CompanyAbout";
 import CompanyPromoter from "../components/companyPromoter/CompanyPromoter";
-import AdminDashboard1 from "../pages/adminDashboard1/adminDashboard/AdminDashboard1";
-import Users from "../pages/adminDashboard1/adminPages/userManagment/users/Users";
-import UpgradeUsers from "../pages/adminDashboard1/adminPages/userManagment/upgradeUsers/UpgradeUsers";
-import Renewals from "../pages/adminDashboard1/adminPages/userManagment/Renewals/Renewals";
-import TempUsers from "../pages/adminDashboard1/adminPages/userManagment/tempUsers/TempUsers";
-import ResetPassword from "../pages/adminDashboard1/adminPages/userManagment/resetPassword/ResetPassword";
-import ImageVerification from "../pages/adminDashboard1/adminPages/userManagment/imageVerification/ImageVerification";
-import Pending from "../pages/adminDashboard1/adminPages/assistanceServices/pending/Pending";
-import Success from "../pages/adminDashboard1/adminPages/assistanceServices/success/Success";
-import PromotersUsers from "../pages/adminDashboard1/adminPages/assistanceServices/promoterUsers/PromoterUsers";
-import Promoters from "../pages/adminDashboard1/adminPages/promoterManagement/promoters/Promoters";
-import PromoterUsers from "../pages/adminDashboard1/adminPages/promoterManagement/promotersUsers/PromotersUsers";
-import PromotersEarning from "../pages/adminDashboard1/adminPages/promoterManagement/promoterEaring/PromoterEaring";
-import PayToPromoters from "../pages/adminDashboard1/adminPages/promoterManagement/payToPromoters/PayToPromoter";
-import OnlineTransaction from "../pages/adminDashboard1/adminPages/receipts/onlineTransaction/OnlineTransaction";
-import AssistanceOnlineTransaction from "../pages/adminDashboard1/adminPages/receipts/assistanceOnlineTransaction/AssistanceOnlineTransaction";
-import ReceiptVoucher from "../pages/adminDashboard1/adminPages/receipts/receiptVoucher/ReceiptVoucher";
-import ReportUsers from "../pages/adminDashboard1/adminPages/reports/reportUsers/ReportUsers";
-import ReportRenewals from "../pages/adminDashboard1/adminPages/reports/reportRenewals/ReportRenewals";
-import ReportReceipts from "../pages/adminDashboard1/adminPages/reports/reportReceipts/ReportReceipts";
-import Notification from "../pages/adminDashboard1/adminPages/notification/Notification";
+import AdminDashboard from "../pages/adminDashboard/adminDashboard/AdminDashboard";
+import Users from "../pages/adminDashboard/adminPages/userManagment/users/Users";
+import UpgradeUsers from "../pages/adminDashboard/adminPages/userManagment/upgradeUsers/UpgradeUsers";
+import Renewals from "../pages/adminDashboard/adminPages/userManagment/Renewals/Renewals";
+import TempUsers from "../pages/adminDashboard/adminPages/userManagment/tempUsers/TempUsers";
+import ResetPassword from "../pages/adminDashboard/adminPages/userManagment/resetPassword/ResetPassword";
+import ImageVerification from "../pages/adminDashboard/adminPages/userManagment/imageVerification/ImageVerification";
+import Pending from "../pages/adminDashboard/adminPages/assistanceServices/pending/Pending";
+import Success from "../pages/adminDashboard/adminPages/assistanceServices/success/Success";
+import PromotersUsers from "../pages/adminDashboard/adminPages/assistanceServices/promoterUsers/PromoterUsers";
+import Promoters from "../pages/adminDashboard/adminPages/promoterManagement/promoters/Promoters";
+import PromoterUsers from "../pages/adminDashboard/adminPages/promoterManagement/promotersUsers/PromotersUsers";
+import PromotersEarning from "../pages/adminDashboard/adminPages/promoterManagement/promoterEaring/PromoterEaring";
+import PayToPromoters from "../pages/adminDashboard/adminPages/promoterManagement/payToPromoters/PayToPromoter";
+import OnlineTransaction from "../pages/adminDashboard/adminPages/receipts/onlineTransaction/OnlineTransaction";
+import AssistanceOnlineTransaction from "../pages/adminDashboard/adminPages/receipts/assistanceOnlineTransaction/AssistanceOnlineTransaction";
+import ReceiptVoucher from "../pages/adminDashboard/adminPages/receipts/receiptVoucher/ReceiptVoucher";
+import ReportUsers from "../pages/adminDashboard/adminPages/reports/reportUsers/ReportUsers";
+import ReportRenewals from "../pages/adminDashboard/adminPages/reports/reportRenewals/ReportRenewals";
+import ReportReceipts from "../pages/adminDashboard/adminPages/reports/reportReceipts/ReportReceipts";
+import Notification from "../pages/adminDashboard/adminPages/notification/Notification";
 import CompanyContact from "../components/companyContact/CompanyContact";
 import PremiumUserDashboard from "../pages/premiumUserDashboard/PremiumUserDashboard";
+import FreeUserDashboard from "../pages/freeUserDashboard/FreeUserDashboard";
+import FreeUserProfile from "../pages/freeUserDashboard/freeUserPages/freeUserProfile/FreeUserProfile";
+import FreeUserViewAll from "../pages/freeUserDashboard/freeUserPages/freeUserViewAll/FreeUserViewAll";
+import FreeUserSearch from "../pages/freeUserDashboard/freeUserPages/freeUserSearch/FreeUserSearch";
 
 const AppRoutes = () => {
   return (
@@ -59,6 +63,9 @@ const AppRoutes = () => {
           <Route path="contact" element={<CompanyContact />} />
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
+      
+       {/* This is Premium User Routing  */}
+
           <Route path="user">
             <Route path="dashboard" element={<PremiumUserDashboard />} />
             <Route path="profile" element={<Profile/>} />
@@ -73,8 +80,11 @@ const AppRoutes = () => {
             <Route path="search" element={<Search />} />
             {/* <Route path="confirmlogout" element={<PremiumUserDashboard />} /> */}
           </Route>
+      
+      {/* This is Admin Page Routing  */}
+
           <Route path="admin">
-            <Route path="dashboard" element={<AdminDashboard1 />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="users" element={<Users />} />
             <Route path="upgradeusers" element={<UpgradeUsers />} />
             <Route path="renewals" element={<Renewals />} />
@@ -99,6 +109,16 @@ const AppRoutes = () => {
             <Route path="receiptsreports" element={<ReportReceipts/>} />
             <Route path="notification" element={<Notification/>} />
           </Route>
+
+            {/* This Is Free User Routing  */}
+
+            <Route path="freeuser">
+               <Route path="dashboard" element={<FreeUserDashboard/>}/>
+               <Route path="profile" element={<FreeUserProfile/>}/>
+               <Route path="viewall" element={<FreeUserViewAll/>}/>
+               <Route path="search" element={<FreeUserSearch/>}/>
+            </Route>
+
         </Route>
       </Routes>
     </>
