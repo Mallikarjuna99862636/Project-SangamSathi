@@ -21,7 +21,9 @@ const DashboardInitialPage = () => {
     setSelectedCardDetails(selectedCard);
     setSelectedCardIndex(index);
     setPopupOpen(true);
-  };
+  }
+
+
 
   const closePopup = () => {
     setPopupOpen(false);
@@ -30,12 +32,13 @@ const DashboardInitialPage = () => {
   };
 
   
+  
   useEffect(() => {
     const getData = () => {
-      fetch("https://jsonplaceholder.typicode.com/users")
+      fetch("https://jsonplaceholder.typicode.com/albums")
         .then((response) => response.json())
         .then((data) => {
-          setUserCard(data);
+          setUserCard(data.slice(0,50));
         })
         .catch((error) => console.log(error));
     };
@@ -67,9 +70,15 @@ const DashboardInitialPage = () => {
               </Box>
               <Box className="sub-div1-card1">
                 <Link className="sub-div1-link">
-                  <h2 className="sub-div1-heading"> {card.name}</h2>
+                  <h2 className="sub-div1-heading"> 
+                  {/* {card.name} */}
+                  naveen
+                  </h2>
                 </Link>
-                <p className="sub-div1-para"> {card.address.street}</p>
+                <p className="sub-div1-para"> 
+                {/* {card.address.street} */}
+                Bengalore
+                </p>
               </Box>
               <Box className="sub-div2-card1">
                 <Box className="sub-div3-card1">

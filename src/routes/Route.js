@@ -44,6 +44,7 @@ import FreeUserDashboard from "../pages/freeUserDashboard/FreeUserDashboard";
 import FreeUserProfile from "../pages/freeUserDashboard/freeUserPages/freeUserProfile/FreeUserProfile";
 import FreeUserViewAll from "../pages/freeUserDashboard/freeUserPages/freeUserViewAll/FreeUserViewAll";
 import FreeUserSearch from "../pages/freeUserDashboard/freeUserPages/freeUserSearch/FreeUserSearch";
+import CompanyPrivacyPolicy from "../components/companyPrivacyPolicy/CompanyPrivacyPolicy";
 
 const AppRoutes = () => {
   return (
@@ -61,6 +62,7 @@ const AppRoutes = () => {
           <Route path="about" element={<CompanyAbout />} />
           <Route path="promoter" element={<CompanyPromoter />} />
           <Route path="contact" element={<CompanyContact />} />
+          <Route path="privacypolicy" element={<CompanyPrivacyPolicy/>} />
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
       

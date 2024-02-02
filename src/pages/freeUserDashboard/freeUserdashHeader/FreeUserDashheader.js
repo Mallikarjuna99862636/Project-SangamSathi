@@ -25,6 +25,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import userdps from "../../../assets/images/profile-pic.jpg";
 import StarIcon from '@mui/icons-material/Star';
 import "./freeuserdashheader.scss";
+import {Link } from 'react-router-dom'
 
 const App = styled(AppBar)`
   height: 65px;
@@ -78,11 +79,13 @@ const FreeUserDashheader = () => {
     <Box sx={{ flexGrow: 1 }}>
       <App position="fixed" elevation="none">
         <Toolbar className="main-div">
+        <Link to="/freeuser/fdashboard">
           <img
             className="sanga-icon"
             src={sangamlogo}
             alt="sangam-sathi-logo"
           />
+          </Link>
           <Stack direction="row">
             <Avatar>
               {" "}
@@ -97,8 +100,9 @@ const FreeUserDashheader = () => {
               aria-haspopup="true"
               onClick={handleClick}
               color="inherit"
+              sx={{textTransform : 'lowercase'}}
             >
-              email <ArrowDropDownIcon />
+              {usermail} <ArrowDropDownIcon />
             </Button>
             <Menu
               id="simple-menu"

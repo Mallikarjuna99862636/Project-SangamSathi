@@ -7,7 +7,7 @@
 
   .profile-details-div {
     box-sizing: border-box;
-
+    margin-bottom: 8px;
     .img-div {
       padding: 19px 5px 5px 21px;
 
@@ -17,6 +17,20 @@
         border: 1px solid black;
         border-radius: 50%;
       }
+    }
+
+    .update-button {
+      color: white;
+      border: none;
+      background-color: #28a745;
+      display: inline-block;
+      padding: 3px 12px;
+      font-size: 13px;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: 10px;
     }
 
     .user-name {
@@ -37,8 +51,8 @@
     flex-direction: column;
     text-decoration: none;
 
-     &:hover{
-       background-color: #ebebeb;
+    &:hover {
+      background-color: #ebebeb;
     }
 
     .sidebar-lists {
@@ -49,8 +63,188 @@
   }
 
   .list-items-buttons {
-      // margin: 3px 0px;
+    // margin: 3px 0px;
     color: #626262;
-   border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+  }
+}
+
+//  Change Profile Update  PopUp Dialog
+
+.freeuser-profile-edit-popup-list {
+  .freeuser-profile-edit-popup-div1 {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #ff4d4d;
+    .freeuser-profile-edit-popup-heading {
+      margin: 0;
+      span {
+        font-size: 14px;
+      }
+    }
+    .freeuser-profile-edit-cancel-icon {
+      margin-top: -6px;
+    }
+  }
+
+  //  Stack CSS  Part
+
+  .freeuser-reg-stack-1 {
+    margin: 10px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    //    First Container Start
+
+    .freeuser-container1 {
+      //  width: 100%;
+      margin: 0px 20px;
+
+      .freeuser-pricing-box1 {
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 40px 26px 85px 40px;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+            rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+            rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+
+        .freeuser-membership-heading-1 {
+          font-size: 14px;
+
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 2px;
+          margin: 0;
+
+          line-height: 26px;
+          margin: 0px 0px 15px 0px;
+          word-spacing: 15px;
+        }
+
+        .freeuser-membership-heading-2 {
+          margin: 70px 0px 12px 0px;
+          font-weight: 500;
+          font-size: 38px;
+          margin-bottom: 20px;
+          letter-spacing: -1px;
+          line-height: 38px;
+        }
+
+        .freeuser-listname {
+          padding: 0px;
+          margin-top: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    //    Second Container Start
+
+    .freeuser-container2 {
+      // width: 50%;
+      margin: 0px 20px;
+
+      .freeuser-pricing-box2 {
+        padding: 40px;
+        text-align: center;
+        border-radius: 4px;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #ebebeb;
+        color: #6f6d72;
+        box-sizing: border-box;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+            rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+            rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+        .freeuser-premium-heading-1 {
+          font-size: 15px;
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 2px;
+          line-height: 26px;
+          color: #252328;
+          margin: 0px 0px 15px 0px;
+          word-spacing: 15px;
+        }
+
+        .freeuser-premium-heading-2 {
+          text-decoration: line-through;
+          box-sizing: border-box;
+          font-size: 18px;
+          line-height: 26px;
+          color: #ea2f45;
+          padding: 5px;
+          margin: 0;
+        }
+
+        .freeuser-premium-heading-3 {
+          font-size: 1.1rem;
+          box-sizing: border-box;
+          color: #ea2f45;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        .freeuser-premium-heading-4 {
+          font-size: 38px;
+          margin: 0 0 6px 0;
+          font-weight: 400;
+          letter-spacing: -1px;
+          line-height: 38px;
+          color: #252328;
+          box-sizing: border-box;
+          padding: 0;
+        }
+
+        .freeuser-premium-heading-5 {
+          font-size: 16px;
+          color: #6f6d72;
+          font-weight: 700;
+          padding-bottom: 40px;
+          margin: 0;
+        }
+
+        .freeuser-continue-button {
+          color: #fff;
+          background-color: #00bda7;
+          border: none;
+          padding: 12px 20px;
+          font-size: 12px;
+          font-weight: 700;
+          border-radius: 2px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+
+          transition: all 0.5s;
+          word-wrap: break-word;
+          white-space: normal !important;
+        }
+      }
+      .freeuser-premium-heading-6 {
+        color: #ea2f45;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 700;
+        padding: 10px;
+      }
+    }
   }
 }

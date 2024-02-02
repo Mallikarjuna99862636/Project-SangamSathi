@@ -22,16 +22,19 @@ const FreeUserAbout = ({ render }) => {
 
   const handleCloseDialog = () => {
     setopenAddressPin(false);
+    render(false)
   };
   const handleOpenDialog = () => {
     setopenAddressPin(true);
   };
   const handleOpenCountryDialog = () => {
     setopenCountry(true);
+
   };
 
   const handleCloseCountryDialog = () => {
     setopenCountry(false);
+    render(false)
   };
 
   const handleOpenLanguageDialog = () => {
@@ -40,6 +43,7 @@ const FreeUserAbout = ({ render }) => {
 
   const handleCloseLanguageDialog = () => {
     setOpenLanguage(false);
+    render(false)
   };
 
   const handlePinAddressSubmit = (e) => {

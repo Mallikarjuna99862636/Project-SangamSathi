@@ -44,14 +44,6 @@ const FreeUserSearch = () => {
     <Box className="search-main-container">
       <Box className="search-header-part">
         <h3 className="search-user-name">Profile Based On Preference</h3>
-        <Box className="search-container">
-          <input
-            type="text"
-            className="search-field"
-            placeholder="Enter Reg No"
-          />
-          <button className="search-button"> search </button>
-        </Box>
       </Box>
       <Box className="radio-div">
         <label className="radio-heading"> First Marriage * </label>
@@ -197,7 +189,7 @@ const FreeUserSearch = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid>
+            <Grid sx={{marginTop : '45px'}}>
               <FormControl
                 className="search-social-formcontrol-6"
                 sx={{ m: 1 }}

@@ -4,8 +4,10 @@ import "./companycontact.scss";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../homePages/footerPart/Footer";
 import logo4 from "../../assets/images/sangam-sathi-logo.png";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { NavigateNext } from "@mui/icons-material";
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 const CompanyContact = () => {
   const navigation = useNavigate();
@@ -15,7 +17,7 @@ const CompanyContact = () => {
   };
 
   return (
-    <>
+    <Box>
       <Box className="companycontact-container">
         <h3 variant="h3" className="companycontact-heading-1">
           Welcome to SangamSathi
@@ -33,8 +35,8 @@ const CompanyContact = () => {
           Login{" "}
         </button>
       </Box>
-      <Box className="companycontact-container-div-2"></Box>
-      <Box className="reg-container-div-3">
+      <Box className="companycontact-container-div-2">
+        <Box className="reg-container-div-3">
           <Stack className="reg-stack-1" direction="row" spacing={2}>
             <Breadcrumbs
               separator={
@@ -44,53 +46,86 @@ const CompanyContact = () => {
               sx={{ marginTop: "50px" }}
             >
               <h4 className="reg-heading-3">
-                <Link to="/" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "#bebbc1" }}
+                >
                   {" "}
                   Home{" "}
                 </Link>{" "}
               </h4>
-              <h4 className="reg-heading-4"> Registration </h4>
+              <h4 className="reg-heading-4"> Contact Us </h4>
             </Breadcrumbs>
           </Stack>
-          </Box>
-
+        </Box>
+      </Box>
       <Box className="companycontact-main-content">
-        <Box className="companycontact-main-logo">
-          <FavoriteIcon className="heart-icon" />
-        </Box>
-        <h2>Established in March 26th 2012</h2>
-        <p className="companycontact-para">
-          Kiran Computers Pvt Ltd has grown from strength to provide the IT
-          Solutions that meet the critical business requirements and fast
-          growing enterprises. Service rendering processes at Kiran Computers
-          Pvt Ltd conform to IT Standards.Our capabilities are backed by sound
-          corporate resources.
-        </p>
+        <Stack className="companycontact-main-stack" spacing={0} >
+          <Box className="companycontact-stack-content-1">
+            <Box className="icon-div-1">
+             <AccountCircleOutlinedIcon fontSize="large" className="contact-icon-1"/>
+            </Box>
+            <Box className="sub-content-div">
+              <h3> Customer Support </h3>
+              <p className="helpline">Call our helpline.</p>
+              <p>
+              <strong>
+                Phone number:
+              </strong>
+              <br/>
+              <span className="text-default">9148824442</span>
+              <br/>
+              <strong>Email Us :</strong>
+              <br/>
+              <span className="text-default"> contactussangamsathi@gmail.com</span>
+              </p>
+            </Box>
+
+          </Box>
+          <Box className="companycontact-stack-content-2">
+            <Box className="icon-div-2">
+             <FmdGoodIcon fontSize="large" className="contact-icon-1"/>
+            </Box>
+            <Box className="sub-content-div-1">
+              <h3> Our Address </h3>
+              <p className="helpline">Our offices are located in the Bangalore.</p>
+              <p>
+              <strong>
+              Address:
+              </strong>
+              Kiran Computers Pvt. Ltd
+              <br/>
+              #148/E, 2nd Floor, 17th Main Vijaynagar,
+              <br/>
+              Banglore-560040
+            </p>
+            </Box>
+
+          </Box>
+          <Box className="companycontact-stack-content-3">
+            <Box className="icon-div-3">
+             <EmailOutlinedIcon fontSize="large" className="contact-icon-1"/>
+            </Box>
+            <Box className="sub-content-div-2">
+              <h3> Other Enquiries </h3>
+              <p className="helpline">Please contact us at the email below for all other inquiries.</p>
+              <p>
+  
+              <br/>
+              <strong>Email Us :</strong>
+              <br/>
+              <span className="text-default"> contactussangamsathi@gmail.com</span>
+              </p>
+            </Box>
+
+          </Box>
+          
+          
+        </Stack>
       </Box>
-      <Box className="section-title-div">
-        <Box className="companycontact-section-title">
-          <h2> What we do </h2>
-          <p>
-            We take pleasure in introducing our self as â€œKiran Computers Pvt
-            Ltdâ€ engaged in Computer Sales & Services, Network and Data
-            Solutions, Security Systems, Software Development and Business
-            Process and other fields of Information Technology. We endeavour to
-            furnish our precious clients superior services designed for to meet
-            clientâ€™s needs.
-          </p>
-          <p>
-            We provide services from the latest technology available to contend
-            our self in the global arena and to provide the best technology to
-            our clients rather than be a passenger of time. Kiran Computers Pvt
-            Ltd infrastructure has in par with latest available equipment. It
-            has a team of experienced, well certified Customer Support
-            Professionals, who with their in depth knowledge have achieved a
-            high level of corporate satisfaction.
-          </p>
-        </Box>
-      </Box>
+
       <Footer />
-    </>
+    </Box>
   );
 };
 
