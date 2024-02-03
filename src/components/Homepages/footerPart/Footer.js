@@ -66,13 +66,13 @@ const Footer = () => {
           <Link to="/contact" className="footer-nav-links">
             <p className="about-heading-4">Contact us</p>
           </Link>
-          <Link className="footer-nav-links">
+          <Link to="/privacypolicy" className="footer-nav-links">
             <p className="about-heading-5">Privacy Policy</p>
           </Link>
-          <Link className="footer-nav-links">
+          <Link to="/termsconditions" className="footer-nav-links">
             <p className="about-heading-6">Terms & Conditions</p>
           </Link>
-          <Link className="footer-nav-links">
+          <Link to="/refundandcancellation" className="footer-nav-links">
             <p className="about-heading-7">Cancellation Policy</p>
           </Link>
         </Box>

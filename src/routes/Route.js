@@ -45,6 +45,8 @@ import FreeUserProfile from "../pages/freeUserDashboard/freeUserPages/freeUserPr
 import FreeUserViewAll from "../pages/freeUserDashboard/freeUserPages/freeUserViewAll/FreeUserViewAll";
 import FreeUserSearch from "../pages/freeUserDashboard/freeUserPages/freeUserSearch/FreeUserSearch";
 import CompanyPrivacyPolicy from "../components/companyPrivacyPolicy/CompanyPrivacyPolicy";
+import CompanyTermsCondition from "../components/companyTermsCondition/CompanyTermsCondition";
+import CompanyCancellationPolicy from "../components/companyCancellationPolicy/CompanyCancellationPolicy";
 
 const AppRoutes = () => {
   return (
@@ -62,15 +64,20 @@ const AppRoutes = () => {
           <Route path="about" element={<CompanyAbout />} />
           <Route path="promoter" element={<CompanyPromoter />} />
           <Route path="contact" element={<CompanyContact />} />
-          <Route path="privacypolicy" element={<CompanyPrivacyPolicy/>} />
+          <Route path="privacypolicy" element={<CompanyPrivacyPolicy />} />
+          <Route path="termsconditions" element={<CompanyTermsCondition />} />
+          <Route
+            path="refundandcancellation"
+            element={<CompanyCancellationPolicy />}
+          />
           <Route path="table" element={<TableData />} />
           <Route path="extra" element={<ExtraCodeDiv />} />
-      
-       {/* This is Premium User Routing  */}
+
+          {/* This is Premium User Routing  */}
 
           <Route path="user">
             <Route path="dashboard" element={<PremiumUserDashboard />} />
-            <Route path="profile" element={<Profile/>} />
+            <Route path="profile" element={<Profile />} />
 
             <Route path="my-matches" element={<MyMatches />} />
             <Route path="my-interests" element={<MyInterests />} />
@@ -82,8 +89,8 @@ const AppRoutes = () => {
             <Route path="search" element={<Search />} />
             {/* <Route path="confirmlogout" element={<PremiumUserDashboard />} /> */}
           </Route>
-      
-      {/* This is Admin Page Routing  */}
+
+          {/* This is Admin Page Routing  */}
 
           <Route path="admin">
             <Route path="dashboard" element={<AdminDashboard />} />
@@ -107,20 +114,19 @@ const AppRoutes = () => {
             />
             <Route path="receiptvoucher" element={<ReceiptVoucher />} />
             <Route path="usersreports" element={<ReportUsers />} />
-            <Route path="renewalsreports" element={<ReportRenewals/>} />
-            <Route path="receiptsreports" element={<ReportReceipts/>} />
-            <Route path="notification" element={<Notification/>} />
+            <Route path="renewalsreports" element={<ReportRenewals />} />
+            <Route path="receiptsreports" element={<ReportReceipts />} />
+            <Route path="notification" element={<Notification />} />
           </Route>
 
-            {/* This Is Free User Routing  */}
+          {/* This Is Free User Routing  */}
 
-            <Route path="freeuser">
-               <Route path="fdashboard" element={<FreeUserDashboard/>}/>
-               <Route path="fprofile" element={<FreeUserProfile/>}/>
-               <Route path="fviewall" element={<FreeUserViewAll/>}/>
-               <Route path="fsearch" element={<FreeUserSearch/>}/>
-            </Route>
-
+          <Route path="freeuser">
+            <Route path="fdashboard" element={<FreeUserDashboard />} />
+            <Route path="fprofile" element={<FreeUserProfile />} />
+            <Route path="fviewall" element={<FreeUserViewAll />} />
+            <Route path="fsearch" element={<FreeUserSearch />} />
+          </Route>
         </Route>
       </Routes>
     </>
