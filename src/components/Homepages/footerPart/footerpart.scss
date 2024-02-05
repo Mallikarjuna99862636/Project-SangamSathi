@@ -39,12 +39,15 @@
     padding-bottom: 40px;
     color: #98969b;
     font-size: 14px;
+    // display: grid !important;
+    // grid-template-columns: repeat(4,1fr) !important;
     // justify-content: space-evenly;
     height: 40%;
 
     //  1st div CSS 
 
     .contaner1 {
+      width: 25%;
       color: #98969b;
       font-size: 16px;
       margin-left: 20px;
@@ -94,8 +97,9 @@
    //  3st div CSS 
 
     .contaner3 {
-      flex: 0 0 16.666667%;
-      max-width: 16.666667%;
+      // flex: 0 0 16.666667%;
+      // max-width: 16.666667%;
+      width: 25%;
 
      .footer-nav-links{
       text-decoration: none;

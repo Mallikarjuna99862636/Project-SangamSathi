@@ -32,7 +32,7 @@ const Footer = () => {
         <Box className="contaner1">
           <img src={logo4} alt="sangam-sathi-logo" />
           <br />
-          <p className=".footer-heading-section1-1">
+          <p className="footer-heading-section1-1">
             A Superior Matrimony Service. Register and Find your Special Someone
             Matches Within Your Community.
           </p>

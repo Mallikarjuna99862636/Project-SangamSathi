@@ -47,6 +47,7 @@ import FreeUserSearch from "../pages/freeUserDashboard/freeUserPages/freeUserSea
 import CompanyPrivacyPolicy from "../components/companyPrivacyPolicy/CompanyPrivacyPolicy";
 import CompanyTermsCondition from "../components/companyTermsCondition/CompanyTermsCondition";
 import CompanyCancellationPolicy from "../components/companyCancellationPolicy/CompanyCancellationPolicy";
+import PromoterDashboard from "../pages/promoterDashboard/promoterDashboard/PromoterDashboard";
 
 const AppRoutes = () => {
   return (
@@ -126,6 +127,14 @@ const AppRoutes = () => {
             <Route path="fprofile" element={<FreeUserProfile />} />
             <Route path="fviewall" element={<FreeUserViewAll />} />
             <Route path="fsearch" element={<FreeUserSearch />} />
+          </Route>
+          {/* This Is Promoter Page  Routing  */}
+
+          <Route path="promoter">
+            <Route path="dashboard" element={<PromoterDashboard/>} />
+            {/* <Route path="profile" element={<FreeUserProfile />} />
+            <Route path="viewall" element={<FreeUserViewAll />} />
+            <Route path="search" element={<FreeUserSearch />} /> */}
           </Route>
         </Route>
       </Routes>

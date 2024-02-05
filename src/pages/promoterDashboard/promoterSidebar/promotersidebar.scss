@@ -1,0 +1,51 @@
+.promoter-dashboard-main-div {
+    
+    .buttons-list-link {
+      border-bottom: 1px solid #ebebeb;
+      display: flex;
+      justify-content: space-between;
+      &:hover {
+        background-color: #ebebeb;
+      }
+  
+      .button-text-div-1 {
+        display: flex;
+        align-items: center;
+        .promoter-sidebar-lists {
+          margin: 0;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+      .button-text-div-2 {
+        align-items: center;
+      }
+    }
+  }
+  
+  .promoter-nav-link {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-bottom: 1px solid #ebebeb;
+    &:hover {
+      background-color: #ebebeb;
+    }
+  
+    .promoter-sidebar-lists {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  
+    .promoter-list-items-buttons {
+      border-bottom: 1px solid #ebebeb;
+      // margin: 3px 0px;
+      color: #626262;
+      &:hover {
+        background-color: #ebebeb;
+      }
+    }
+  }
+  
