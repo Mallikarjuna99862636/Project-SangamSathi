@@ -1,8 +1,8 @@
 import React from "react";
-import "./forgotpassword.scss"
+import "./forgotpassword.scss";
 import { Box, Button } from "@mui/material";
 import logo2 from "../../assets/images/sangam-sathi-logo.png";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 const ForgotPassword = () => {
   return (

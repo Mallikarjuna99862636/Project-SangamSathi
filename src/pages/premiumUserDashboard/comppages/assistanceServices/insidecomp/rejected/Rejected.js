@@ -5,25 +5,13 @@ import userdp from "../../../../../../assets/images/profile-pic.jpg";
 import "./rejected.scss";
 
 const Completed = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
   const [userCard, setUserCard] = useState([]);
-  const [completedCardDetails, setcompletedCardDetails] = useState({});
-  const [completedCardIndex, setcompletedCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  const handleCardClick = (index) => {
-    const completedCard = userCard[index];
-    setcompletedCardDetails(completedCard);
-    setcompletedCardIndex(index);
-    setPopupOpen(true);
-  };
+  
 
-  const closePopup = () => {
-    setPopupOpen(false);
-    setcompletedCardIndex(null);
-    console.log("Close button clicked");
-  };
+  
 
   const getData = (page) => {
     fetch(
@@ -52,7 +40,6 @@ const Completed = () => {
           <Box
             key={index}
             className="rejected-div-card1"
-            onClick={() => handleCardClick(index)}
           >
             <Box className="rejected-img-div">
               <Box className="rejected-sub-img-div">
@@ -85,13 +72,6 @@ const Completed = () => {
                 <span className="rejected-sub-div5-text">Reg No</span>
               </Box>
             </Box>
-            {popupOpen && completedCardIndex === index && (
-              <div className="rejected-popup-content">
-                <h2>{completedCardDetails.name}</h2>
-                <h2>{completedCardDetails.id}</h2>
-                <button onClick={closePopup}>Close</button>
-              </div>
-            )}
           </Box>
         ))}
       </Box>

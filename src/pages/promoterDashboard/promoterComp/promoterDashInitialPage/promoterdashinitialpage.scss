@@ -1,0 +1,528 @@
+.promoter-initial-page-container {
+  .promoter-header-part {
+    padding: 5px 10px;
+    .promoter-user-name {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      margin: 0px 0px 0px 10px;
+    }
+    margin-bottom: 10px;
+  }
+
+  .dash-stack-container-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 30px;
+    padding: 20px 20px 0px 20px;
+
+    .stack-first-card {
+      border: none;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      margin-bottom: 30px;
+      border-radius: 0.25rem;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+
+      .card-div-01 {
+        padding: 20px;
+
+        .card1-heading-01 {
+          text-align: initial;
+          font-size: 17px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card1-heading-02 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-01 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-one {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .stack-second-card {
+      border: none;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      margin-bottom: 30px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+
+      border-radius: 0.25rem;
+
+      .card-div-02 {
+        padding: 20px;
+
+        .card2-heading-01 {
+          text-align: initial;
+          font-size: 17px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+
+        .card2-heading-02 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-02 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-two {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+    .stack-third-card {
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      margin-bottom: 30px;
+      border-radius: 0.25rem;
+      width: 400px !important;
+      .card-div-03 {
+        padding: 20px;
+
+        .card3-heading-01 {
+          text-align: initial;
+          font-size: 17px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card3-heading-02 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+      .view-all-link-03 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-three {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  //  Second Div CSS
+  .dash-stack-container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 0px 20px 0px 20px;
+
+    .stack-first-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #e1caf1 !important;
+      .card-div-01 {
+        padding: 20px;
+        //   display: grid;
+        //   grid-template-columns: repeat(2, 1fr);
+
+        .card1-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card1-heading-002 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-01 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-one {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .stack-second-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #cfedad !important;
+      .card-div-02 {
+        padding: 20px;
+
+        .card2-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+
+        .card2-heading-002 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-02 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-two {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+    .stack-third-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #fff4bf !important;
+      .card-div-03 {
+        padding: 20px;
+        .card3-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card3-heading-002 {
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+      .view-all-link-03 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-three {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  //  Third  Div CSS
+  .dash-stack-container-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 0px 20px 0px 20px;
+
+    .stack-first-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #fff4bf !important;
+      .card-div-01 {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card1-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card1-heading-002 {
+          width: 140px;
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-01 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-one {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .stack-second-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #cfedad !important;
+      .card-div-02 {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card2-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+
+        .card2-heading-002 {
+          width: 152px;
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+
+      .view-all-link-02 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-two {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+    .stack-third-card {
+      border: none;
+      margin-bottom: 30px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(61, 70, 79, 0.05),
+        0 1px 3px 0 rgba(61, 70, 79, 0.15);
+      background-color: #cfedad !important;
+      .card-div-03 {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card3-heading-01 {
+          text-align: initial;
+          font-size: 42px;
+          color: #252328;
+          font-weight: 600;
+          line-height: 1;
+          margin: 0px 0px 10px 0px;
+        }
+        .card3-heading-002 {
+          width: 152px;
+          margin: 0;
+          font-size: 17px;
+          line-height: 26px;
+          color: #6f6d72;
+          font-weight: 500;
+          text-align: justify;
+        }
+
+        .group-icons {
+          margin-left: 30px;
+          font-size: 65px;
+          color: rgb(255, 77, 77);
+        }
+      }
+      .view-all-link-03 {
+        background: #fff;
+        border-top: 1px solid #e6e5e7;
+        font-size: 14px;
+
+        .link-three {
+          color: black;
+          text-decoration: none;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  //    Table Css render here
+
+  .tables-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 60px 20px 20px;
+
+    .table-one-div {
+      width: 500px;
+      height: 600px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      .table-one {
+        height: 500px;
+
+        .cell-items-name {
+          font-weight: bold;
+          vertical-align: baseline;
+        }
+
+        .cell-data {
+          width: 57px;
+          color: #6f6d72;
+          font-size: 14px;
+
+          .status-button {
+             padding: 4px 8px;
+            line-height: 1.5;
+            color: #00bda7;
+             background-color: transparent;
+            border-color: #00bda7;
+            font-size: 11px;
+            font-weight: 500;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            word-wrap: break-word;
+            white-space: normal !important;
+            border: 1px solid #00bda7;
+          }
+        }
+      }
+
+      .table-one-heading {
+        font-size: 19px;
+        font-weight: 400;
+        text-align: justify;
+        margin-bottom: 0;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 16px 20px;
+      }
+    }
+  }
+}

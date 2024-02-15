@@ -83,12 +83,12 @@ const PromoterSidebar = () => {
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          <Link className="promoter-nav-link" to="/admin/dashboard">
+          <Link className="promoter-nav-link" to="/promoter/dashboard">
             <ListItemButton
               className="promoter-list-items-buttons"
               style={{
                 backgroundColor:
-                  location.pathname === "/admin/dashboard" ? "#ffe9e9" : "initial",
+                  location.pathname === "/promoter/dashboard" ? "#ffe9e9" : "initial",
               }}
             >
               <ListItemIcon sx={{ minWidth: "40px" }}>

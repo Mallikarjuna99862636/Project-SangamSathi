@@ -5,25 +5,12 @@ import userdp from "../../../../../../assets/images/profile-pic.jpg";
 import "./requests.scss";
 
 const Requests = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
   const [userCard, setUserCard] = useState([]);
-  const [selectedCardDetails, setSelectedCardDetails] = useState({});
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
-  const handleCardClick = (index) => {
-    const selectedCard = userCard[index];
-    setSelectedCardDetails(selectedCard);
-    setSelectedCardIndex(index);
-    setPopupOpen(true);
-  };
 
-  const closePopup = () => {
-    setPopupOpen(false);
-    setSelectedCardIndex(null);
-    console.log("Close button clicked");
-  };
+ 
 
   const getData = (page) => {
     fetch(
@@ -52,7 +39,6 @@ const Requests = () => {
           <Box
             key={index}
             className="requests-div-card1"
-            onClick={() => handleCardClick(index)}
           >
             <Box className="requests-img-div">
               <Box className="requests-sub-img-div">
@@ -85,13 +71,7 @@ const Requests = () => {
                 <span className="requests-sub-div5-text">Reg No</span>
               </Box>
             </Box>
-            {popupOpen && selectedCardIndex === index && (
-              <div className="requests-popup-content">
-                <h2>{selectedCardDetails.name}</h2>
-                <h2>{selectedCardDetails.id}</h2>
-                <button onClick={closePopup}>Close</button>
-              </div>
-            )}
+          
           </Box>
         ))}
       </Box>

@@ -4,30 +4,12 @@ import icon1 from "../../../../assets/images/wedding-arch.png";
 import icon2 from "../../../../assets/images/love-letter.png";
 import icon3 from "../../../../assets/images/chat.png";
 import userdp from "../../../../assets/images/profile-pic.jpg";
-import silverimg from '../../../../assets/images/silverImg.jpg';
 import "./freeuserInitialpage.scss";
 import { Link } from "react-router-dom";
 import Carousel from "react-material-ui-carousel";
-import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const FreeUserInitialPage = () => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const [selectedCardDetails, setSelectedCardDetails] = useState({});
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [userCard, setUserCard] = useState([]);
-
-  const handleCardClick = (index) => {
-    const selectedCard = userCard[index];
-    setSelectedCardDetails(selectedCard);
-    setSelectedCardIndex(index);
-    setPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setPopupOpen(false);
-    setSelectedCardIndex(null);
-    console.log("Close button clicked");
-  };
 
   
   useEffect(() => {
@@ -56,7 +38,6 @@ const FreeUserInitialPage = () => {
             <Box
               key={index}
               className="sub-div-card1"
-              onClick={() => handleCardClick(i + index)}
             >
               <Box className="img-div">
                 <Box className="sub-img-div">
@@ -85,13 +66,6 @@ const FreeUserInitialPage = () => {
                   <span className="sub-div5-text">Reg No</span>
                 </Box>
               </Box>
-              {isPopupOpen && selectedCardIndex === i + index && (
-                <div className="popup-content">
-                  <h2>{selectedCardDetails.name}</h2>
-                  <h2>{selectedCardDetails.id}</h2>
-                  <button onClick={closePopup}>Close</button>
-                </div>
-              )}
             </Box>
           ))}
         </Stack>

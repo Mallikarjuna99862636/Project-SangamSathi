@@ -11,28 +11,11 @@ import Carousel from "react-material-ui-carousel";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const DashboardInitialPage = () => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const [selectedCardDetails, setSelectedCardDetails] = useState({});
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [userCard, setUserCard] = useState([]);
 
-  const handleCardClick = (index) => {
-    const selectedCard = userCard[index];
-    setSelectedCardDetails(selectedCard);
-    setSelectedCardIndex(index);
-    setPopupOpen(true);
-  }
+ 
 
 
-
-  const closePopup = () => {
-    setPopupOpen(false);
-    setSelectedCardIndex(null);
-    console.log("Close button clicked");
-  };
-
-  
-  
   useEffect(() => {
     const getData = () => {
       fetch("https://jsonplaceholder.typicode.com/albums")
@@ -59,7 +42,6 @@ const DashboardInitialPage = () => {
             <Box
               key={index}
               className="sub-div-card1"
-              onClick={() => handleCardClick(i + index)}
             >
               <Box className="img-div">
                 <Box className="sub-img-div">
@@ -94,13 +76,6 @@ const DashboardInitialPage = () => {
                   <span className="sub-div5-text">Reg No</span>
                 </Box>
               </Box>
-              {isPopupOpen && selectedCardIndex === i + index && (
-                <div className="popup-content">
-                  <h2>{selectedCardDetails.name}</h2>
-                  <h2>{selectedCardDetails.id}</h2>
-                  <button onClick={closePopup}>Close</button>
-                </div>
-              )}
             </Box>
           ))}
         </Stack>

@@ -5,25 +5,9 @@ import userdp from "../../../../../../assets/images/profile-pic.jpg";
 import "./onprocess.scss";
 
 const OnProcess = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
   const [userCard, setUserCard] = useState([]);
-  const [onprocessCardDetails, setonprocessCardDetails] = useState({});
-  const [onprocessCardIndex, setonprocessCardIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
-
-  const handleCardClick = (index) => {
-    const onprocessCard = userCard[index];
-    setonprocessCardDetails(onprocessCard);
-    setonprocessCardIndex(index);
-    setPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setPopupOpen(false);
-    setonprocessCardIndex(null);
-    console.log("Close button clicked");
-  };
 
   const getData = (page) => {
     fetch(
@@ -52,7 +36,6 @@ const OnProcess = () => {
           <Box
             key={index}
             className="onprocess-div-card1"
-            onClick={() => handleCardClick(index)}
           >
             <Box className="onprocess-img-div">
               <Box className="onprocess-sub-img-div">
@@ -85,13 +68,7 @@ const OnProcess = () => {
                 <span className="onprocess-sub-div5-text">Reg No</span>
               </Box>
             </Box>
-            {popupOpen && onprocessCardIndex === index && (
-              <div className="onprocess-popup-content">
-                <h2>{onprocessCardDetails.name}</h2>
-                <h2>{onprocessCardDetails.id}</h2>
-                <button onClick={closePopup}>Close</button>
-              </div>
-            )}
+           
           </Box>
         ))}
       </Box>

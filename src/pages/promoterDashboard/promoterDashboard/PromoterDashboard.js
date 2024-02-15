@@ -2,6 +2,7 @@ import React from 'react'
 import PromoterHeader from '../promoterHeader/PromoterHeader'
 import PromoterSidebar from '../promoterSidebar/PromoterSidebar'
 import './promoterdashboard.scss'
+import PromoterDashInitialPage from '../promoterComp/promoterDashInitialPage/PromoterDashInitialPage'
 
 const PromoterDashboard = () => {
   return (
@@ -9,7 +10,7 @@ const PromoterDashboard = () => {
        <PromoterHeader/>
        <PromoterSidebar/>
        <div className='promoter-page'>
-         <h3> Hello </h3>
+         <PromoterDashInitialPage/>
        </div> 
     </div>
   )
